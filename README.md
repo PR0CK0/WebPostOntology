@@ -37,19 +37,19 @@ Below are some general things to consider about the WPO:
 # Version Updates
 All updates to the taxonomy are performed in Protégé. The general process after updating (anything, including term ordering, term names/annotations, addition/deletion of terms, etc.) is:
 
-## Protégé Work
+### Protégé Work
 1. In Protégé, click Refactor > Change ontology IRI > Enter new version number (I don't use a "versioned" IRI; I build it into the IRI normally)
 2. In the Ontology tab, under the Ontology Prefixes tab at the bottom, update the blank (default) namespace prefix IRI with the new version number and hit Enter
 3. Refactor > Rename multiple entities > Enter the old versioned IRI in the first line and the new versioned IRI in the second line > Rename
 
-## jsoncrack Visualization
+### jsoncrack Visualization
 Visualizations are then made with [jsoncrack.com](jsoncrack.com).
 
 1. Use [munging/ontology_outputting/ttl_to_json.py](munging/ontology_outputting/ttl_to_json.py) on the new version .ttl file
 2. Copy/paste the JSON content into jsoncrack's editor
 3. Top right, click the download arrow, then save as PNG or SVG
 
-## PyLODE HTML rendering
+### PyLODE HTML rendering
 1. Download the latest version of PyLODE [here](https://github.com/RDFLib/pyLODE)
 2. Put your ontology file in the bin/ folder
 3. Open a command prompt in the bin/ folder
