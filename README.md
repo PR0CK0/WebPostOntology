@@ -31,6 +31,8 @@ Below are some general things to consider about the WPO:
 * To retain some level of linkage to outside sources, the terms herein are linked to Wikidata and/or DBPedia terms, with either (1) skos:example or (2) dct:source. For the former, the terms are roughly similar, but not exactly the same; for the latter, the terms are considered identical. E.g., in this taxonomy, the term "Animals" excludes humans, where the Wikidata and DBPedia terms include humans. This is because, as delineated earlier, the purpose of this taxonomy is to be amenable to lifestyle content writers publishing magazine-like articles, so for them, humans are not necessarily animals, as pets and wildlife are.
   * Initially, I had used rdfs:seeAlso and owl:sameAs, but neither of these can be rendered with PyLODE (it only allows [a few annotation properties](https://github.com/RDFLib/pyLODE/blob/master/pylode/rdf_elements.py) to show), and using owl:sameAs causes Protégé to enforce some rules that ruins rendering, so I had to use skos:example and dct:source
     * I may transition to using regular [LODE](https://essepuntato.it/lode/), which may allow more annotations to be rendered, but it needs investigation as well
+* I use the delimiter ```#``` insead of ```/``` because it allows you to jump around HTML or TTL pages opened on the web, as the ```#``` is a fragment designed to do so
+  * To keep it this way, when editing in Protégé, make sure in the File > Preferences > New entities tab, you have 'Followed by:' selected to be ```#```
 
 # Version Updates
 All updates to the taxonomy are performed in Protégé. The general process after updating (anything, including term ordering, term names/annotations, addition/deletion of terms, etc.) is:
