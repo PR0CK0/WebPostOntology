@@ -1,0 +1,629 @@
+@prefix : <https://hooray.media/ontology/wpo/version/0.1.0-alpha#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://hooray.media/ontology/wpo/version/0.1.0-alpha> .
+
+<https://hooray.media/ontology/wpo/version/0.1.0-alpha> rdf:type owl:Ontology ;
+                                                         dct:contributor <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#JohnByrne> ;
+                                                         dct:created "2023-11-10"@en ;
+                                                         dct:creator <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#TylerProcko> ;
+                                                         dct:format "text/turtle"@en ;
+                                                         dct:language "en-US"@en ;
+                                                         dct:modified "2023-11-16"@en ;
+                                                         dct:title "Web Post Ontology"@en ;
+                                                         owl:versionInfo "0.1.0-alpha"@en ;
+                                                         skos:definition "aaa"@en ;
+                                                         skos:note """This is a provisional (and necessarily philosophically \"loose\") representation of general topics/categories used to organize website content for posts pertaining to parenting and dating lifestyle. Inasmuch as the things represented here are not precisely tangible, the taxonomy is intentionally \"fiat\" (see Barry Smith's BFO). Therefore, the author maintains the stance that (1) the end-user view of the webpages themselves and (2) the ease of use of the website content writers in categorizing new content are more important than the philosophical rigor of the taxonomy.
+
+Moreover, where the semantics of \"subClassOf\" mean inheritance and specialization, within this taxonomy, the definition of \"subClassOf\" is loosened. For example, while \"Fall Festival\" is not, semantically, a subclass of \"Fall\", it is nonetheless placed under \"Fall\". This is because the purpose of the taxonomy is to help content writers organize website posts, and such a prescription is intuitive to laymen."""@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Accommodation
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Accommodation> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Aquarium
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Aquarium> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ArtMuseum
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ArtMuseum> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Museum> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#BackToSchool
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#BackToSchool> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Ballroom
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Ballroom> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Bar
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Bar> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Beach
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Beach> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Beauty
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Beauty> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Birthday
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Birthday> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#BirthdayPartyVenue
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#BirthdayPartyVenue> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Breakfast
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Breakfast> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Brewery
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Brewery> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Brunch
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Brunch> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Camp
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Camp> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Christmas
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Christmas> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ReligiousHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CincoDeMayo
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CincoDeMayo> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Concert
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Concert> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Contest
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Contest> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Craft
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Craft> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Cruise
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Cruise> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Holiday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#DayTrip
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#DayTrip> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Deal
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Deal> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Shopping> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> ;
+                                                                                  skos:altLabel "Eats"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Easter
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Easter> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ReligiousHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Education
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Education> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ElementaryYears
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ElementaryYears> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Event
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Event> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Fall
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Fall> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Season> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FallFestival
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FallFestival> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Fall> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Farm
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Farm> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FarmersMarket
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FarmersMarket> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FathersDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FathersDay> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Festival
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Festival> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Fitness
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Fitness> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Health> ;
+                                                                                   skos:prefLabel "Fitness"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Game
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Game> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Getaway
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Getaway> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#GirlsNightOut
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#GirlsNightOut> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> ;
+                                                                                         skos:altLabel "GNO"@en ;
+                                                                                         skos:prefLabel "Girls Night Out"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Halloween
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Halloween> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Hanukkah
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Hanukkah> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ReligiousHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Health
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Health> rdf:type owl:Class ;
+                                                                                  skos:prefLabel "Health"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#HighschoolYears
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#HighschoolYears> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Hiking
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Hiking> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Sport> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#HistoryMuseum
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#HistoryMuseum> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Museum> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Holiday
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Holiday> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> rdf:type owl:Class ;
+                                                                                skos:prefLabel "Home"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Hotel
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Hotel> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Accommodation> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Infancy
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Infancy> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Inn
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Inn> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Accommodation> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#InterestingPeople
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#InterestingPeople> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#People> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#July4th
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#July4th> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Kwanzaa
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Kwanzaa> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#LaborDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#LaborDay> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> ;
+                                                                                    skos:altLabel "Labor Day Weekend"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Library
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Library> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MLKDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MLKDay> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MemorialDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MemorialDay> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MentalHealth
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MentalHealth> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Health> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MiddleSchoolYears
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MiddleSchoolYears> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MothersDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#MothersDay> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Museum
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Museum> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#NationalChocolateDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#NationalChocolateDay> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Neighborhood
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Neighborhood> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#NewYears
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#NewYears> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#NewYearsEve
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#NewYearsEve> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#News
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#News> rdf:type owl:Class ;
+                                                                                skos:altLabel "News"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Park
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Park> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#People
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#People> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Playground
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Playground> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Location> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#PrePregnancy
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#PrePregnancy> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Pregnancy
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Pregnancy> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#PresidentsDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#PresidentsDay> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#PumpkinPatch
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#PumpkinPatch> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#FallFestival> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Recipe
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Recipe> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Region
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Region> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ReligiousHoliday
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ReligiousHoliday> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Holiday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Restaurant
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Restaurant> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Dining> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Season
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Season> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Shopping
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Shopping> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Sport
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Sport> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Spring
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Spring> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Season> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#SpringBreak
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#SpringBreak> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#StPatricksDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#StPatricksDay> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> ;
+                                                                                         skos:altLabel "St. Pats"@en ,
+                                                                                                       "St. Patty's"@en ,
+                                                                                                       "St. Patty's Day"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Style
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Style> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Home> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Summer
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Summer> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Season> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#SummerCamp
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#SummerCamp> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Camp> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Swimming
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Swimming> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Sport> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Thanksgiving
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Thanksgiving> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThemePark
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThemePark> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> rdf:type owl:Class ;
+                                                                                      skos:altLabel "Do"@en ,
+                                                                                                    "Recreation"@en ;
+                                                                                      skos:note "Philosophically, everything is a \"thing to do\", if broken into its constituent pieces. For the purpose of the use case of this taxonomy, let a \"thing to do\" be roughly synonymous with a \"recreational act\"."@en ;
+                                                                                      skos:prefLabel "Things To Do"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ToddlerYears
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ToddlerYears> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Travel> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#UPickFarm
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#UPickFarm> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Farm> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ValentinesDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ValentinesDay> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#VeteransDay
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#VeteransDay> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#CulturalHoliday> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Volunteer
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Volunteer> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#ThingsToDo> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Wedding
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Wedding> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Accommodation> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Winter
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Winter> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Season> .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#YoungAdulthood
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#YoungAdulthood> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Parenting> ;
+                                                                                          skos:altLabel "Highschool Years and Beyond"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Zoo
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Zoo> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#Attraction> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#JohnByrne
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#JohnByrne> rdf:type owl:NamedIndividual ;
+                                                                                     skos:prefLabel "John Byrne"@en ;
+                                                                                     foaf:name "John Byrne"@en .
+
+
+###  http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#TylerProcko
+<http://www.semanticweb.org/prock/ontologies/2023/10/untitled-ontology-53#TylerProcko> rdf:type owl:NamedIndividual ;
+                                                                                       skos:prefLabel "Tyler Procko"@en ;
+                                                                                       foaf:mbox "tyler@semanticscience.us"@en ;
+                                                                                       foaf:name "Tyler Procko" ;
+                                                                                       foaf:page "www.semanticscience.us"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

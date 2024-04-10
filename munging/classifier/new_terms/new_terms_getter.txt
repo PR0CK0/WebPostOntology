@@ -1,0 +1,15 @@
+Prompt: Give me a list of as many terms you think are relevant from these URLs:
+
+Then pasted the content of 
+odng1.txt
+odng2.txt
+odng3.txt
+op1.txt
+tbdng.txt
+tbp1.txt
+tbp2.txt
+tbp3.txt
+tbp4.txt
+tbp5.txt
+
+Only issue is Bing searcher ran... I want it to just read the URL strings

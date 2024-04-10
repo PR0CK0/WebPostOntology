@@ -1,0 +1,3 @@
+rdfs:isDefinedBy
+
+but need to verify file hosting structure (ask mk bergman)?

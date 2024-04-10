@@ -1,0 +1,2203 @@
+@prefix : <https://hooray.media/ontology/wpo/version/0.3.0-alpha#> .
+@prefix dbp: <https://dbpedia.org/page/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wkd: <https://www.wikidata.org/wiki/> .
+
+dct:contributor a owl:AnnotationProperty .
+
+dct:created a owl:AnnotationProperty .
+
+dct:creator a owl:AnnotationProperty .
+
+dct:format a owl:AnnotationProperty .
+
+dct:language a owl:AnnotationProperty .
+
+dct:modified a owl:AnnotationProperty .
+
+dct:source a owl:AnnotationProperty .
+
+dct:title a owl:AnnotationProperty .
+
+owl:priorVersion a owl:AnnotationProperty .
+
+skos:altLabel a owl:AnnotationProperty .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .
+
+skos:note a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty .
+
+foaf:mbox a owl:AnnotationProperty .
+
+foaf:name a owl:AnnotationProperty .
+
+foaf:page a owl:AnnotationProperty .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha> a owl:Ontology ;
+    dct:contributor :JohnByrne ;
+    dct:created "2023-11-10"@en ;
+    dct:creator :TylerProcko ;
+    dct:format "text/turtle"@en ;
+    dct:language "en-US"@en ;
+    dct:modified "2024-04-01"@en ;
+    dct:source "The taxonomy underlying this ontology is inspired by AOL's DMOZ project, which ran from 1998-2017. DMOZ was an early attempt for Internet denizens to organize the web, before machines did so. Much of its hierarchy manifests here, although the perspective is certainly more focused."@en ;
+    dct:title "Web Post Ontology"@en ;
+    owl:priorVersion "0.2.2-alpha"@en ;
+    owl:versionInfo "0.3.0-alpha"@en ;
+    skos:altLabel "wpo"@en ;
+    skos:definition "The Web Post Ontology. Contains a taxonomy of conceptual/topical \"categories\" for the purpose of organizing web posts centering on parenting and dating lifestyle content."@en ;
+    skos:example "https://web.archive.org/web/20170314000301/http://www.dmoz.org/"@en ;
+    skos:note """This is a provisional (and necessarily philosophically "loose") representation of general topics/categories used to organize website content for posts pertaining to parenting and dating lifestyle. Inasmuch as the things represented here are not precisely tangible, the taxonomy is intentionally "fiat" (see Barry Smith's BFO). Therefore, the author maintains the stance that (1) the end-user view of the webpages themselves and (2) the ease of use of the website for content writers in categorizing new content are more important than the philosophical rigor of the taxonomy.
+
+Moreover, where the semantics of "subClassOf" mean inheritance and specialization, within this taxonomy, the definition of "subClassOf" is loosened. For example, while "Fall Festival" is not, semantically, a subclass of "Fall", it is nonetheless placed under "Fall". This is because the purpose of the taxonomy is to help content writers organize website posts, and such a prescription is intuitive to laymen.
+
+The BFO principle of naming things singularly (non-plurally) is violated here. This is because, for web content categorization, it is common practice for post categories to be plural. E.g., "Holidays" is more appropriately displayed on a web page than "Holiday". This is not true for every term, however, e.g., as "Family" is more appropriate than "Families". In short: the decision between singular and plural terms is subjectively based on the applicability to web content writers and readers.
+
+Some of the other BFO-esque principles are violated here: single inheritance, Aristotelian definitions and the use of roles.
+
+To retain some level of linkage to outside sources, the terms herein are linked to Wikidata and/or DBPedia terms, with either (1) skos:example or (2) dct:source. For the former, the terms are roughly similar, but not exactly the same; for the latter, the terms are considered identical. E.g., in this taxonomy, the term "Animals" excludes humans, where the Wikidata and DBPedia terms include humans. This is because, as delineated earlier, the purpose of this taxonomy is to be amenable to lifestyle content writers publishing magazine-like articles, so for them, humans are not necessarily animals, as pets and wildlife are."""@en .
+
+:5k a owl:Class ;
+    rdfs:label "5k"@en ;
+    dct:source dbp:5K_run,
+        wkd:Q9171043 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Running ;
+    skos:definition "A Running subclass that pertains to a long-distance running competition over five kilometers."@en .
+
+:AnnaMariaIsland a owl:Class ;
+    rdfs:label "Anna Maria Island"@en ;
+    dct:source "https://dbpedia.org/page/Anna_Maria_Island"@en,
+        "https://www.wikidata.org/wiki/Q4767301"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SouthwestFlorida ;
+    skos:definition "The named island of Anna Maria Island within the Southwest Florida region."@en .
+
+:Appetizers a owl:Class ;
+    rdfs:label "Appetizers"@en ;
+    dct:source <https://dbpedia.org/page/Hors_d'oeuvre>,
+        wkd:Q1628963 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :DiningCourse ;
+    skos:definition "A Dining Course that precedes all other courses, typically with a small amount of food."@en .
+
+:Aquariums a owl:Class ;
+    rdfs:label "Aquariums"@en ;
+    dct:source wkd:Q2281788 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction that houses large tanks for water-dwelling species for the viewing of the public."@en ;
+    skos:example dbp:Aquarium .
+
+:ArtMuseum a owl:Class ;
+    rdfs:label "Art Museum"@en ;
+    dct:source dbp:Art_museum,
+        wkd:Q207694 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Museums ;
+    skos:definition "A Museum that specifically displays art."@en .
+
+:AsianPacificHeritageMonth a owl:Class ;
+    rdfs:label "Asian Pacific Heritage Month"@en ;
+    dct:source wkd:Q4806710 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HolidayMonths ;
+    skos:definition "A Holiday Month recognizing the influence of Asian American and Pacific Islanders in the United States of America."@en .
+
+:AskTheDoc a owl:Class ;
+    rdfs:label "Ask the Doc"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpecialContent ;
+    skos:definition "A Special Content subclass that pertains to questions answered by a licensed medical doctor."@en .
+
+:Author a owl:Class ;
+    rdfs:label "Author"@en ;
+    dct:source dbp:Author,
+        wkd:Q482980 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Occupations ;
+    skos:definition "An Occupation that pertains to those who author artifacts for publication."@en .
+
+:Aviary a owl:Class ;
+    rdfs:label "Aviary"@en ;
+    dct:source dbp:Aviary,
+        wkd:Q1363025 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction housing airborne animals, like birds and bats."@en .
+
+:Babysitting a owl:Class ;
+    rdfs:label "Babysitting"@en ;
+    dct:source dbp:Babysitting,
+        wkd:Q797990 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parenting ;
+    skos:definition "A Parenting subclass that pertains to individuals taking care of the children of others, typically in the house of the family and for monetary payment."@en .
+
+:Bachelorette a owl:Class ;
+    rdfs:label "Bachelorette"@en ;
+    dct:source dbp:Bachelorette,
+        wkd:Q4838841 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Singles ;
+    skos:definition "A Single person who is a female."@en .
+
+:Bachelors a owl:Class ;
+    rdfs:label "Bachelors"@en ;
+    dct:source dbp:Bachelor,
+        wkd:Q516445 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Singles ;
+    skos:definition "A Single person who is a male."@en .
+
+:BackToSchool a owl:Class ;
+    rdfs:label "Back To School"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Education ;
+    skos:definition "An Education subclass that pertains to the few weeks or months leading up to children returning to school after a break."@en .
+
+:Ballroom a owl:Class ;
+    rdfs:label "Ballroom"@en ;
+    dct:source dbp:Ballroom,
+        wkd:Q805353 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is typically upscale and intended for group dancing."@en .
+
+:Baseball a owl:Class ;
+    rdfs:label "Baseball"@en ;
+    dct:source dbp:Baseball,
+        wkd:Q5369 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TeamSports ;
+    skos:definition "A Team Sport played with a bat and ball, where two teams take turns batting and fielding."@en .
+
+:Basketball a owl:Class ;
+    rdfs:label "Basketball"@en ;
+    dct:source dbp:Basketball,
+        wkd:Q5372 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TeamSports ;
+    skos:definition "A Team Sport played on a rectangular court where two teams try to put a basketball through the defending team's hoop."@en .
+
+:Beaches a owl:Class ;
+    rdfs:label "Beaches"@en ;
+    dct:source dbp:Beach,
+        wkd:Q40080 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction that is alongside a body of water, typically rich with sand."@en .
+
+:Beauty a owl:Class ;
+    rdfs:label "Beauty"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to personal appearance."@en ;
+    skos:example dbp:Hygiene,
+        wkd:Q162297 .
+
+:Biking a owl:Class ;
+    rdfs:label "Biking"@en ;
+    dct:source dbp:Cycling,
+        wkd:Q53121 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "A Sport that involves the use of bicycles."@en .
+
+:Birthday a owl:Class ;
+    rdfs:label "Birthday"@en ;
+    dct:source dbp:Birthday ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Family ;
+    skos:definition "A Family subclass that pertains to celebration of an individual's day of birth."@en ;
+    skos:example wkd:Q47223 .
+
+:BirthdayPartyVenue a owl:Class ;
+    rdfs:label "Birthday Party Venue"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is intended for birthday celebrations."@en .
+
+:BlackFriday a owl:Class ;
+    rdfs:label "Black Friday"@en ;
+    dct:source wkd:Q86483 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Shopping ;
+    skos:definition "A Shopping subclass that pertains to the period of time in which retail establishments sell items at significant discounts."@en .
+
+:BlackHistoryMonth a owl:Class ;
+    rdfs:label "Black History Month"@en ;
+    dct:source dbp:Black_History_Month,
+        wkd:Q458206 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HolidayMonths ;
+    skos:definition "A Holiday Month recognizing the influence of black Americans in the United States of America."@en .
+
+:Books a owl:Class ;
+    rdfs:label "Books"@en ;
+    dct:source dbp:Book,
+        wkd:Q571 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:altLabel "A Things To Do subclass that pertains to literature."@en .
+
+:Breakfast a owl:Class ;
+    rdfs:label "Breakfast"@en ;
+    dct:source dbp:Breakfast,
+        wkd:Q80973 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :DiningCourse ;
+    skos:definition "A Dining Course that occurs in the morning, typically as the first meal of the day."@en .
+
+:Breweries a owl:Class ;
+    rdfs:label "Breweries"@en ;
+    dct:source dbp:Brewery,
+        wkd:Q131734 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to establishments producing beer."@en .
+
+:Brunch a owl:Class ;
+    rdfs:label "Brunch"@en ;
+    dct:source dbp:Brunch,
+        wkd:Q734263 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :DiningCourse ;
+    skos:definition "A Dining Course that occurs between Breakfast and Lunch, typically with a small amount of food."@en .
+
+:COVID-19 a owl:Class ;
+    rdfs:label "COVID-19"@en ;
+    dct:source dbp:COVID-19 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :News ;
+    skos:definition "A News subclass that pertains to the COVID-19 pandemic."@en ;
+    skos:example wkd:Q84263196 .
+
+:Cats a owl:Class ;
+    dct:source dbp:Cat,
+        wkd:Q146 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Pets ;
+    skos:definition "A Pet that has the species name Felis catus."@en .
+
+:CharterSchools a owl:Class ;
+    rdfs:label "Charter Schools"@en ;
+    dct:source dbp:Charter_school,
+        wkd:Q12241709 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PublicSchools ;
+    skos:definition "A Public School subclass that includes publicly-funded schools, without tuition, that may have more autonomy than traditional public schools in their operations and teaching methods."@en .
+
+:CheapAndFree a owl:Class ;
+    rdfs:label "Cheap and Free"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpecialContent ;
+    skos:definition "A Special Content subclass that pertains to fiscally cheap or free items or services."@en .
+
+:ChristmasLights a owl:Class ;
+    rdfs:label "Christmas Lights"@en ;
+    dct:source wkd:Q1653073 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Christmas ;
+    skos:definition "A Christmas subclass that pertains to the tradition of hanging or viewing Christmas lights."@en .
+
+:ChristmasTree a owl:Class ;
+    rdfs:label "Christmas Tree"@en ;
+    dct:source dbp:Christmas_tree,
+        wkd:Q47128 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Christmas ;
+    skos:definition "A Christmas subclass that pertains to a decorated tree, typically an evergreen conifer, set up for the purpose of celebrating Christmas."@en .
+
+:Churches a owl:Class ;
+    rdfs:label "Churches"@en ;
+    dct:source dbp:Church_\(building\),
+        wkd:Q16970 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location in which religious worship takes place."@en .
+
+:CincoDeMayo a owl:Class ;
+    rdfs:label "Cinco de Mayo"@en ;
+    dct:source dbp:Cinco_de_Mayo,
+        wkd:Q660447 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday held on May 5th to commemorate the anniversary of a historical Mexican victory over the Second French Empire."@en .
+
+:Clearwater a owl:Class ;
+    rdfs:label "Clearwater"@en ;
+    dct:source "https://dbpedia.org/page/Clearwater,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q244146"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TampaBay ;
+    skos:definition "The named city of Clearwater within the Tampa Bay region."@en .
+
+:Clermont a owl:Class ;
+    rdfs:label "Clermont"@en ;
+    dct:source <https://dbpedia.org/page/Clermont,_Florida>,
+        wkd:Q531446 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Clermont within the Central Florida region."@en .
+
+:Coffee a owl:Class ;
+    rdfs:label "Coffee"@en ;
+    dct:source dbp:Coffee,
+        wkd:Q8486 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Drinks ;
+    skos:definition "A Drinks subclass that pertains to the drink brewed from the coffee bean."@en .
+
+:ComedyClub a owl:Class ;
+    rdfs:label "Comedy Club"@en ;
+    dct:source wkd:Q2814066 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is established to provide a stage for comedians and short accomodations for audiences."@en .
+
+:Concerts a owl:Class ;
+    rdfs:label "Concerts"@en ;
+    dct:source dbp:Concert,
+        wkd:Q182832 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :LiveMusic ;
+    skos:definition "A Live Music subclass that pertains to large settings intended to facilitate a musician or band for performing their music."@en .
+
+:Contests a owl:Class ;
+    rdfs:label "Contests"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Event in which individuals compete for a prize or award."@en ;
+    skos:example wkd:Q841654 .
+
+:CraftBeer a owl:Class ;
+    rdfs:label "Craft Beer"@en ;
+    dct:source dbp:Craft_beer,
+        wkd:Q25866325 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Beer ;
+    skos:definition "A Beer subclass that pertains to beer typically brewed in a small, local or otherwise limited fashion."@en .
+
+:Crafts a owl:Class ;
+    rdfs:label "Crafts"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to the creation of new artifacts out of extant artifacts."@en ;
+    skos:example dbp:Craft,
+        wkd:Q2207288 .
+
+:Cruise a owl:Class ;
+    rdfs:label "Cruise"@en ;
+    dct:source wkd:Q1745299 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Travel ;
+    skos:definition "A Travel subclass that pertains to the use of a large passenger ship to tourist destinations."@en .
+
+:Dads a owl:Class ;
+    rdfs:label "Dads"@en ;
+    dct:source dbp:Father,
+        wkd:Q7565 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :InterestingPeople ;
+    skos:definition "A Interesting People subclass that pertains to fathers."@en .
+
+:DanceStudio a owl:Class ;
+    rdfs:label "Dance Studio"@en ;
+    dct:source wkd:Q1561361 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is intended to teach dancing."@en .
+
+:Dancing a owl:Class ;
+    rdfs:label "Dancing"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to rhythmically moving the body, possibly to music."@en ;
+    skos:example dbp:Dance,
+        wkd:Q11639 .
+
+:DateNight a owl:Class ;
+    rdfs:label "Date Night"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to romantic dates in the evening."@en .
+
+:Dating a owl:Class ;
+    rdfs:label "Dating"@en ;
+    dct:source dbp:Dating,
+        wkd:Q654810 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Relationships ;
+    skos:definition "A Relationships subclass that pertains to dating, courtship and pre-marital romantic activities."@en .
+
+:DayTrip a owl:Class ;
+    rdfs:label "Day Trip"@en ;
+    dct:source wkd:Q15850009 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to short trips taking no more than a day to return home."@en .
+
+:Daycare a owl:Class ;
+    rdfs:label "Daycare"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parenting ;
+    skos:definition "A Parenting subclass that pertains to services and establishments used to tend to the children of others."@en .
+
+:DaytonaBeach a owl:Class ;
+    rdfs:label "Daytona Beach"@en ;
+    dct:source <https://dbpedia.org/page/Daytona_Beach,_Florida>,
+        wkd:Q490595 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Daytona Beach within the Central Florida region."@en .
+
+:Deals a owl:Class ;
+    rdfs:label "Deals"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Shopping ;
+    skos:definition "A Shopping subclass that pertains to item offers perceived to be appreciably cheaper than otherwise."@en .
+
+:Decorating a owl:Class ;
+    rdfs:label "Decorating"@en ;
+    dct:source wkd:Q91791919 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to the apperance of a home."@en ;
+    skos:example dbp:Christmas_decoration,
+        dbp:Interior_design .
+
+:Deltona a owl:Class ;
+    rdfs:label "Deltona"@en ;
+    dct:source <https://dbpedia.org/page/Deltona,_Florida>,
+        wkd:Q1898798 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Deltona within the Central Florida region."@en .
+
+:Desserts a owl:Class ;
+    rdfs:label "Desserts"@en ;
+    dct:source dbp:Dessert,
+        wkd:Q182940 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :DiningCourse ;
+    skos:definition "A Dining Course that typically occurs after a meal, with sugary, sweet foods."@en .
+
+:Dinner a owl:Class ;
+    rdfs:label "Dinner"@en ;
+    dct:source dbp:Dinner,
+        wkd:Q657221 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :DiningCourse ;
+    skos:definition "A Dining Course that occurs later in the evening."@en .
+
+:Dogs a owl:Class ;
+    dct:source dbp:Dog,
+        wkd:Q144 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Pets ;
+    skos:definition "A Pet that has the species name Canis lupus familiaris."@en .
+
+:EasterBunny a owl:Class ;
+    rdfs:label "Easter Bunny"@en ;
+    dct:source dbp:Easter_Bunny,
+        wkd:Q108636 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Easter ;
+    skos:definition "An Easter subclass that pertains to the folkloric figure of Easter, a rabbit bringing Easter eggs."@en .
+
+:EasterEggHunting a owl:Class ;
+    rdfs:label "Easter Egg Hunting"@en ;
+    dct:source dbp:Egg_hunt ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Easter ;
+    skos:definition "An Easter subclass that pertains to the Easter tradition of children hunting for hidden eggs, either real and hard-boiled or plastic and filled with treats or toys, typically played on Easter Sunday."@en ;
+    skos:example wkd:Q5347845 .
+
+:ElementarySchool a owl:Class ;
+    rdfs:label "Elementary School"@en ;
+    dct:source dbp:Primary_school,
+        wkd:Q15155051 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByLifeStage ;
+    skos:definition "A Schools By Life Stage subclass that pertains to children aged 7 to 11, or roughly grades 5-6."@en .
+
+:ElementaryYears a owl:Class ;
+    rdfs:label "Elementary Years"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 5 and 8."@en .
+
+:Engagement a owl:Class ;
+    rdfs:label "Engagement"@en ;
+    dct:source dbp:Engagement,
+        wkd:Q157512 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Relationships ;
+    skos:definition "A Relationships subclass that pertains to the state of being engaged to one's spouse prior to marriage."@en .
+
+:Exercise a owl:Class ;
+    rdfs:label "Exercise"@en ;
+    dct:source dbp:Exercise,
+        wkd:Q219067 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Fitness ;
+    skos:definition "A Fitness subclass that pertains to physical exercise activities intended to enhance physical wellness."@en .
+
+:FamilyFun a owl:Class ;
+    rdfs:label "Family Fun"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to activities friendly to families."@en .
+
+:FarmersMarket a owl:Class ;
+    rdfs:label "Farmers' Market"@en ;
+    dct:source <https://dbpedia.org/page/Farmers'_market>,
+        wkd:Q1522620 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is typically established in a transient manner for the purpose of hosting local farmers who intend to sell their goods."@en .
+
+:Fashion a owl:Class ;
+    rdfs:label "Fashion"@en ;
+    dct:source dbp:Fashion,
+        wkd:Q12684 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to personal appearance through artifacts, such as clothing."@en .
+
+:FathersDay a owl:Class ;
+    rdfs:label "Father's Day"@en ;
+    dct:source <https://dbpedia.org/page/Father's_Day>,
+        wkd:Q134847 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that celebrates fathers."@en .
+
+:Featured a owl:Class ;
+    rdfs:label "Featured"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpecialContent ;
+    skos:definition "A Special Content subclass that pertains to preferred or otherwise important content."@en .
+
+:FloridaKeys a owl:Class ;
+    rdfs:label "Florida Keys"@en ;
+    dct:source dbp:Florida_Keys,
+        wkd:Q537749 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:definition "A Florida area that pertains to the chain of islands south of Florida's primary landmass."@en .
+
+:FoodTrucks a owl:Class ;
+    rdfs:label "Food Trucks"@en ;
+    dct:source dbp:Food_truck,
+        wkd:Q3303463 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to mobile food service vehicles."@en .
+
+:Football a owl:Class ;
+    rdfs:label "Football"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TeamSports ;
+    skos:example dbp:Football,
+        wkd:Q41323,
+        "A Team Sport played with an oval-shaped ball on a rectangular field with the goal of advancing the ball into the defending team's side."@en .
+
+:FortLauderdale a owl:Class ;
+    rdfs:label "Fort Lauderdale"@en ;
+    dct:source <https://dbpedia.org/page/Fort_Lauderdale,_Florida>,
+        wkd:Q165972 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SoutheastFlorida ;
+    skos:definition "The named city of Fort Lauderdale within the Southeast Florida region."@en .
+
+:FortMyers a owl:Class ;
+    rdfs:label "Fort Myers"@en ;
+    dct:source "https://dbpedia.org/page/Fort_Myers,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q506451"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SouthwestFlorida ;
+    skos:definition "The named city of Fort Myers within the Southwest Florida region."@en .
+
+:Friends a owl:Class ;
+    rdfs:label "Friends"@en ;
+    dct:source wkd:Q17297777 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Audience ;
+    skos:definition "An Audience subclass that pertains to close acquaintances."@en ;
+    skos:example dbp:Friendship .
+
+:Games a owl:Class ;
+    rdfs:label "Games"@en ;
+    dct:source dbp:Game,
+        wkd:Q11410 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to activities performed in groups for entertainment."@en .
+
+:Garden a owl:Class ;
+    rdfs:label "Garden"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction that is a planned space, typically outdoors, reserved for the display and enjoyment of flora and other natural things."@en ;
+    skos:example dbp:Garden,
+        wkd:Q1107656,
+        wkd:Q167346 .
+
+:Gardening a owl:Class ;
+    rdfs:label "Gardening"@en ;
+    dct:source dbp:Gardening,
+        wkd:Q124946 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to the maintenance of gardens."@en .
+
+:GirlsNightOut a owl:Class ;
+    rdfs:label "Girls Night Out"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:altLabel "GNO"@en ;
+    skos:definition "An Events subclass that pertains to female friends enjoying the company of one another in the evening."@en .
+
+:Glamping a owl:Class ;
+    rdfs:label "Glamping"@en ;
+    dct:source dbp:Glamping,
+        wkd:Q2153744 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Camping ;
+    skos:definition "A Camping subclass that pertains to \"glamorous camping\", typically with expensive or luxurious equipment."@en .
+
+:Gyms a owl:Class ;
+    rdfs:label "Gyms"@en ;
+    dct:source dbp:Gym ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Fitness ;
+    skos:definition "A Fitness subclass that pertains to locations used to perform physical activities."@en ;
+    skos:example wkd:Q1065656,
+        wkd:Q14092 .
+
+:Hanukkah a owl:Class ;
+    rdfs:label "Hanukkah"@en ;
+    dct:source dbp:Hanukkah,
+        wkd:Q130881 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ReligiousHolidays ;
+    skos:definition "A Religious Holiday celebrated by those practicing Judaism."@en .
+
+:HappyHour a owl:Class ;
+    rdfs:label "Happy Hour"@en ;
+    dct:source dbp:Happy_hour,
+        wkd:Q1364401 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Bars ;
+    skos:definition "A Bars subclass that pertains to a period of time during the day when drinks are discounted."@en .
+
+:HauntedHouse a owl:Class ;
+    rdfs:label "Haunted House"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Halloween ;
+    skos:definition dbp:Haunted_house,
+        wkd:Q545599,
+        "A Halloween subclass that pertains to a house perceived to be inhabited by spirits of the deceased, typically open to the public for entertainment."@en .
+
+:HighSchool a owl:Class ;
+    rdfs:label "High School"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByLifeStage ;
+    skos:definition "A Schools By Life Stage subclass that pertains to children aged 14 to 18, or roughly grades 9-12."@en ;
+    skos:example dbp:Secondary_school,
+        wkd:Q9826 .
+
+:HighSchoolYears a owl:Class ;
+    rdfs:label "High School Years"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 16 and 18."@en .
+
+:Hiking a owl:Class ;
+    rdfs:label "Hiking"@en ;
+    dct:source dbp:Hiking,
+        wkd:Q12014035 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "A Sport that involves walking, typically through nature trails."@en .
+
+:HispanicHeritageMonth a owl:Class ;
+    rdfs:label "Hispanic Heritage Month"@en ;
+    dct:source dbp:National_Hispanic_Heritage_Month_\(United_States\),
+        wkd:Q6973362 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HolidayMonths ;
+    skos:definition "A Holiday Month recognizing the influence of Hispanic Americans in the United States."@en .
+
+:HistoryMuseum a owl:Class ;
+    rdfs:label "History Museum"@en ;
+    dct:source wkd:Q16735822 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Museums ;
+    skos:definition "A Museum that specifically displays artifacts of historical importance, typically centering around some theme or time period."@en .
+
+:HomeSchool a owl:Class ;
+    rdfs:label "Home School"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByGovernance ;
+    skos:definition "A Schools By Governance subclass that pertains to schooling environments constrained to parents acting as the teacher of their child(ren)."@en ;
+    skos:example dbp:Homeschooling .
+
+:Hotel a owl:Class ;
+    rdfs:label "Hotel"@en ;
+    dct:source dbp:Hotel,
+        wkd:Q27686 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Accommodations ;
+    skos:definition "An Accomodation that provides short-term lodging for money."@en .
+
+:Indoor a owl:Class ;
+    rdfs:label "Indoor"@en ;
+    dct:source wkd:Q1299240 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Scene ;
+    skos:definition "A Scene that is placed within a constructed building."@en .
+
+:Infancy a owl:Class ;
+    rdfs:label "Infancy"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 0 and 2."@en ;
+    skos:example dbp:Infant,
+        wkd:Q49257364 ;
+    skos:note "Synonymous with Babies."@en .
+
+:Inn a owl:Class ;
+    rdfs:label "Inn"@en ;
+    dct:source dbp:Inn,
+        wkd:Q256020 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Accommodations ;
+    skos:definition "An Accomodation that provides short-term lodging, food and drink for money."@en .
+
+:Jacksonville a owl:Class ;
+    rdfs:label "Jacksonville"@en ;
+    dct:source <https://dbpedia.org/page/Jacksonville,_Florida>,
+        wkd:Q16568 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NortheastFlorida ;
+    skos:definition "The named city of Jacksonville within the Northeast Florida region."@en .
+
+:Jogging a owl:Class ;
+    rdfs:label "Jogging"@en ;
+    dct:source dbp:Jogging,
+        wkd:Q816261 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "A Sport that involves ambulation at a faster-than-walking pace."@en .
+
+:July4thFireworks a owl:Class ;
+    rdfs:label "July 4th Fireworks"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :July4th ;
+    skos:definition "A July 4th subclass that pertains to the July 4th tradition of celebrating with fireworks."@en ;
+    skos:example wkd:Q2699757 .
+
+:JuniorHigh a owl:Class ;
+    rdfs:label "Junior High"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByLifeStage ;
+    skos:definition "A Schools By Life Stage subclass that pertains to children aged 12 to 15, or roughly grades 7-9."@en ;
+    skos:example dbp:Middle_school,
+        wkd:Q149566 .
+
+:JuniorHighYears a owl:Class ;
+    rdfs:label "Junior High Years"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 13 and 15."@en .
+
+:Kids a owl:Class ;
+    rdfs:label "Kids"@en ;
+    dct:source dbp:Child,
+        wkd:Q7569 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :InterestingPeople ;
+    skos:definition "A Interesting People subclass that pertains to children."@en .
+
+:Kindergarten a owl:Class ;
+    rdfs:label "Kindergarten"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByLifeStage ;
+    skos:definition "A Schools By Life Stage subclass that pertains to children aged 5 to 6."@en ;
+    skos:example dbp:Kindergarten,
+        wkd:Q126807 .
+
+:Kissimmee a owl:Class ;
+    rdfs:label "Kissimmee"@en ;
+    dct:source <https://dbpedia.org/page/Kissimmee,_Florida>,
+        wkd:Q583894 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Kissimmee within the Central Florida region."@en .
+
+:Kwanzaa a owl:Class ;
+    rdfs:label "Kwanzaa"@en ;
+    dct:source dbp:Kwanzaa,
+        wkd:Q746851 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that is a celebration of black American culture, held from December 26th to January 1st."@en .
+
+:LaborDay a owl:Class ;
+    rdfs:label "Labor Day"@en ;
+    dct:source dbp:Labor_Day,
+        wkd:Q848352 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:altLabel "Labor Day Weekend"@en ;
+    skos:definition "A Cultural Holiday that celebrates the American labor movement."@en .
+
+:Lakeland a owl:Class ;
+    rdfs:label "Lakeland"@en ;
+    dct:source <https://dbpedia.org/page/Lakeland,_Florida>,
+        wkd:Q639452 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Lakeland within the Central Florida region."@en .
+
+:Libraries a owl:Class ;
+    rdfs:label "Libraries"@en ;
+    dct:source dbp:Library,
+        wkd:Q7075 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is established to house and loan books."@en .
+
+:Lunch a owl:Class ;
+    rdfs:label "Lunch"@en ;
+    dct:source dbp:Lunch,
+        wkd:Q12896105 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :DiningCourse ;
+    skos:definition "A Dining Course that occurs in the afternoon or early evening."@en .
+
+:MLKDay a owl:Class ;
+    rdfs:label "MLK Day"@en ;
+    dct:source dbp:Martin_Luther_King_Jr._Day,
+        wkd:Q81644424 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:altLabel "Martin Luther King Day"@en ;
+    skos:definition "A Cultural Holiday that takes place on the third Monday of January, the birthday of Martin Luther King Jr."@en .
+
+:Marathon a owl:Class ;
+    rdfs:label "Marathon"@en ;
+    dct:source dbp:Marathon,
+        wkd:Q40244 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Running ;
+    skos:definition "A Running subclass that pertains to a long-distance running competition over 42.195 kilometers."@en .
+
+:MardiGras a owl:Class ;
+    rdfs:label "Mardi Gras"@en ;
+    dct:source dbp:Mardi_Gras,
+        wkd:Q35105 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that is the final day of Carnival; Mardi Gras, from French, translates literally to \"Fat Tuesday\", reflecting how partakers consume fatty foods in preparation for the fasting of Lent."@en .
+
+:Marriage a owl:Class ;
+    rdfs:label "Marriage"@en ;
+    dct:source dbp:Marriage,
+        wkd:Q8445 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Relationships ;
+    skos:definition "A Relationships subclass that pertains to marriage or post-marriage topics."@en .
+
+:MarriedCouples a owl:Class ;
+    rdfs:label "Married Couples"@en ;
+    dct:source wkd:Q3046146 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Couples ;
+    skos:definition "A Couple that has been married previously."@en ;
+    skos:example dbp:Monogamy .
+
+:MedicalDoctor a owl:Class ;
+    rdfs:label "Medical Doctor"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Doctor ;
+    skos:definition "A Doctor that is licensed in medicine."@en ;
+    skos:example wkd:Q39631 .
+
+:Melbourne a owl:Class ;
+    rdfs:label "Melbourne"@en ;
+    dct:source <https://dbpedia.org/page/Melbourne,_Florida>,
+        wkd:Q949779 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Melbourne within the Central Florida region."@en .
+
+:MemorialDay a owl:Class ;
+    rdfs:label "Memorial Day"@en ;
+    dct:source dbp:Memorial_Day,
+        wkd:Q371781 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday in the United States that commemorates military personnel who gave their lives in service of their country."@en .
+
+:MentalHealth a owl:Class ;
+    rdfs:label "Mental Health"@en ;
+    dct:source dbp:Mental_health,
+        wkd:Q317309 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Health ;
+    skos:definition "A Health subclass that pertains to mental wellbeing."@en .
+
+:Miami a owl:Class ;
+    rdfs:label "Miami"@en ;
+    dct:source dbp:Miami,
+        wkd:Q8652 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SoutheastFlorida ;
+    skos:definition "The named city of Miami within the Southeast Florida region."@en .
+
+:MiddleSchool a owl:Class ;
+    rdfs:label "Middle School"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByLifeStage ;
+    skos:definition "A Schools By Life Stage subclass that pertains to children aged 11 to 13, or roughly grades 6-8."@en ;
+    skos:example dbp:Middle_school,
+        wkd:Q149566 .
+
+:MiddleSchoolYears a owl:Class ;
+    rdfs:label "Middle School Years"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 9 and 12."@en ;
+    skos:example wkd:Q116789753 .
+
+:Moms a owl:Class ;
+    rdfs:label "Moms"@en ;
+    dct:source dbp:Mother,
+        wkd:Q7560 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :InterestingPeople ;
+    skos:definition "A Interesting People subclass that pertains to mothers."@en .
+
+:MothersDay a owl:Class ;
+    rdfs:label "Mother's Day"@en ;
+    dct:source <https://dbpedia.org/page/Mother's_Day>,
+        wkd:Q6917243 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that celebrates mothers."@en .
+
+:Motorsports a owl:Class ;
+    rdfs:label "Motorsports"@en ;
+    dct:source dbp:Motorsport,
+        wkd:Q5367 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "Any Sport that involves motorized vehicles, typically in a timed or racing fashion."@en .
+
+:MusicFestivals a owl:Class ;
+    rdfs:label "Music Festivals"@en ;
+    dct:source dbp:Music_festival,
+        wkd:Q868557 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Festivals ;
+    skos:definition "A Festival in which a community enjoys performances of singing and music."@en .
+
+:Naples a owl:Class ;
+    rdfs:label "Naples"@en ;
+    dct:source "https://dbpedia.org/page/Naples,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q257830"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SouthwestFlorida ;
+    skos:definition "The named city of Naples within the Southwest Florida region."@en .
+
+:NationalPark a owl:Class ;
+    rdfs:label "National Park" ;
+    dct:source dbp:National_park,
+        wkd:Q46169 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parks ;
+    skos:definition "A Park used for the conservation of flora, fauna and other natural things, typically protected by a national government."@en .
+
+:NaturalSpring a owl:Class ;
+    rdfs:label "Natural Spring"@en ;
+    dct:source dbp:Spring_\(hydrology\),
+        wkd:Q124714 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parks ;
+    skos:definition "A Park that is centered around a natural flow of groundwater from an aquifer."@en .
+
+:Neighborhoods a owl:Class ;
+    rdfs:label "Neighborhoods"@en ;
+    dct:source dbp:Neighbourhood,
+        wkd:Q123705 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location in which houses are built."@en .
+
+:NewSmyrnaBeach a owl:Class ;
+    rdfs:label "New Smyrna Beach"@en ;
+    dct:source <https://dbpedia.org/page/New_Smyrna_Beach,_Florida>,
+        wkd:Q375375 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of New Smyrna Beach within the Central Florida region."@en .
+
+:NewYears a owl:Class ;
+    rdfs:label "New Year's"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that celebrates the passing of one year into the next, on the first day of January."@en ;
+    skos:example wkd:Q196627 .
+
+:NewYearsEveFireworks a owl:Class ;
+    rdfs:label "New Year's Eve Fireworks"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NewYearsEve ;
+    skos:definition "A New Year's Eve subclass that pertains to the tradition of celebrating with fireworks at the stroke of midnight before the new year."@en ;
+    skos:example wkd:Q2699757 .
+
+:Nightlife a owl:Class ;
+    rdfs:label "Nightlife"@en ;
+    dct:source wkd:Q1594437 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to interesting activities or locations enjoyed in the evening and at night."@en .
+
+:Nutrition a owl:Class ;
+    rdfs:label "Nutrition"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Health ;
+    skos:definition "A Health subclass that pertains to diet."@en ;
+    skos:example dbp:Nutrition,
+        wkd:Q66615814 .
+
+:Ocala a owl:Class ;
+    rdfs:label "Ocala"@en ;
+    dct:source <https://dbpedia.org/page/Ocala,_Florida>,
+        wkd:Q918195 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Ocala within the Central Florida region."@en .
+
+:Oktoberfest a owl:Class ;
+    rdfs:label "Oktoberfest"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that celebrates beer, originating from Germany."@en ;
+    skos:example dbp:Oktoberfest,
+        wkd:Q102400 .
+
+:Orlando a owl:Class ;
+    rdfs:label "Orlando"@en ;
+    dct:source <https://dbpedia.org/page/Orlando,_Florida>,
+        wkd:Q49233 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Orlando within the Central Florida region."@en .
+
+:OurFavoriteThings a owl:Class ;
+    rdfs:label "Our Favorite Things"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpecialContent ;
+    skos:definition "A Special Content subclass that pertains to things favorited by content creators."@en .
+
+:Outdoor a owl:Class ;
+    rdfs:label "Outdoor"@en ;
+    dct:source wkd:Q21950738 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Scene ;
+    skos:definition "A Scene that is placed outside of a constructed building, i.e., in a natural setting."@en .
+
+:PalmBeach a owl:Class ;
+    rdfs:label "Palm Beach"@en ;
+    dct:source <https://dbpedia.org/page/Palm_Beach,_Florida>,
+        wkd:Q695411 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SoutheastFlorida ;
+    skos:definition "The named city of Palm Beach within the Southeast Florida region."@en .
+
+:PanamaCity a owl:Class ;
+    rdfs:label "Panama City"@en ;
+    dct:source <https://dbpedia.org/page/Panama_City,_Florida>,
+        wkd:Q852591 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :FloridaPanhandle ;
+    skos:definition "The named city of Panama City within the Florida Panhandle region."@en .
+
+:Parade a owl:Class ;
+    rdfs:label "Parade"@en ;
+    dct:source dbp:Parade,
+        wkd:Q657449 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to a celebratory procession typically performed in a public thoroughfare."@en .
+
+:Pensacola a owl:Class ;
+    rdfs:label "Pensacola"@en ;
+    dct:source <https://dbpedia.org/page/Pensacola,_Florida>,
+        wkd:Q486306 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :FloridaPanhandle ;
+    skos:definition "The named city of Pensacola within the Florida Panhandle region."@en .
+
+:PettingZoo a owl:Class ;
+    rdfs:label "Petting Zoo"@en ;
+    dct:source dbp:Petting_zoo,
+        wkd:Q459886 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Zoos ;
+    skos:definition "A Zoo where visitors can pet the housed animals."@en .
+
+:PlantBased a owl:Class ;
+    rdfs:label "Plant-Based"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Cuisine ;
+    skos:definition "A Cuisine subclass that pertains to establishments serving primarily plant-based foods."@en ;
+    skos:example wkd:Q7201457 .
+
+:Playgrounds a owl:Class ;
+    rdfs:label "Playgrounds"@en ;
+    dct:source dbp:Playground,
+        wkd:Q11875349 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that encompasses recreational equipment and is intended to be used by children to play."@en .
+
+:PopularPosts a owl:Class ;
+    rdfs:label "Popular Posts"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpecialContent ;
+    skos:definition "A Special Content subclass that pertains to posts interacted with a significant number of times by content consumers."@en .
+
+:PrePregnancy a owl:Class ;
+    rdfs:label "Pre Pregnancy"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that pertains to the anticipation of pregnancy."@en .
+
+:Pregnancy a owl:Class ;
+    rdfs:label "Pregnancy"@en ;
+    dct:source dbp:Pregnancy,
+        wkd:Q11995 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that pertains to the period of conception through child delivery."@en .
+
+:Preschool a owl:Class ;
+    rdfs:label "Preschool"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByLifeStage ;
+    skos:definition "A Schools By Life Stage subclass that pertains to children aged 2 to 5."@en ;
+    skos:example dbp:Preschool,
+        wkd:Q1076052 .
+
+:PresidentsDay a owl:Class ;
+    rdfs:label "Presidents Day"@en ;
+    dct:source <https://dbpedia.org/page/Presidents'_Day>,
+        wkd:Q744159 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:altLabel "Washington's Birthday"@en ;
+    skos:definition "A Cultural Holiday that commemorates George Washington's birthday, celebrated on the third Monday of February."@en .
+
+:Prom a owl:Class ;
+    rdfs:label "Prom"@en ;
+    dct:source dbp:Prom,
+        wkd:Q1150737 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Education ;
+    skos:definition "An Education subclass that pertains to the middle-youth or teenage year celebration where individuals are inclined to ask one another to attend a ceremony, where dancing and music are typical."@en .
+
+:Pubs a owl:Class ;
+    rdfs:label "Pubs"@en ;
+    dct:source dbp:Pub,
+        wkd:Q212198 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Bars ;
+    skos:definition "A Bars subclass that pertains to establishments serving alcoholic beverages, but with an emphasis on food, community and comfort, typically mirroring \"old-world\" values."@en .
+
+:PumpkinPatch a owl:Class ;
+    rdfs:label "Pumpkin Patch"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :FallFestivals ;
+    skos:definition "A Fall Festival that pertains to the growing and arrangement of pumpkins for the enjoyment of attendees."@en .
+
+:Recipes a owl:Class ;
+    rdfs:label "Recipes"@en ;
+    dct:source dbp:Recipe,
+        wkd:Q219239 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Kitchen ;
+    skos:definition "A Kitchen subclass that pertains to cooking recipes."@en .
+
+:ReligiousSchools a owl:Class ;
+    rdfs:label "Religious Schools"@en ;
+    dct:source dbp:Religious_school,
+        wkd:Q1971849 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PrivateSchools ;
+    skos:definition "A Private Schools subclass that pertains to schools with a religious focus."@en .
+
+:Restaurants a owl:Class ;
+    rdfs:label "Restaurants"@en ;
+    dct:source dbp:Restaurant,
+        wkd:Q11707 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to establishments oriented to serving food and drinks to customers."@en .
+
+:RoadTrip a owl:Class ;
+    rdfs:label "Road Trip"@en ;
+    dct:source wkd:Q6739884 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Travel ;
+    skos:definition "A Travel subclass that pertains to the act of driving, typically with others, enjoying the trip itself, and not necessarily the destination."@en .
+
+:Sanford a owl:Class ;
+    rdfs:label "Sanford"@en ;
+    dct:source <https://dbpedia.org/page/Sanford,_Florida>,
+        wkd:Q786770 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Sanford within the Central Florida region."@en .
+
+:SantaClaus a owl:Class ;
+    rdfs:label "Santa Claus"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Christmas ;
+    skos:definition "A Christmas subclass that pertains to the legendary character of Western Christian origin who is said to deliver gifts to people on Christmas Eve."@en ;
+    skos:example dbp:Santa_Claus,
+        wkd:Q315796 .
+
+:Sarasota a owl:Class ;
+    rdfs:label "Sarasota"@en ;
+    dct:source "https://dbpedia.org/page/Sarasota,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q491540"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SouthwestFlorida ;
+    skos:definition "The named city of Sarasota within the Southwest Florida region."@en .
+
+:SpecialOccasions a owl:Class ;
+    rdfs:label "Special Occasions"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events Subclass that pertains to unique or otherwise novel occasions."@en .
+
+:Spring a owl:Class ;
+    rdfs:label "Spring"@en ;
+    dct:source dbp:Spring_\(season\),
+        wkd:Q1312 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Seasons ;
+    skos:definition "A Season that follows Winter and precedes Summer."@en .
+
+:SpringBreak a owl:Class ;
+    rdfs:label "Spring Break"@en ;
+    dct:source dbp:Spring_break,
+        wkd:Q1153162 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that is established by universities and schools, allowing students and faculty a break in early spring."@en .
+
+:StAugustine a owl:Class ;
+    rdfs:label "St. Augustine"@en ;
+    dct:source <https://dbpedia.org/page/St._Augustine,_Florida>,
+        wkd:Q487988 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NortheastFlorida ;
+    skos:definition "The named city of St. Augustine within the Northeast Florida region."@en .
+
+:StPatricksDay a owl:Class ;
+    rdfs:label "St. Patricks Day"@en ;
+    dct:source wkd:Q181817 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:altLabel "St. Pats"@en,
+        "St. Patty's"@en,
+        "St. Patty's Day"@en ;
+    skos:definition "A Cultural Holiday that commemorates the death of Saint Patrick, on March 17th."@en .
+
+:StPetersburg a owl:Class ;
+    rdfs:label "St. Petersburg"@en ;
+    dct:source "https://dbpedia.org/page/St._Petersburg,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q49236"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TampaBay ;
+    skos:altLabel "St. Pete"@en ;
+    skos:definition "The named city of St. Petersburg within the Tampa Bay region."@en .
+
+:StatePark a owl:Class ;
+    rdfs:label "State Park"@en ;
+    dct:source dbp:State_park,
+        wkd:Q1761072 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parks ;
+    skos:definition "A Park that is protected at the sub-national level."@en .
+
+:Steakhouse a owl:Class ;
+    rdfs:label "Steakhouse"@en ;
+    dct:source dbp:Steakhouse,
+        wkd:Q3109696 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Cuisine ;
+    skos:definition "A Cuisine subclass that pertains to establishments serving primarily steaks."@en .
+
+:Summer a owl:Class ;
+    rdfs:label "Summer"@en ;
+    dct:source dbp:Summer,
+        wkd:Q1313 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Seasons ;
+    skos:definition "A Season that follows Spring and precedes Fall."@en .
+
+:SummerCamp a owl:Class ;
+    rdfs:label "Summer Camp"@en ;
+    dct:source dbp:Summer_camp,
+        wkd:Q876852 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Camps ;
+    skos:definition "A Camp that is typically established in a summer period, typically intended for parents to leave their children at."@en .
+
+:Sushi a owl:Class ;
+    rdfs:label "Sushi"@en ;
+    dct:source wkd:Q46383 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Cuisine ;
+    skos:definition "A Cuisine subclass that pertains to establishments serving primarily the Japanese dish of sushi."@en ;
+    skos:example dbp:Sushi .
+
+:Swimming a owl:Class ;
+    rdfs:label "Swimming"@en ;
+    dct:source dbp:Swimming,
+        wkd:Q31920 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "A Sport that involves movement through water."@en .
+
+:Tallahassee a owl:Class ;
+    rdfs:label "Tallahassee"@en ;
+    dct:source <https://dbpedia.org/page/Tallahassee,_Florida>,
+        wkd:Q37043 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :FloridaPanhandle ;
+    skos:definition "The named city of Tallahassee within the Florida Panhandle region."@en .
+
+:Tampa a owl:Class ;
+    rdfs:label "Tampa"@en ;
+    dct:source "https://dbpedia.org/page/Tampa,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q49255"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TampaBay ;
+    skos:definition "The named city of Tampa within the Tampa Bay region."@en .
+
+:Teacher a owl:Class ;
+    rdfs:label "Teacher"@en ;
+    dct:source dbp:Teacher,
+        wkd:Q37226 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Occupations ;
+    skos:definition "An Occupation that pertains to educational professionals."@en .
+
+:Thanksgiving a owl:Class ;
+    rdfs:label "Thanksgiving"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday celebrated to give thanks for harvests."@en ;
+    skos:example dbp:Thanksgiving,
+        wkd:Q2913791 .
+
+:ThemePark a owl:Class ;
+    rdfs:label "Theme Park"@en ;
+    dct:source dbp:Amusement_park,
+        wkd:Q2416723 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parks ;
+    skos:altLabel "Amusement Park"@en ;
+    skos:definition "A Park that features various attractions like rides and games for entertainment, typically centering around a theme."@en .
+
+:Throwback a owl:Class ;
+    rdfs:label "Throwback"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpecialContent ;
+    skos:definition "A Special Content subclass that pertains to the remembrance of particular periods in time."@en .
+
+:ToddlerYears a owl:Class ;
+    rdfs:label "Toddler Years"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 3 and 4."@en ;
+    skos:example dbp:Toddler,
+        wkd:Q1340307 .
+
+:Trails a owl:Class ;
+    rdfs:label "Trails"@en ;
+    dct:source dbp:Trail,
+        wkd:Q628179 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that encompasses a marked path, typically through a natural area, intended to be used recreationally by individuals engaging in hiking."@en .
+
+:TrickOrTreating a owl:Class ;
+    rdfs:label "Trick-or-Treating"@en ;
+    dct:source dbp:Trick-or-treating,
+        wkd:Q47195 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Halloween ;
+    skos:definition "A Halloween subclass that pertains to the tradition of people dressing up and going door to door asking for candy."@en .
+
+:UPickFarm a owl:Class ;
+    rdfs:label "U-Pick Farm"@en ;
+    dct:source wkd:Q7862943 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Farms ;
+    skos:definition "A Farm that allows attendees to pick their own crops for purchase."@en .
+
+:ValentinesDay a owl:Class ;
+    rdfs:label "Valentines Day"@en ;
+    dct:source <https://dbpedia.org/page/Valentine's_Day>,
+        wkd:Q37587 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that honors Saint Valentine, and celebrates love."@en .
+
+:VeteransDay a owl:Class ;
+    rdfs:label "Veterans Day"@en ;
+    dct:source dbp:Veterans_Day,
+        wkd:Q755999 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday observed on November 11th for honoring military veterans."@en .
+
+:Volunteer a owl:Class ;
+    rdfs:label "Volunteer"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to voluntary activities performed without compensation."@en ;
+    skos:example dbp:Volunteering,
+        wkd:Q188844 .
+
+:WaterPark a owl:Class ;
+    rdfs:label "Water Park"@en ;
+    dct:source dbp:Water_park,
+        wkd:Q740326 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parks ;
+    skos:definition "A Park that holds pools and facilities themed around water for entertainment."@en .
+
+:Wedding a owl:Class ;
+    rdfs:label "Wedding"@en ;
+    dct:source dbp:Wedding,
+        wkd:Q675187 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Event that pertains to the marriage of two individuals."@en .
+
+:WeekendGetaway a owl:Class ;
+    rdfs:label "Weekend Getaway"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Getaways ;
+    skos:definition "A Getaways subclass that pertains to locations travelled to in relatively short manner for no more than two or so days, typically fitting within the timeframe of a weekend."@en .
+
+:Westchase a owl:Class ;
+    rdfs:label "Westchase"@en ;
+    dct:source "https://dbpedia.org/page/Westchase,_Florida"@en,
+        "https://www.wikidata.org/wiki/Q2464007"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TampaBay ;
+    skos:definition "The named census-designated place of Westchase within the Tampa Bay region."@en .
+
+:Wildlife a owl:Class ;
+    rdfs:label "Wildlife"@en ;
+    dct:source dbp:Wildlife,
+        wkd:Q241741 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Animals ;
+    skos:definition "Any Animal that is not domesticated."@en .
+
+:Wine a owl:Class ;
+    rdfs:label "Wine"@en ;
+    dct:source dbp:Wine,
+        wkd:Q282 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Drinks ;
+    skos:definition "A Drinks subclass that pertains to alcoholic beverages typically crafted from grapes."@en .
+
+:Winter a owl:Class ;
+    rdfs:label "Winter"@en ;
+    dct:source dbp:Winter,
+        wkd:Q1311 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Seasons ;
+    skos:definition "A Season that follows Fall and precedes Spring."@en .
+
+:WinterGarden a owl:Class ;
+    rdfs:label "Winter Garden"@en ;
+    dct:source <https://dbpedia.org/page/Winter_Garden,_Florida>,
+        wkd:Q2152414 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Winter Garden within the Central Florida region."@en .
+
+:WinterPark a owl:Class ;
+    rdfs:label "Winter Park"@en ;
+    dct:source <https://dbpedia.org/page/Winter_Park,_Florida>,
+        wkd:Q986641 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named city of Winter Park within the Central Florida region."@en .
+
+:Work a owl:Class ;
+    rdfs:label "Work"@en ;
+    dct:source dbp:Work_\(human_activity\),
+        wkd:Q192581 ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to employment, service, jobs, careers, etc."@en .
+
+:WorldChocolateDay a owl:Class ;
+    rdfs:label "World Chocolate Day"@en ;
+    dct:source wkd:Q4127399 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that celebrates the arrival of chocolate in Europe from the Americas."@en .
+
+:Writer a owl:Class ;
+    rdfs:label "Writer"@en ;
+    dct:source dbp:Writer,
+        wkd:Q37226 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Occupations ;
+    skos:definition "A Occupation that pertains to those who write content."@en .
+
+:YborCity a owl:Class ;
+    rdfs:label "Ybor City"@en ;
+    dct:source "https://dbpedia.org/page/Ybor_City"@en,
+        "https://www.wikidata.org/wiki/Q3572050"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :TampaBay ;
+    skos:definition "The named neighborhood of Ybor City within the Tampa Bay region."@en .
+
+:YoungAdulthood a owl:Class ;
+    rdfs:label "Young Adulthood"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:altLabel "Highschool Years and Beyond"@en ;
+    skos:definition "A Child Life Stage that is typically recognized as the age range between 18 and 21."@en ;
+    skos:example dbp:Young_adult,
+        wkd:Q124411815,
+        wkd:Q17156455 .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/CapeCanaveral> a owl:Class ;
+    rdfs:label "Cape Canaveral"@en ;
+    dct:source <https://dbpedia.org/page/Cape_Canaveral,_Florida>,
+        wkd:Q193401 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SpaceCoast ;
+    skos:definition "The named city of Cape Canaveral within the Space Coast region."@en .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/HomeImprovement> a owl:Class ;
+    rdfs:label "Home Improvement"@en ;
+    dct:source wkd:Q2789106 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to the renovation or improvement of homes."@en .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/Speakeasy> a owl:Class ;
+    rdfs:label "Speakeasy"@en ;
+    dct:source dbp:Speakeasy,
+        wkd:Q616100 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Bars ;
+    skos:definition "A Bars subclass that pertains to the old-fashioned, Prohibition era style of establishment serving alcoholic beverages."@en .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/TeenageYears> a owl:Class ;
+    rdfs:label "Teenage Years"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ChildLifeStages ;
+    skos:example dbp:Adolescence,
+        wkd:Q1492760,
+        "A Child Life Stage that is typically recognized as the age range between (roughly) 10 and the early 20s."@en .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/YouthSports> a owl:Class ;
+    rdfs:label "Youth Sports"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Education ;
+    skos:definition "An Education subclass that pertains to sports played by youths typically in a tangentially or directly educational setting, e.g., with a school team."@en ;
+    skos:example dbp:Youth_sports,
+        wkd:Q599867 .
+
+:Beer a owl:Class ;
+    rdfs:label "Beer"@en ;
+    dct:source dbp:Beer,
+        wkd:Q44 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Drinks ;
+    skos:definition "A Drinks subclass that pertains to alcoholic beverages typically brewed from grains."@en .
+
+:Camping a owl:Class ;
+    rdfs:label "Camping"@en ;
+    dct:source dbp:Camping,
+        wkd:Q455550 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to staying outdoors, typically in natural areas, with cooking and sleeping."@en .
+
+:Camps a owl:Class ;
+    rdfs:label "Camps"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that encompasses various buildings, activities and natural areas, intended for group interactions over extended periods of time."@en .
+
+:Couples a owl:Class ;
+    rdfs:label "Couples"@en ;
+    dct:source wkd:Q219160 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Audience ;
+    skos:definition "An Audience subclass that pertains to individuals in romantic relationships."@en ;
+    skos:example dbp:Intimate_relationship .
+
+:Doctor a owl:Class ;
+    rdfs:label "Doctor"@en ;
+    dct:source dbp:Doctor_\(title\),
+        wkd:Q4618975 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Occupations ;
+    skos:definition "An Occupation that pertains to accredited doctors in some field."@en .
+
+:Fall a owl:Class ;
+    rdfs:label "Fall"@en ;
+    dct:source dbp:Autumn,
+        wkd:Q1314 ;
+    dct:title "A Season that follows Summer and precedes Winter, typically associated with the beginning of cold weather."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Seasons ;
+    skos:altLabel "Autumn"@en .
+
+:FallFestivals a owl:Class ;
+    rdfs:label "Fall Festivals"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Fall ;
+    skos:definition "A Fall subclass that pertains to celebratory festivals occuring in Fall."@en .
+
+:Farms a owl:Class ;
+    rdfs:label "Farms"@en ;
+    dct:source dbp:Farm,
+        wkd:Q131596 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that grows and harvests crops or animals."@en .
+
+:Festivals a owl:Class ;
+    rdfs:label "Festivals"@en ;
+    dct:source dbp:Festival,
+        wkd:Q132241 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Event in which a community of individuals celebrate around some cultural or religious theme."@en .
+
+:Getaways a owl:Class ;
+    rdfs:label "Getaways"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Travel ;
+    skos:definition "A Travel subclass that pertains to locations travelled to, typically for respite and relaxation."@en .
+
+:JohnByrne a owl:NamedIndividual ;
+    rdfs:label "John Byrne"@en ;
+    foaf:name "John Byrne"@en .
+
+:July4th a owl:Class ;
+    rdfs:label "July 4th"@en ;
+    dct:source dbp:Independence_Day_\(United_States\),
+        wkd:Q86591 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:altLabel "4th of July"@en,
+        "Independence Day"@en ;
+    skos:definition "A Cultural Holiday that is held on July 4th to commemorate the Declaration of Independence, when the United States of America declared independence from Great Britain."@en .
+
+:Kitchen a owl:Class ;
+    rdfs:label "Kitchen"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Home ;
+    skos:definition "A Home subclass that pertains to the interior locale used to prepare food."@en ;
+    skos:example dbp:Kitchen,
+        wkd:Q43164 .
+
+:LiveMusic a owl:Class ;
+    rdfs:label "Live Music"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Events ;
+    skos:definition "An Events subclass that pertains to scenarios where music is played live, typically by a musician or a band."@en .
+
+:NewYearsEve a owl:Class ;
+    rdfs:label "New Year's Eve"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition "A Cultural Holiday that celebrates the final day of the year."@en ;
+    skos:example wkd:Q11269 .
+
+:News a owl:Class ;
+    rdfs:label "News"@en ;
+    dct:source dbp:News ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to notable events."@en ;
+    skos:example wkd:Q1193236,
+        wkd:Q38926 .
+
+:People a owl:Class ;
+    rdfs:label "People"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to humans."@en ;
+    skos:example dbp:People,
+        wkd:Q2472587 .
+
+:PrivateSchools a owl:Class ;
+    rdfs:label "Private Schools"@en ;
+    dct:source dbp:Independent_school,
+        wkd:Q423208 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByGovernance ;
+    skos:definition "A Schools By Governance subclass that pertains to schools funded privately with tuition."@en .
+
+:PublicSchools a owl:Class ;
+    rdfs:label "Public Schools"@en ;
+    dct:source dbp:State_school,
+        wkd:Q1080794 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :SchoolsByGovernance ;
+    skos:definition "A Schools By Governance subclass that pertains to schools funded publicly, adhering to regulations prescribed by a higher governing body, e.g., a state."@en .
+
+:Region a owl:Class ;
+    rdfs:label "Region"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to geographic areas."@en ;
+    skos:example dbp:Region,
+        wkd:Q82794 .
+
+:SpaceCoast a owl:Class ;
+    rdfs:label "Space Coast"@en ;
+    dct:source dbp:Space_Coast,
+        wkd:Q2920489 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CentralFlorida ;
+    skos:definition "The named region of the Space Coast within the Central Florida region."@en .
+
+:TylerProcko a owl:NamedIndividual ;
+    rdfs:label "Tyler Procko"@en ;
+    foaf:mbox "tyler@semanticscience.us"@en ;
+    foaf:name "Tyler Procko"@en ;
+    foaf:page <https://www.semanticscience.us> .
+
+:US_State a owl:Class ;
+    rdfs:label "U.S. State"@en ;
+    dct:source dbp:U.S._state,
+        wkd:Q35657 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Region ;
+    skos:definition "A Region subclass that is an identifiable, named, bordered region within the United States of America."@en .
+
+:Zoos a owl:Class ;
+    rdfs:label "Zoos"@en ;
+    dct:source dbp:Zoo,
+        wkd:Q43501 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction that houses assorted animals kept for study, conservation or public display."@en .
+
+:Accommodations a owl:Class ;
+    rdfs:label "Accommodations"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is an establishment intended to house individuals for particular periods of time."@en .
+
+:Animals a owl:Class ;
+    rdfs:label "Animals"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to living entities that are not human."@en ;
+    skos:example dbp:Animal,
+        "https://www.wikidata.org/wiki/Q729"@en ;
+    skos:note "In the more semantically correct sense, the class of animals does include humans; but for the purpose of this ontology, which centers around web posts about lifestyle content, let us forgo the semantic rigor and distinguish animals from humans."@en .
+
+:Easter a owl:Class ;
+    rdfs:label "Easter"@en ;
+    dct:source dbp:Easter,
+        wkd:Q21196 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ReligiousHolidays ;
+    skos:definition "A Religious Holiday that is the commemoration of the resurrection of Jesus Christ."@en .
+
+:Fitness a owl:Class ;
+    rdfs:label "Fitness"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Health ;
+    skos:definition "A Health subclass that pertains to physical exercise."@en ;
+    skos:example dbp:Physical_fitness,
+        wkd:Q309252 .
+
+:Halloween a owl:Class ;
+    rdfs:label "Halloween"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :CulturalHolidays ;
+    skos:definition dbp:Halloween,
+        wkd:Q251868,
+        "A Cultural Holiday celebrated on the 31st of October."@en .
+
+:Museums a owl:Class ;
+    rdfs:label "Museums"@en ;
+    dct:source dbp:Museum,
+        wkd:Q33506 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction that holds, for display, artifacts of scientific, cultural or historical interest."@en .
+
+:NortheastFlorida a owl:Class ;
+    rdfs:label "Northeast Florida"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:altLabel "First Coast"@en ;
+    skos:definition "A Florida area that pertains to the northeast, coastal part of Florida."@en ;
+    skos:example wkd:Q387785 .
+
+:Pets a owl:Class ;
+    rdfs:label "Pets"@en ;
+    dct:source dbp:Pet,
+        wkd:Q39201 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Animals ;
+    skos:definition "An Animal that is domesticated and kept for the purpose of companionship."@en .
+
+:Running a owl:Class ;
+    rdfs:label "Running"@en ;
+    dct:source dbp:Running,
+        wkd:Q105674 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "A Sport that involves ambulation at a rapid pace, typically for exercise, to reach some destination, with a timer or in a race."@en .
+
+:Scene a owl:Class ;
+    rdfs:label "Scene"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to the locale of some activity, e.g., Indoor or Outdoor."@en ;
+    skos:note "Subject to change."@en .
+
+:Schools a owl:Class ;
+    rdfs:label "Schools"@en ;
+    dct:source dbp:School,
+        wkd:Q3914 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Education ;
+    skos:definition "A Education subclass that pertains to educational facilities."@en .
+
+:Shopping a owl:Class ;
+    rdfs:label "Shopping"@en ;
+    dct:source dbp:Shopping,
+        wkd:Q830036 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to potentially spending money to acquire new items."@en .
+
+:Singles a owl:Class ;
+    rdfs:label "Singles"@en ;
+    dct:source dbp:Single_person,
+        wkd:Q908826 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Audience ;
+    skos:definition "An Audience subclass that pertains to persons not in romantic relationships."@en .
+
+:Audience a owl:Class ;
+    rdfs:label "Audience"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to a people group of interest, e.g., as web writers focus on an Internet audience."@en ;
+    skos:example dbp:Audience,
+        schema:Audience,
+        wkd:Q211198 .
+
+:Bars a owl:Class ;
+    rdfs:label "Bars"@en ;
+    dct:source dbp:Bar_\(establishment\),
+        wkd:Q187456 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to establishments oriented toward serving alcoholic beverages."@en .
+
+:Christmas a owl:Class ;
+    rdfs:label "Christmas"@en ;
+    dct:source dbp:Christmas,
+        wkd:Q19809 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ReligiousHolidays ;
+    skos:definition "A Religious Holiday that commemorates the birth of Jesus Christ."@en .
+
+:Cuisine a owl:Class ;
+    rdfs:label "Cuisine"@en ;
+    dct:source dbp:Cuisine,
+        wkd:Q1778821 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to particular types of cuisine."@en .
+
+:Drinks a owl:Class ;
+    rdfs:label "Drinks"@en ;
+    dct:source dbp:Drink,
+        wkd:Q40050 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to orally imbibed liquids."@en .
+
+:FloridaPanhandle a owl:Class ;
+    rdfs:label "Florida Panhandle"@en ;
+    dct:source dbp:Florida_Panhandle,
+        wkd:Q1430068 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:definition "A Florida area that pertains to the northwest part of Florida."@en .
+
+:Health a owl:Class ;
+    rdfs:label "Health"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to physical and mental wellness."@en ;
+    skos:example dbp:Health,
+        wkd:Q12147 .
+
+:HolidayMonths a owl:Class ;
+    rdfs:label "Holiday Months"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Holidays ;
+    skos:definition "A Holidays subclass that pertains to holidays spanning calendar months." .
+
+:Holidays a owl:Class ;
+    rdfs:label "Holidays"@en ;
+    dct:source dbp:Holiday,
+        wkd:Q1445650 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to activities related to festive or celebratory periods of time dictated by custom or law."@en .
+
+:Parenting a owl:Class ;
+    rdfs:label "Parenting"@en ;
+    dct:source dbp:Parenting,
+        wkd:Q1217379 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Family ;
+    skos:definition "A Family subclass that pertains to raising children."@en .
+
+:Relationships a owl:Class ;
+    rdfs:label "Relationships"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Family ;
+    skos:definition "A Family subclass that pertains to romantic relationships."@en ;
+    skos:example dbp:Interpersonal_relationship,
+        dbp:Romance_\(love\),
+        wkd:Q1189047,
+        wkd:Q223642 .
+
+:ReligiousHolidays a owl:Class ;
+    rdfs:label "Religious Holidays"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Holidays ;
+    skos:definition "A Holidays subclass that pertains to holidays religious in nature."@en .
+
+:SchoolsByGovernance a owl:Class ;
+    rdfs:label "Schools by Governance"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Schools ;
+    skos:definition "Any School that is grouped by its governance type."@en .
+
+:SoutheastFlorida a owl:Class ;
+    rdfs:label "Southeast Florida"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:definition "A Florida area that pertains to the southeast, coastal part of Florida."@en .
+
+:TeamSports a owl:Class ;
+    rdfs:label "Team Sports"@en ;
+    dct:source dbp:Team_sport,
+        wkd:Q216048 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Sports ;
+    skos:definition "A Sport that involves several people on identifiable teams."@en .
+
+:Travel a owl:Class ;
+    rdfs:label "Travel"@en ;
+    dct:source dbp:Travel,
+        wkd:Q61509 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to particular activities taking individuals away from their home and/or local area."@en .
+
+:Education a owl:Class ;
+    rdfs:label "Education"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Family ;
+    skos:definition "A Family subclass that pertains to learning, teaching and development, particularly of youth."@en ;
+    skos:example dbp:Education,
+        wkd:Q8434 ;
+    skos:note "This is made a subclass of Family because, in the context of the lifestyle content being written, the primary audience is parents and much of the subject matter pertains to parenthood. I.e., \"education\" here, refers to the pre-college years, which typically occur before the age of 18, barring fringe cases."@en .
+
+:Family a owl:Class ;
+    rdfs:label "Family"@en ;
+    dct:source dbp:Family,
+        wkd:Q8436 ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to groups of people related by ancestry, marriage or some other relationship."@en .
+
+:InterestingPeople a owl:Class ;
+    rdfs:label "Interesting People"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :People ;
+    skos:definition "A People subclass that pertains to individuals of interest."@en .
+
+:Occupations a owl:Class ;
+    rdfs:label "Occupations"@en ;
+    dct:source wkd:Q12737077 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :InterestingPeople ;
+    skos:definition "A Interesting People subclass that groups persons by occupation or role."@en ;
+    skos:example dbp:Work_\(human_activity\) .
+
+:Seasons a owl:Class ;
+    rdfs:label "Seasons"@en ;
+    dct:source dbp:Season,
+        wkd:Q24384 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to the canonical yearly seasons based on weather or climate."@en .
+
+:SouthwestFlorida a owl:Class ;
+    rdfs:label "Southwest Florida"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:definition "A Florida area that pertains to the southwest area of Florida."@en ;
+    skos:example wkd:Q2902384 .
+
+:Parks a owl:Class ;
+    rdfs:label "Parks"@en ;
+    dct:source dbp:Park,
+        wkd:Q22698 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Attractions ;
+    skos:definition "An Attraction, typically outdoors and semi-natural, open to the public for enjoyment."@en .
+
+:TampaBay a owl:Class ;
+    rdfs:label "Tampa Bay"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:definition "A Florida area that pertains to the popular Tampa Bay part of Florida."@en ;
+    skos:example dbp:Tampa_Bay .
+
+:DiningCourse a owl:Class ;
+    rdfs:label "Dining Course"@en ;
+    dct:source dbp:Course_\(food\),
+        <https://www.wikidata.org/wiki/Property:P8431> ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Dining ;
+    skos:definition "A Dining subclass that pertains to the canonical courses of eating."@en ;
+    skos:note "Defined with respect to the American perspective."@en .
+
+:SchoolsByLifeStage a owl:Class ;
+    rdfs:label "Schools by Life Stage"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Schools ;
+    skos:definition "Any School that is grouped by the life stage of its attending students."@en .
+
+:SpecialContent a owl:Class ;
+    rdfs:label "Special Content"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to unique or otherwise reserved content."@en .
+
+:Attractions a owl:Class ;
+    rdfs:label "Attractions"@en ;
+    dct:source wkd:Q570116 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Locations ;
+    skos:definition "A Location that is typically interesting to individuals from a recreational perspective."@en .
+
+:Dining a owl:Class ;
+    rdfs:label "Dining"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:altLabel "Eats"@en ;
+    skos:definition "A Things To Do subclass that pertains to eating and drinking."@en ;
+    skos:example wkd:Q30915455,
+        wkd:Q5153956 .
+
+:Florida a owl:Class ;
+    rdfs:label "Florida"@en ;
+    dct:source dbp:Florida,
+        wkd:Q812 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :US_State ;
+    skos:definition "The American state of Florida."@en .
+
+:Home a owl:Class ;
+    rdfs:label "Home"@en ;
+    rdfs:isDefinedBy : ;
+    skos:definition "A top-level class that pertains to all facets of home life."@en ;
+    skos:example dbp:Home,
+        wkd:Q7743 .
+
+:Sports a owl:Class ;
+    rdfs:label "Sports"@en ;
+    dct:source dbp:Sport,
+        wkd:Q349 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to physical activities performed in a competitive or otherwise improvement-oriented manner."@en .
+
+:ChildLifeStages a owl:Class ;
+    rdfs:label "Child Life Stages"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Parenting ;
+    skos:definition "A Parenting subclass that pertains to the canonical life stages of childhood development."@en ;
+    skos:example wkd:Q48834911 .
+
+:Events a owl:Class ;
+    rdfs:label "Events"@en ;
+    dct:source wkd:Q1656682 ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to particular activities taking place in broad locales."@en .
+
+:CentralFlorida a owl:Class ;
+    rdfs:label "Central Florida"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Florida ;
+    skos:definition "A Florida area that pertains to the central part of Florida."@en ;
+    skos:example wkd:Q2920358 .
+
+:ThingsToDo a owl:Class ;
+    rdfs:label "Things To Do"@en ;
+    rdfs:isDefinedBy : ;
+    skos:altLabel "Do"@en,
+        "Recreation"@en,
+        "To Do"@en ;
+    skos:definition "A top-level class that pertains to activities of interest."@en ;
+    skos:note "Philosophically, everything is a \"thing to do\", if broken into its constituent pieces. For the purpose of the use case of this taxonomy, let a \"thing to do\" be roughly synonymous with a \"recreational act\" that does not typically occur in the home."@en .
+
+:Locations a owl:Class ;
+    rdfs:label "Locations"@en ;
+    dct:source <https://www.wikidata.org/wiki/Property:P276> ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ThingsToDo ;
+    skos:definition "A Things To Do subclass that pertains to particular locations of interest to individuals and groups."@en ;
+    skos:example dbp:Location .
+
+:CulturalHolidays a owl:Class ;
+    rdfs:label "Cultural Holidays"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Holidays ;
+    skos:definition "A Holidays subclass that pertains to holidays cultural in nature."@en .
+

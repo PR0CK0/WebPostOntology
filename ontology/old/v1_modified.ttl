@@ -1,0 +1,732 @@
+@prefix : <https://hooray.media/ontology/wpo/version/0.1.0-alpha#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <https://hooray.media/ontology/wpo/version/0.1.0-alpha> .
+
+<https://hooray.media/ontology/wpo/version/0.1.0-alpha> rdf:type owl:Ontology ;
+                                                         dct:contributor :JohnByrne ;
+                                                         dct:created "2023-11-10"@en ;
+                                                         dct:creator :TylerProcko ;
+                                                         dct:format "text/turtle"@en ;
+                                                         dct:language "en-US"@en ;
+                                                         dct:modified "2023-11-16"@en ;
+                                                         dct:title "Web Post Ontology"@en ;
+                                                         owl:versionInfo "0.1.0-alpha"@en ;
+                                                         skos:definition "The Web Post Ontology. Contains a taxonomy of conceptual/topical \"categories\" for the purpose of organizing web posts centering on parenting and dating lifestyle content."@en ;
+                                                         skos:note """This is a provisional (and necessarily philosophically \"loose\") representation of general topics/categories used to organize website content for posts pertaining to parenting and dating lifestyle. Inasmuch as the things represented here are not precisely tangible, the taxonomy is intentionally \"fiat\" (see Barry Smith's BFO). Therefore, the author maintains the stance that (1) the end-user view of the webpages themselves and (2) the ease of use of the website content writers in categorizing new content are more important than the philosophical rigor of the taxonomy.
+
+Moreover, where the semantics of \"subClassOf\" mean inheritance and specialization, within this taxonomy, the definition of \"subClassOf\" is loosened. For example, while \"Fall Festival\" is not, semantically, a subclass of \"Fall\", it is nonetheless placed under \"Fall\". This is because the purpose of the taxonomy is to help content writers organize website posts, and such a prescription is intuitive to laymen."""@en ;
+                                                         :vann:preferredNamespacePrefix "wpo"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:AnnotationProperty .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#vann:preferredNamespacePrefix
+:vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf :Location ;
+               skos:prefLabel "Accommodation"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Aquarium
+:Aquarium rdf:type owl:Class ;
+          rdfs:subClassOf :Attraction ;
+          skos:prefLabel "Aquarium"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ArtMuseum
+:ArtMuseum rdf:type owl:Class ;
+           rdfs:subClassOf :Museum ;
+           skos:prefLabel "ArtMuseum"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Attraction
+:Attraction rdf:type owl:Class ;
+            rdfs:subClassOf :Location ;
+            skos:prefLabel "Attraction"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#BackToSchool
+:BackToSchool rdf:type owl:Class ;
+              rdfs:subClassOf :Home ;
+              skos:prefLabel "BackToSchool"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Ballroom
+:Ballroom rdf:type owl:Class ;
+          rdfs:subClassOf :Travel ;
+          skos:prefLabel "Ballroom"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Bar
+:Bar rdf:type owl:Class ;
+     rdfs:subClassOf :Dining ;
+     skos:prefLabel "Bar"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Beach
+:Beach rdf:type owl:Class ;
+       rdfs:subClassOf :Attraction ;
+       skos:prefLabel "Beach"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Beauty
+:Beauty rdf:type owl:Class ;
+        rdfs:subClassOf :Home ;
+        skos:prefLabel "Beauty"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Birthday
+:Birthday rdf:type owl:Class ;
+          rdfs:subClassOf :Home ;
+          skos:prefLabel "Birthday"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#BirthdayPartyVenue
+:BirthdayPartyVenue rdf:type owl:Class ;
+                    rdfs:subClassOf :Travel ;
+                    skos:prefLabel "BirthdayPartyVenue"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Breakfast
+:Breakfast rdf:type owl:Class ;
+           rdfs:subClassOf :Dining ;
+           skos:prefLabel "Breakfast"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Brewery
+:Brewery rdf:type owl:Class ;
+         rdfs:subClassOf :Dining ;
+         skos:prefLabel "Brewery"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Brunch
+:Brunch rdf:type owl:Class ;
+        rdfs:subClassOf :Dining ;
+        skos:prefLabel "Brunch"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Camp
+:Camp rdf:type owl:Class ;
+      rdfs:subClassOf :Location ;
+      skos:prefLabel "Camp"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Christmas
+:Christmas rdf:type owl:Class ;
+           rdfs:subClassOf :ReligiousHoliday ;
+           skos:prefLabel "Christmas"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#CincoDeMayo
+:CincoDeMayo rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHoliday ;
+             skos:prefLabel "CincoDeMayo"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Concert
+:Concert rdf:type owl:Class ;
+         rdfs:subClassOf :Attraction ;
+         skos:prefLabel "Concert"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Contest
+:Contest rdf:type owl:Class ;
+         rdfs:subClassOf :Attraction ;
+         skos:prefLabel "Contest"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Craft
+:Craft rdf:type owl:Class ;
+       rdfs:subClassOf :Home ;
+       skos:prefLabel "Craft"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Cruise
+:Cruise rdf:type owl:Class ;
+        rdfs:subClassOf :Travel ;
+        skos:prefLabel "Cruise"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#CulturalHoliday
+:CulturalHoliday rdf:type owl:Class ;
+                 rdfs:subClassOf :Holiday ;
+                 skos:prefLabel "CulturalHoliday"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#DayTrip
+:DayTrip rdf:type owl:Class ;
+         rdfs:subClassOf :Travel ;
+         skos:prefLabel "DayTrip"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Deal
+:Deal rdf:type owl:Class ;
+      rdfs:subClassOf :Shopping ;
+      skos:prefLabel "Deal"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Dining
+:Dining rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        skos:altLabel "Eats"@en ;
+        skos:prefLabel "Dining"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Easter
+:Easter rdf:type owl:Class ;
+        rdfs:subClassOf :ReligiousHoliday ;
+        skos:prefLabel "Easter"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Education
+:Education rdf:type owl:Class ;
+           rdfs:subClassOf :Home ;
+           skos:prefLabel "Education"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ElementaryYears
+:ElementaryYears rdf:type owl:Class ;
+                 rdfs:subClassOf :Parenting ;
+                 skos:prefLabel "ElementaryYears"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :ThingsToDo ;
+       skos:prefLabel "Event"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Fall
+:Fall rdf:type owl:Class ;
+      rdfs:subClassOf :Season ;
+      skos:prefLabel "Fall"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#FallFestival
+:FallFestival rdf:type owl:Class ;
+              rdfs:subClassOf :Fall ;
+              skos:prefLabel "FallFestival"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Farm
+:Farm rdf:type owl:Class ;
+      rdfs:subClassOf :Location ;
+      skos:prefLabel "Farm"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#FarmersMarket
+:FarmersMarket rdf:type owl:Class ;
+               rdfs:subClassOf :Location ;
+               skos:prefLabel "FarmersMarket"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#FathersDay
+:FathersDay rdf:type owl:Class ;
+            rdfs:subClassOf :CulturalHoliday ;
+            skos:prefLabel "FathersDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Festival
+:Festival rdf:type owl:Class ;
+          rdfs:subClassOf :Attraction ;
+          skos:prefLabel "Festival"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Fitness
+:Fitness rdf:type owl:Class ;
+         rdfs:subClassOf :Health ;
+         skos:prefLabel "Fitness"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Game
+:Game rdf:type owl:Class ;
+      rdfs:subClassOf :ThingsToDo ;
+      skos:prefLabel "Game"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Getaway
+:Getaway rdf:type owl:Class ;
+         rdfs:subClassOf :Travel ;
+         skos:prefLabel "Getaway"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#GirlsNightOut
+:GirlsNightOut rdf:type owl:Class ;
+               rdfs:subClassOf :ThingsToDo ;
+               skos:altLabel "GNO"@en ;
+               skos:prefLabel "Girls Night Out"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Halloween
+:Halloween rdf:type owl:Class ;
+           rdfs:subClassOf :CulturalHoliday ;
+           skos:prefLabel "Halloween"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Hanukkah
+:Hanukkah rdf:type owl:Class ;
+          rdfs:subClassOf :ReligiousHoliday ;
+          skos:prefLabel "Hanukkah"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Health
+:Health rdf:type owl:Class ;
+        skos:prefLabel "Health"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#HighschoolYears
+:HighschoolYears rdf:type owl:Class ;
+                 rdfs:subClassOf :Parenting ;
+                 skos:prefLabel "HighschoolYears"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Hiking
+:Hiking rdf:type owl:Class ;
+        rdfs:subClassOf :Sport ;
+        skos:prefLabel "Hiking"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#HistoryMuseum
+:HistoryMuseum rdf:type owl:Class ;
+               rdfs:subClassOf :Museum ;
+               skos:prefLabel "HistoryMuseum"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Holiday
+:Holiday rdf:type owl:Class ;
+         rdfs:subClassOf :ThingsToDo ;
+         skos:prefLabel "Holiday"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Home
+:Home rdf:type owl:Class ;
+      skos:prefLabel "Home"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Accommodation ;
+       skos:prefLabel "Hotel"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Infancy
+:Infancy rdf:type owl:Class ;
+         rdfs:subClassOf :Parenting ;
+         skos:prefLabel "Infancy"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Inn
+:Inn rdf:type owl:Class ;
+     rdfs:subClassOf :Accommodation ;
+     skos:prefLabel "Inn"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#InterestingPeople
+:InterestingPeople rdf:type owl:Class ;
+                   rdfs:subClassOf :People ;
+                   skos:prefLabel "InterestingPeople"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#July4th
+:July4th rdf:type owl:Class ;
+         rdfs:subClassOf :CulturalHoliday ;
+         skos:prefLabel "July4th"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Kwanzaa
+:Kwanzaa rdf:type owl:Class ;
+         rdfs:subClassOf :CulturalHoliday ;
+         skos:prefLabel "Kwanzaa"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#LaborDay
+:LaborDay rdf:type owl:Class ;
+          rdfs:subClassOf :CulturalHoliday ;
+          skos:altLabel "Labor Day Weekend"@en ;
+          skos:prefLabel "LaborDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf :Location ;
+         skos:prefLabel "Library"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf :Travel ;
+          skos:prefLabel "Location"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#MLKDay
+:MLKDay rdf:type owl:Class ;
+        rdfs:subClassOf :CulturalHoliday ;
+        skos:prefLabel "MLKDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#MemorialDay
+:MemorialDay rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHoliday ;
+             skos:prefLabel "MemorialDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#MentalHealth
+:MentalHealth rdf:type owl:Class ;
+              rdfs:subClassOf :Health ;
+              skos:prefLabel "MentalHealth"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#MiddleSchoolYears
+:MiddleSchoolYears rdf:type owl:Class ;
+                   rdfs:subClassOf :Parenting ;
+                   skos:prefLabel "MiddleSchoolYears"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#MothersDay
+:MothersDay rdf:type owl:Class ;
+            rdfs:subClassOf :CulturalHoliday ;
+            skos:prefLabel "MothersDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :Attraction ;
+        skos:prefLabel "Museum"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#NationalChocolateDay
+:NationalChocolateDay rdf:type owl:Class ;
+                      rdfs:subClassOf :CulturalHoliday ;
+                      skos:prefLabel "NationalChocolateDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Neighborhood
+:Neighborhood rdf:type owl:Class ;
+              rdfs:subClassOf :Location ;
+              skos:prefLabel "Neighborhood"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#NewYears
+:NewYears rdf:type owl:Class ;
+          rdfs:subClassOf :CulturalHoliday ;
+          skos:prefLabel "NewYears"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#NewYearsEve
+:NewYearsEve rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHoliday ;
+             skos:prefLabel "NewYearsEve"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#News
+:News rdf:type owl:Class ;
+      skos:altLabel "News"@en ;
+      skos:prefLabel "News"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Parenting
+:Parenting rdf:type owl:Class ;
+           rdfs:subClassOf :Home ;
+           skos:prefLabel "Parenting"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Park
+:Park rdf:type owl:Class ;
+      rdfs:subClassOf :Attraction ;
+      skos:prefLabel "Park"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#People
+:People rdf:type owl:Class ;
+        skos:prefLabel "People"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Playground
+:Playground rdf:type owl:Class ;
+            rdfs:subClassOf :Location ;
+            skos:prefLabel "Playground"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#PrePregnancy
+:PrePregnancy rdf:type owl:Class ;
+              rdfs:subClassOf :Parenting ;
+              skos:prefLabel "PrePregnancy"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Pregnancy
+:Pregnancy rdf:type owl:Class ;
+           rdfs:subClassOf :Parenting ;
+           skos:prefLabel "Pregnancy"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#PresidentsDay
+:PresidentsDay rdf:type owl:Class ;
+               rdfs:subClassOf :CulturalHoliday ;
+               skos:prefLabel "PresidentsDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#PumpkinPatch
+:PumpkinPatch rdf:type owl:Class ;
+              rdfs:subClassOf :FallFestival ;
+              skos:prefLabel "PumpkinPatch"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Recipe
+:Recipe rdf:type owl:Class ;
+        rdfs:subClassOf :Dining ;
+        skos:prefLabel "Recipe"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :Travel ;
+        skos:prefLabel "Region"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ReligiousHoliday
+:ReligiousHoliday rdf:type owl:Class ;
+                  rdfs:subClassOf :Holiday ;
+                  skos:prefLabel "ReligiousHoliday"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf :Dining ;
+            skos:prefLabel "Restaurant"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Season
+:Season rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        skos:prefLabel "Season"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Shopping
+:Shopping rdf:type owl:Class ;
+          rdfs:subClassOf :ThingsToDo ;
+          skos:prefLabel "Shopping"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Sport
+:Sport rdf:type owl:Class ;
+       rdfs:subClassOf :ThingsToDo ;
+       skos:prefLabel "Sport"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Spring
+:Spring rdf:type owl:Class ;
+        rdfs:subClassOf :Season ;
+        skos:prefLabel "Spring"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#SpringBreak
+:SpringBreak rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHoliday ;
+             skos:prefLabel "SpringBreak"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#StPatricksDay
+:StPatricksDay rdf:type owl:Class ;
+               rdfs:subClassOf :CulturalHoliday ;
+               skos:altLabel "St. Pats"@en ,
+                             "St. Patty's"@en ,
+                             "St. Patty's Day"@en ;
+               skos:prefLabel "StPatricksDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Style
+:Style rdf:type owl:Class ;
+       rdfs:subClassOf :Home ;
+       skos:prefLabel "Style"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Summer
+:Summer rdf:type owl:Class ;
+        rdfs:subClassOf :Season ;
+        skos:prefLabel "Summer"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#SummerCamp
+:SummerCamp rdf:type owl:Class ;
+            rdfs:subClassOf :Camp ;
+            skos:prefLabel "SummerCamp"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Swimming
+:Swimming rdf:type owl:Class ;
+          rdfs:subClassOf :Sport ;
+          skos:prefLabel "Swimming"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Thanksgiving
+:Thanksgiving rdf:type owl:Class ;
+              rdfs:subClassOf :CulturalHoliday ;
+              skos:prefLabel "Thanksgiving"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ThemePark
+:ThemePark rdf:type owl:Class ;
+           rdfs:subClassOf :Attraction ;
+           skos:prefLabel "ThemePark"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ThingsToDo
+:ThingsToDo rdf:type owl:Class ;
+            skos:altLabel "Do"@en ,
+                          "Recreation"@en ;
+            skos:note "Philosophically, everything is a \"thing to do\", if broken into its constituent pieces. For the purpose of the use case of this taxonomy, let a \"thing to do\" be roughly synonymous with a \"recreational act\"."@en ;
+            skos:prefLabel "Things To Do"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ToddlerYears
+:ToddlerYears rdf:type owl:Class ;
+              rdfs:subClassOf :Parenting ;
+              skos:prefLabel "ToddlerYears"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Travel
+:Travel rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        skos:prefLabel "Travel"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#UPickFarm
+:UPickFarm rdf:type owl:Class ;
+           rdfs:subClassOf :Farm ;
+           skos:prefLabel "UPickFarm"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#ValentinesDay
+:ValentinesDay rdf:type owl:Class ;
+               rdfs:subClassOf :CulturalHoliday ;
+               skos:prefLabel "ValentinesDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#VeteransDay
+:VeteransDay rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHoliday ;
+             skos:prefLabel "VeteransDay"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Volunteer
+:Volunteer rdf:type owl:Class ;
+           rdfs:subClassOf :ThingsToDo ;
+           skos:prefLabel "Volunteer"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Wedding
+:Wedding rdf:type owl:Class ;
+         rdfs:subClassOf :Accommodation ;
+         skos:prefLabel "Wedding"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Winter
+:Winter rdf:type owl:Class ;
+        rdfs:subClassOf :Season ;
+        skos:prefLabel "Winter"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#YoungAdulthood
+:YoungAdulthood rdf:type owl:Class ;
+                rdfs:subClassOf :Parenting ;
+                skos:altLabel "Highschool Years and Beyond"@en ;
+                skos:prefLabel "YoungAdulthood"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#Zoo
+:Zoo rdf:type owl:Class ;
+     rdfs:subClassOf :Attraction ;
+     skos:prefLabel "Zoo"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#JohnByrne
+:JohnByrne rdf:type owl:NamedIndividual ;
+           rdfs:label "John Byrne"@en ;
+           foaf:name "John Byrne"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.1.0-alpha#TylerProcko
+:TylerProcko rdf:type owl:NamedIndividual ;
+             rdfs:label "Tyler Procko"@en ;
+             foaf:mbox "tyler@semanticscience.us"@en ;
+             foaf:name "Tyler Procko" ;
+             foaf:page "www.semanticscience.us"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,13 @@
+the prompt:
+```
+take this block of links and give me all terms you think would make good "tags" for online content, in plain text. use the word phrases present in the links. just print out the terms line by line.
+```
+
+i would then paste in 200ish lines of links and keep copying its output into the new_tags.txt file
+
+i did all the extracted URL files except for
+odng2.txt
+odng3.txt
+tbdng1.txt
+
+could have done this programattically with the API, but it was sort of throwaway anyhow

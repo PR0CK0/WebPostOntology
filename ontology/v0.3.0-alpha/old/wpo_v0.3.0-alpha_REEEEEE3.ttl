@@ -1,0 +1,3037 @@
+@prefix : <https://hooray.media/ontology/wpo/version/0.3.0-alpha#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <https://schema.org/> .
+@base <https://hooray.media/ontology/wpo/version/0.3.0-alpha> .
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha> rdf:type owl:Ontology ;
+                                                         dct:contributor :JohnByrne ;
+                                                         dct:created "2023-11-10"@en ;
+                                                         dct:creator :TylerProcko ;
+                                                         dct:format "text/turtle"@en ;
+                                                         dct:language "en-US"@en ;
+                                                         dct:modified "2024-03-29"@en ;
+                                                         dct:source "The taxonomy underlying this ontology is inspired by AOL's DMOZ project, which ran from 1998-2017. DMOZ was an early attempt for Internet denizens to organize the web, before machines did so. Much of its hierarchy manifests here, although the perspective is certainly more focused."@en ;
+                                                         dct:title "Web Post Ontology"@en ;
+                                                         rdfs:seeAlso "https://web.archive.org/web/20170314000301/http://www.dmoz.org/"@en ;
+                                                         owl:priorVersion "0.2.2-alpha"@en ;
+                                                         owl:versionInfo "0.3.0-alpha"@en ;
+                                                         skos:definition "The Web Post Ontology. Contains a taxonomy of conceptual/topical \"categories\" for the purpose of organizing web posts centering on parenting and dating lifestyle content."@en ;
+                                                         skos:note """This is a provisional (and necessarily philosophically \"loose\") representation of general topics/categories used to organize website content for posts pertaining to parenting and dating lifestyle. Inasmuch as the things represented here are not precisely tangible, the taxonomy is intentionally \"fiat\" (see Barry Smith's BFO). Therefore, the author maintains the stance that (1) the end-user view of the webpages themselves and (2) the ease of use of the website for content writers in categorizing new content are more important than the philosophical rigor of the taxonomy.
+
+Moreover, where the semantics of \"subClassOf\" mean inheritance and specialization, within this taxonomy, the definition of \"subClassOf\" is loosened. For example, while \"Fall Festival\" is not, semantically, a subclass of \"Fall\", it is nonetheless placed under \"Fall\". This is because the purpose of the taxonomy is to help content writers organize website posts, and such a prescription is intuitive to laymen.
+
+The BFO principle of naming things singularly (non-plurally) is violated here. This is because, for web content categorization, it is common practice for post categories to be plural. E.g., \"Holidays\" is more appropriately displayed on a web page than \"Holiday\". This is not true for every term, however, e.g., as \"Family\" is more appropriate than \"Families\". In short: the decision between singular and plural terms is subjectively based on the applicability to web content writers and readers.
+
+Some of the other BFO-esque principles are violated here: single inheritance, Aristotelian definitions and the use of roles.
+
+To retain some level of linkage to outside sources, the terms herein are linked to Wikidata and/or DBPedia terms, with either (1) rdfs:seeAlso or (2) owl:sameAs. For the former, the terms are roughly similar, but not exactly the same; for the latter, the terms are considered identical. E.g., in this taxonomy, the term \"Animals\" excludes humans, where the Wikidata and DBPedia terms include humans. This is because, as delineated earlier, the purpose of this taxonomy is to be amenable to lifestyle content writers publishing magazine-like articles, so for them, humans are not necessarily animals, as pets and wildlife are."""@en ;
+                                                         :vann:preferredNamespacePrefix "wpo"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:AnnotationProperty .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#vann:preferredNamespacePrefix
+:vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Accommodations
+:Accommodations rdf:type owl:Class ;
+                rdfs:subClassOf :Locations ;
+                rdfs:label "Accommodations"@en ;
+                skos:definition "A Location that is an establishment intended to house individuals for particular periods of time."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Animals
+:Animals rdf:type owl:Class ;
+         rdfs:label "Animals"@en ;
+         rdfs:seeAlso <https://dbpedia.org/page/Animal> ,
+                      "https://www.wikidata.org/wiki/Q729"@en ;
+         skos:definition "A top-level class that pertains to living entities that are not human."@en ;
+         skos:note "In the more semantically correct sense, the class of animals does include humans; but for the purpose of this ontology, which centers around web posts about lifestyle content, let us forgo the semantic rigor and distinguish animals from humans."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#AnnaMariaIsland
+:AnnaMariaIsland rdf:type owl:Class ;
+                 rdfs:subClassOf :SouthwestFlorida ;
+                 rdfs:label "Anna Maria Island"@en ;
+                 owl:sameAs "https://dbpedia.org/page/Anna_Maria_Island"@en ,
+                            "https://www.wikidata.org/wiki/Q4767301"@en ;
+                 skos:definition "The named island of Anna Maria Island within the Southwest Florida region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Appetizers
+:Appetizers rdf:type owl:Class ;
+            rdfs:subClassOf :DiningCourse ;
+            rdfs:label "Appetizers"@en ;
+            skos:definition "A Dining Course that precedes all other courses, typically with a small amount of food."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Aquariums
+:Aquariums rdf:type owl:Class ;
+           rdfs:subClassOf :Attractions ;
+           rdfs:label "Aquariums"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ArtMuseum
+:ArtMuseum rdf:type owl:Class ;
+           rdfs:subClassOf :Museums ;
+           rdfs:label "Art Museum"@en ;
+           skos:definition "A Museums that "@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#AsianPacificHeritageMonth
+:AsianPacificHeritageMonth rdf:type owl:Class ;
+                           rdfs:subClassOf :HolidayMonths ;
+                           rdfs:label "Asian Pacific Heritage Month"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#AskTheDoc
+:AskTheDoc rdf:type owl:Class ;
+           rdfs:subClassOf :SpecialContent ;
+           rdfs:label "Ask the Doc"@en ;
+           skos:definition "A Special Content subclass that pertains to questions answered by a licensed medical doctor."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Attractions
+:Attractions rdf:type owl:Class ;
+             rdfs:subClassOf :Locations ;
+             rdfs:label "Attractions"@en ;
+             skos:definition "A Location that is typically interesting to individuals from a recreational perspective."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Audience
+:Audience rdf:type owl:Class ;
+          rdfs:label "Audience"@en ;
+          rdfs:seeAlso <https://dbpedia.org/page/Audience> ,
+                       schema:Audience ,
+                       <https://www.wikidata.org/wiki/Q211198> ;
+          skos:definition "A top-level class that pertains to a people group of interest, e.g., as web writers focus on an Internet audience."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Author
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf :Occupations .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Aviary
+:Aviary rdf:type owl:Class ;
+        rdfs:subClassOf :Attractions ;
+        rdfs:label "Aviary"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Babysitting
+:Babysitting rdf:type owl:Class ;
+             rdfs:subClassOf :Parenting ;
+             rdfs:label "Babysitting"@en ;
+             owl:sameAs <https://dbpedia.org/page/Babysitting> ,
+                        <https://www.wikidata.org/wiki/Q797990> ;
+             skos:definition "A Parenting subclass that pertains to individuals taking care of the children of others, typically in the house of the family and for monetary payment."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Bachelorette
+:Bachelorette rdf:type owl:Class ;
+              rdfs:subClassOf :Singles .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Bachelors
+:Bachelors rdf:type owl:Class ;
+           rdfs:subClassOf :Singles .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#BackToSchool
+:BackToSchool rdf:type owl:Class ;
+              rdfs:subClassOf :Education ;
+              rdfs:label "Back To School"@en ;
+              skos:definition "An Education subclass that pertains to the few weeks or months leading up to children returning to school after a break."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Ballroom
+:Ballroom rdf:type owl:Class ;
+          rdfs:subClassOf :Locations ;
+          rdfs:label "Ballroom"@en ;
+          skos:definition "A Location that is typically upscale and intended for group dancing."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Bars
+:Bars rdf:type owl:Class ;
+      rdfs:subClassOf :Dining ;
+      rdfs:label "Bars"@en ;
+      skos:definition "A Dining subclass that pertains to establishments oriented toward serving alcoholic beverages."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Baseball
+:Baseball rdf:type owl:Class ;
+          rdfs:subClassOf :TeamSports ;
+          rdfs:label "Baseball"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Basketball
+:Basketball rdf:type owl:Class ;
+            rdfs:subClassOf :TeamSports ;
+            rdfs:label "Basketball"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Beaches
+:Beaches rdf:type owl:Class ;
+         rdfs:subClassOf :Attractions ;
+         rdfs:label "Beaches"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Beauty
+:Beauty rdf:type owl:Class ;
+        rdfs:subClassOf :Home ;
+        rdfs:label "Beauty"@en ;
+        rdfs:seeAlso <https://dbpedia.org/page/Hygiene> ,
+                     <https://www.wikidata.org/wiki/Q162297> ;
+        skos:definition "A Home subclass that pertains to personal appearance."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Beer
+:Beer rdf:type owl:Class ;
+      rdfs:subClassOf :Drinks ;
+      rdfs:label "Beer"@en ;
+      skos:definition "A Drinks subclass that pertains to alcoholic beverages typically brewed from grains."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Biking
+:Biking rdf:type owl:Class ;
+        rdfs:subClassOf :Sports ;
+        rdfs:label "Biking"@en ;
+        skos:definition "A Sport that involves the use of bicycles."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Birthday
+:Birthday rdf:type owl:Class ;
+          rdfs:subClassOf :Family ;
+          rdfs:label "Birthday"@en ;
+          owl:sameAs <https://dbpedia.org/page/Birthday> ,
+                     <https://www.wikidata.org/wiki/Q47223> ;
+          skos:definition "A Family subclass that pertains to celebration of an individual's day of birth."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#BirthdayPartyVenue
+:BirthdayPartyVenue rdf:type owl:Class ;
+                    rdfs:subClassOf :Locations ;
+                    rdfs:label "Birthday Party Venue"@en ;
+                    skos:definition "A Location that is intended for birthday celebrations."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#BlackFriday
+:BlackFriday rdf:type owl:Class ;
+             rdfs:subClassOf :Shopping ;
+             rdfs:label "Black Friday"@en ;
+             skos:definition "A Shopping subclass that pertains to the period of time in which retail establishments sell items at significant discounts."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#BlackHistoryMonth
+:BlackHistoryMonth rdf:type owl:Class ;
+                   rdfs:subClassOf :HolidayMonths ;
+                   rdfs:label "Black History Month"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Books
+:Books rdf:type owl:Class ;
+       rdfs:subClassOf :ThingsToDo ;
+       rdfs:label "Books"@en ;
+       skos:altLabel "A Things To Do subclass that pertains to literature."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Breakfast
+:Breakfast rdf:type owl:Class ;
+           rdfs:subClassOf :DiningCourse ;
+           rdfs:label "Breakfast"@en ;
+           skos:definition "A Dining Course that occurs in the morning, typically as the first meal of the day."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Breweries
+:Breweries rdf:type owl:Class ;
+           rdfs:subClassOf :Dining ;
+           rdfs:label "Breweries"@en ;
+           skos:definition "A Dining subclass that pertains to establishments producing beer."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Brunch
+:Brunch rdf:type owl:Class ;
+        rdfs:subClassOf :DiningCourse ;
+        rdfs:label "Brunch"@en ;
+        skos:definition "A Dining Course that occurs between Breakfast and Lunch, typically with a small amount of food."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#COVID-19
+:COVID-19 rdf:type owl:Class ;
+          rdfs:subClassOf :News .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Camping
+:Camping rdf:type owl:Class ;
+         rdfs:subClassOf :Events ;
+         rdfs:label "Camping"@en ;
+         skos:definition "An Events subclass that pertains to staying outdoors, typically in natural areas, with cooking and sleeping."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Camps
+:Camps rdf:type owl:Class ;
+       rdfs:subClassOf :Locations ;
+       rdfs:label "Camps"@en ;
+       skos:definition "A Location that encompasses various buildings, activities and natural areas, intended for group interactions over extended periods of time."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CapeCanaveral
+:CapeCanaveral rdf:type owl:Class ;
+               rdfs:subClassOf :SpaceCoast .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Cats
+:Cats rdf:type owl:Class ;
+      rdfs:subClassOf :Pets .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CentralFlorida
+:CentralFlorida rdf:type owl:Class ;
+                rdfs:subClassOf :Florida ;
+                rdfs:label "Central Florida"@en ;
+                rdfs:seeAlso <https://www.wikidata.org/wiki/Q2920358> ;
+                skos:definition "A Florida area that pertains to the central part of Florida."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CharterSchools
+:CharterSchools rdf:type owl:Class ;
+                rdfs:subClassOf :PublicSchools ;
+                rdfs:label "Charter Schools"@en ;
+                owl:sameAs <https://dbpedia.org/page/Charter_school> ,
+                           <https://www.wikidata.org/wiki/Q12241709> ;
+                skos:definition "A Public School subclass that includes publicly-funded schools, without tuition, that may have more autonomy than traditional public schools in their operations and teaching methods."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CheapAndFree
+:CheapAndFree rdf:type owl:Class ;
+              rdfs:subClassOf :SpecialContent ;
+              rdfs:label "Cheap and Free"@en ;
+              skos:definition "A Special Content subclass that pertains to fiscally cheap or free items or services."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ChildLifeStages
+:ChildLifeStages rdf:type owl:Class ;
+                 rdfs:subClassOf :Parenting ;
+                 rdfs:label "Child Life Stages"@en ;
+                 rdfs:seeAlso <https://www.wikidata.org/wiki/Q48834911> ;
+                 skos:definition "A Parenting subclass that pertains to the canonical life stages of childhood development."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Christmas
+:Christmas rdf:type owl:Class ;
+           rdfs:subClassOf :ReligiousHolidays ;
+           rdfs:label "Christmas"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ChristmasLights
+:ChristmasLights rdf:type owl:Class ;
+                 rdfs:subClassOf :Christmas ;
+                 rdfs:label "Christmas Lights"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ChristmasTree
+:ChristmasTree rdf:type owl:Class ;
+               rdfs:subClassOf :Christmas ;
+               rdfs:label "Christmas Tree"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Churches
+:Churches rdf:type owl:Class ;
+          rdfs:subClassOf :Locations ;
+          rdfs:label "Churches"@en ;
+          skos:definition "A Location in which religious worship takes place."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CincoDeMayo
+:CincoDeMayo rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHolidays ;
+             rdfs:label "Cinco de Mayo"@en ;
+             owl:sameAs <https://www.wikidata.org/wiki/Q660447> ;
+             skos:definition "A Cultural Holiday taking place on May 5th."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Clearwater
+:Clearwater rdf:type owl:Class ;
+            rdfs:subClassOf :TampaBay ;
+            rdfs:label "Clearwater"@en ;
+            owl:sameAs "https://dbpedia.org/page/Clearwater,_Florida"@en ,
+                       "https://www.wikidata.org/wiki/Q244146"@en ;
+            skos:definition "The named city of Clearwater within the Tampa Bay region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Clermont
+:Clermont rdf:type owl:Class ;
+          rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Coffee
+:Coffee rdf:type owl:Class ;
+        rdfs:subClassOf :Drinks ;
+        rdfs:label "Coffee"@en ;
+        skos:definition "A Drinks subclass that pertains to the drink brewed from the coffee bean."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ComedyClub
+:ComedyClub rdf:type owl:Class ;
+            rdfs:subClassOf :Locations ;
+            rdfs:label "Comedy Club"@en ;
+            skos:definition "A Location that is established to provide a stage for comedians and short accomodations for audiences."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Concerts
+:Concerts rdf:type owl:Class ;
+          rdfs:subClassOf :LiveMusic ;
+          rdfs:label "Concerts"@en ;
+          skos:definition "A Live Music subclass that pertains to large settings intended to facilitate a musician or band for performing their music."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Contests
+:Contests rdf:type owl:Class ;
+          rdfs:subClassOf :Attractions ;
+          rdfs:label "Contests"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Couples
+:Couples rdf:type owl:Class ;
+         rdfs:subClassOf :Audience .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CraftBeer
+:CraftBeer rdf:type owl:Class ;
+           rdfs:subClassOf :Beer ;
+           rdfs:label "Craft Beer"@en ;
+           skos:definition "A Beer subclass that pertains to beer typically brewed in a small, local or otherwise limited fashion."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Crafts
+:Crafts rdf:type owl:Class ;
+        rdfs:subClassOf :Home ;
+        rdfs:label "Crafts"@en ;
+        rdfs:seeAlso <https://dbpedia.org/page/Craft> ,
+                     <https://www.wikidata.org/wiki/Q2207288> ;
+        skos:definition "A Home subclass that pertains to the creation of new artifacts out of extant artifacts."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Cruise
+:Cruise rdf:type owl:Class ;
+        rdfs:subClassOf :Travel ;
+        rdfs:label "Cruise"@en ;
+        skos:definition "A Travel subclass that pertains to the use of a large passenger ship to tourist destinations."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Cuisine
+:Cuisine rdf:type owl:Class ;
+         rdfs:subClassOf :Dining ;
+         rdfs:label "Cuisine"@en ;
+         skos:definition "A Dining subclass that pertains to particular types of cuisine."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CulturalHolidays
+:CulturalHolidays rdf:type owl:Class ;
+                  rdfs:subClassOf :Holidays ;
+                  rdfs:label "Cultural Holidays"@en ;
+                  skos:definition "A Holidays subclass that pertains to holidays cultural in nature."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dads
+:Dads rdf:type owl:Class ;
+      rdfs:subClassOf :InterestingPeople .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#DanceStudio
+:DanceStudio rdf:type owl:Class ;
+             rdfs:subClassOf :Locations ;
+             rdfs:label "Dance Studio"@en ;
+             skos:definition "A Location that is intended to teach dancing."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dancing
+:Dancing rdf:type owl:Class ;
+         rdfs:subClassOf :ThingsToDo ;
+         rdfs:label "Dancing"@en ;
+         skos:definition "A Things To Do subclass that pertains to rhythmically moving the body, possibly to music."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#DateNight
+:DateNight rdf:type owl:Class ;
+           rdfs:subClassOf :Events ;
+           rdfs:label "Date Night"@en ;
+           skos:definition "An Events subclass that pertains to romantic dates in the evening."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dating
+:Dating rdf:type owl:Class ;
+        rdfs:subClassOf :Relationships ;
+        rdfs:label "Dating"@en ;
+        owl:sameAs <https://dbpedia.org/page/Dating> ,
+                   <https://www.wikidata.org/wiki/Q654810> ;
+        skos:definition "A Relationships subclass that pertains to dating, courtship and pre-marital romantic activities."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#DayTrip
+:DayTrip rdf:type owl:Class ;
+         rdfs:subClassOf :Events ;
+         rdfs:label "Day Trip"@en ;
+         skos:definition "An Events subclass that pertains to short trips taking no more than a day to return home."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Daycare
+:Daycare rdf:type owl:Class ;
+         rdfs:subClassOf :Parenting ;
+         rdfs:label "Daycare"@en ;
+         owl:sameAs <https://dbpedia.org/page/Child_care> ,
+                    <https://www.wikidata.org/wiki/Q1455871> ;
+         skos:definition "A Parenting subclass that pertains to services and establishments used to tend to the children of others."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#DaytonaBeach
+:DaytonaBeach rdf:type owl:Class ;
+              rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Deals
+:Deals rdf:type owl:Class ;
+       rdfs:subClassOf :Shopping ;
+       rdfs:label "Deals"@en ;
+       skos:definition "A Shopping subclass that pertains to item offers perceived to be appreciably cheaper than otherwise."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Decorating
+:Decorating rdf:type owl:Class ;
+            rdfs:subClassOf :Home .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Deltona
+:Deltona rdf:type owl:Class ;
+         rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Desserts
+:Desserts rdf:type owl:Class ;
+          rdfs:subClassOf :DiningCourse ;
+          rdfs:label "Desserts"@en ;
+          skos:definition "A Dining Course that typically occurs after a meal, with sugary, sweet foods."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dining
+:Dining rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        rdfs:label "Dining"@en ;
+        skos:altLabel "Eats"@en ;
+        skos:definition "A Things To Do subclass that pertains to eating and drinking."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#DiningCourse
+:DiningCourse rdf:type owl:Class ;
+              rdfs:subClassOf :Dining ;
+              rdfs:label "Dining Course"@en ;
+              skos:definition "A Dining subclass that pertains to the canonical courses of eating."@en ;
+              skos:note "Defined with respect to the American perspective."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dinner
+:Dinner rdf:type owl:Class ;
+        rdfs:subClassOf :DiningCourse ;
+        rdfs:label "Dinner"@en ;
+        skos:definition "A Dining Course that occurs later in the evening."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Doctor
+:Doctor rdf:type owl:Class ;
+        rdfs:subClassOf :Occupations .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dogs
+:Dogs rdf:type owl:Class ;
+      rdfs:subClassOf :Pets .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Drinks
+:Drinks rdf:type owl:Class ;
+        rdfs:subClassOf :Dining ;
+        rdfs:label "Drinks"@en ;
+        skos:definition "A Dining subclass that pertains to orally imbibed liquids."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Easter
+:Easter rdf:type owl:Class ;
+        rdfs:subClassOf :ReligiousHolidays ;
+        rdfs:label "Easter"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#EasterBunny
+:EasterBunny rdf:type owl:Class ;
+             rdfs:subClassOf :Easter ;
+             rdfs:label "Easter Bunny"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#EasterEggHunting
+:EasterEggHunting rdf:type owl:Class ;
+                  rdfs:subClassOf :Easter ;
+                  rdfs:label "Easter Egg Hunting"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Education
+:Education rdf:type owl:Class ;
+           rdfs:subClassOf :Family ;
+           rdfs:label "Education"@en ;
+           rdfs:seeAlso <https://dbpedia.org/page/Education> ,
+                        <https://www.wikidata.org/wiki/Q8434> ;
+           skos:definition "A Family subclass that pertains to learning, teaching and development, particularly of youth."@en ;
+           skos:note "This is made a subclass of Family because, in the context of the lifestyle content being written, the primary audience is parents and much of the subject matter pertains to parenthood. I.e., \"education\" here, refers to the pre-college years, which typically occur before the age of 18, barring fringe cases."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ElementarySchool
+:ElementarySchool rdf:type owl:Class ;
+                  rdfs:subClassOf :SchoolsByLifeStage ;
+                  skos:definition "A Schools By Life Stage subclass that pertains to children aged 7 to 11, or roughly grades 5-6."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ElementaryYears
+:ElementaryYears rdf:type owl:Class ;
+                 rdfs:subClassOf :ChildLifeStages ;
+                 rdfs:label "Elementary Years"@en ;
+                 skos:definition "A Child Life Stage that is typically recognized as the age range between 5 and 8."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Engagement
+:Engagement rdf:type owl:Class ;
+            rdfs:subClassOf :Relationships ;
+            rdfs:label "Engagement"@en ;
+            owl:sameAs <https://dbpedia.org/page/Engagement> ,
+                       <https://www.wikidata.org/wiki/Q157512> ;
+            skos:definition "A Relationships subclass that pertains to the state of being engaged to one's spouse prior to marriage."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Events
+:Events rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        rdfs:label "Events"@en ;
+        skos:definition "A Things To Do subclass that pertains to particular activities taking place in broad locales."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Exercise
+:Exercise rdf:type owl:Class ;
+          rdfs:subClassOf :Fitness .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Fall
+:Fall rdf:type owl:Class ;
+      rdfs:subClassOf :Seasons ;
+      dct:title "A Season that follows Summer and precedes Winter, typically associated with the beginning of cold weather."@en ;
+      rdfs:label "Fall"@en ;
+      skos:altLabel "Autumn"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FallFestivals
+:FallFestivals rdf:type owl:Class ;
+               rdfs:subClassOf :Fall ;
+               rdfs:label "Fall Festivals"@en ;
+               skos:definition "A Fall subclass that pertains to celebratory festivals occuring in Fall."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Family
+:Family rdf:type owl:Class ;
+        rdfs:label "Family"@en ;
+        owl:sameAs <https://dbpedia.org/page/Family> ,
+                   <https://www.wikidata.org/wiki/Q8436> ;
+        skos:definition "A top-level class that pertains to groups of people related by ancestry, marriage or some other relationship."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FamilyFun
+:FamilyFun rdf:type owl:Class ;
+           rdfs:subClassOf :Events ;
+           rdfs:label "Family Fun"@en ;
+           skos:definition "An Events subclass that pertains to activities friendly to families."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FarmersMarket
+:FarmersMarket rdf:type owl:Class ;
+               rdfs:subClassOf :Locations ;
+               rdfs:label "Farmers Market"@en ;
+               skos:definition "A Location that is typically established in a transient manner for the purpose of hosting local farmers who intend to sell their goods."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Farms
+:Farms rdf:type owl:Class ;
+       rdfs:subClassOf :Locations ;
+       rdfs:label "Farms"@en ;
+       skos:definition "A Location that grows and harvests crops or animals."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Fashion
+:Fashion rdf:type owl:Class ;
+         rdfs:subClassOf :Home .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FathersDay
+:FathersDay rdf:type owl:Class ;
+            rdfs:subClassOf :CulturalHolidays ;
+            rdfs:label "Fathers Day"@en ;
+            owl:sameAs <https://dbpedia.org/page/Father's_Day> ,
+                       <https://www.wikidata.org/wiki/Q134847> ;
+            skos:definition "A Cultural Holiday celebrating fathers."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Featured
+:Featured rdf:type owl:Class ;
+          rdfs:subClassOf :SpecialContent ;
+          rdfs:label "Featured"@en ;
+          skos:definition "A Special Content subclass that pertains to preferred or otherwise important content."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FernandinaBeach
+:FernandinaBeach rdf:type owl:Class ;
+                 rdfs:subClassOf :NortheastFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Festivals
+:Festivals rdf:type owl:Class ;
+           rdfs:subClassOf :Attractions ;
+           rdfs:label "Festivals"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Fitness
+:Fitness rdf:type owl:Class ;
+         rdfs:subClassOf :Health ;
+         rdfs:label "Fitness"@en ;
+         rdfs:seeAlso <https://dbpedia.org/page/Physical_fitness> ,
+                      <https://www.wikidata.org/wiki/Q309252> ;
+         skos:definition "A Health subclass that pertains to physical exercise."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Florida
+:Florida rdf:type owl:Class ;
+         rdfs:subClassOf :US_State .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FloridaKeys
+:FloridaKeys rdf:type owl:Class ;
+             rdfs:subClassOf :Florida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FloridaPanhandle
+:FloridaPanhandle rdf:type owl:Class ;
+                  rdfs:subClassOf :Florida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FoodTrucks
+:FoodTrucks rdf:type owl:Class ;
+            rdfs:subClassOf :Dining ;
+            rdfs:label "Food Trucks"@en ;
+            skos:definition "A Dining subclass that pertains to mobile food service vehicles."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Football
+:Football rdf:type owl:Class ;
+          rdfs:subClassOf :TeamSports ;
+          rdfs:label "Football"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FortLauderdale
+:FortLauderdale rdf:type owl:Class ;
+                rdfs:subClassOf :SoutheastFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FortMyers
+:FortMyers rdf:type owl:Class ;
+           rdfs:subClassOf :SouthwestFlorida ;
+           rdfs:label "Fort Myers"@en ;
+           owl:sameAs "https://dbpedia.org/page/Fort_Myers,_Florida"@en ,
+                      "https://www.wikidata.org/wiki/Q506451"@en ;
+           skos:definition "The named city of Fort Myers within the Southwest Florida region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Friends
+:Friends rdf:type owl:Class ;
+         rdfs:subClassOf :Audience .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Games
+:Games rdf:type owl:Class ;
+       rdfs:subClassOf :ThingsToDo ;
+       rdfs:label "Games"@en ;
+       skos:definition "A Things To Do subclass that pertains to activities performed in groups for entertainment."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Garden
+:Garden rdf:type owl:Class ;
+        rdfs:subClassOf :Attractions ;
+        rdfs:label "Garden"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Gardening
+:Gardening rdf:type owl:Class ;
+           rdfs:subClassOf :Home .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Getaways
+:Getaways rdf:type owl:Class ;
+          rdfs:subClassOf :Travel ;
+          rdfs:label "Getaways"@en ;
+          skos:definition "A Travel subclass that pertains to locations travelled to, typically for respite and relaxation."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#GirlsNightOut
+:GirlsNightOut rdf:type owl:Class ;
+               rdfs:subClassOf :Events ;
+               rdfs:label "Girls Night Out"@en ;
+               skos:altLabel "GNO"@en ;
+               skos:definition "An Events subclass that pertains to female friends enjoying the company of one another in the evening."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Glamping
+:Glamping rdf:type owl:Class ;
+          rdfs:subClassOf :Camping ;
+          rdfs:label "Glamping"@en ;
+          skos:definition "A Camping subclass that pertains to \"glamorous camping\", typically with expensive or luxurious equipment."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Gyms
+:Gyms rdf:type owl:Class ;
+      rdfs:subClassOf :Fitness .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Halloween
+:Halloween rdf:type owl:Class ;
+           rdfs:subClassOf :CulturalHolidays ;
+           rdfs:label "Halloween"@en ;
+           owl:sameAs <https://dbpedia.org/page/Halloween> ,
+                      <https://www.wikidata.org/wiki/Q251868> ;
+           skos:definition "A Cultural Holiday observed on October 31st."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Hanukkah
+:Hanukkah rdf:type owl:Class ;
+          rdfs:subClassOf :ReligiousHolidays ;
+          rdfs:label "Hanukkah"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HappyHour
+:HappyHour rdf:type owl:Class ;
+           rdfs:subClassOf :Bars ;
+           rdfs:label "Happy Hour"@en ;
+           skos:definition "A Bars subclass that pertains to a period of time during the day when drinks are discounted."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HauntedHouse
+:HauntedHouse rdf:type owl:Class ;
+              rdfs:subClassOf :Halloween ;
+              rdfs:label "Haunted House"@en ;
+              owl:sameAs <https://dbpedia.org/page/Haunted_house> ,
+                         <https://www.wikidata.org/wiki/Q545599> ;
+              skos:definition "A Halloween subclass that pertains to a house perceived as inhabited by deceased spirits, often used for fun during Halloween."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Health
+:Health rdf:type owl:Class ;
+        rdfs:label "Health"@en ;
+        rdfs:seeAlso <https://dbpedia.org/page/Health> ,
+                     <https://www.wikidata.org/wiki/Q12147> ;
+        skos:definition "A top-level class that pertains to physical and mental wellness."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HighSchool
+:HighSchool rdf:type owl:Class ;
+            rdfs:subClassOf :SchoolsByLifeStage ;
+            rdfs:label "High School"@en ;
+            rdfs:seeAlso <https://dbpedia.org/page/Secondary_school> ,
+                         <https://www.wikidata.org/wiki/Q9826> ;
+            skos:definition "A Schools By Life Stage subclass that pertains to children aged 14 to 18, or roughly grades 9-12."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HighSchoolYears
+:HighSchoolYears rdf:type owl:Class ;
+                 rdfs:subClassOf :ChildLifeStages ;
+                 rdfs:label "High School Years"@en ;
+                 skos:definition "A Child Life Stage that is typically recognized as the age range between 16 and 18."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Hiking
+:Hiking rdf:type owl:Class ;
+        rdfs:subClassOf :Sports ;
+        rdfs:label "Hiking"@en ;
+        skos:definition "A Sport that involves walking, typically through nature trails."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HispanicHeritageMonth
+:HispanicHeritageMonth rdf:type owl:Class ;
+                       rdfs:subClassOf :HolidayMonths ;
+                       rdfs:label "Hispanic Heritage Month"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HistoryMuseum
+:HistoryMuseum rdf:type owl:Class ;
+               rdfs:subClassOf :Museums ;
+               rdfs:label "History Museum"@en ;
+               skos:definition "A Museums that "@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HolidayMonths
+:HolidayMonths rdf:type owl:Class ;
+               rdfs:subClassOf :Holidays ;
+               rdfs:label "Holiday Months"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Holidays
+:Holidays rdf:type owl:Class ;
+          rdfs:subClassOf :ThingsToDo ;
+          rdfs:label "Holidays"@en ;
+          owl:sameAs <https://dbpedia.org/page/Holiday> ,
+                     <https://www.wikidata.org/wiki/Q1445650> ;
+          skos:definition "A Things To Do subclass that pertains to activities related to festive periods of time designated by custom or law."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Home
+:Home rdf:type owl:Class ;
+      rdfs:label "Home"@en ;
+      rdfs:seeAlso <https://dbpedia.org/page/Home> ,
+                   <https://www.wikidata.org/wiki/Q7743> ;
+      skos:definition "A top-level class that pertains to all facets of home life."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#HomeSchool
+:HomeSchool rdf:type owl:Class ;
+            rdfs:subClassOf :SchoolsByGovernance ;
+            rdfs:label "Home School"@en ;
+            rdfs:seeAlso <https://dbpedia.org/page/Homeschooling> ;
+            skos:definition "A Schools By Governance subclass that pertains to schooling environments constrained to parents acting as the teacher of their child(ren)."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Accommodations .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Indoor
+:Indoor rdf:type owl:Class ;
+        rdfs:subClassOf :Scene ;
+        rdfs:label "Indoor"@en ;
+        skos:definition "A Scene that is placed within a constructed building."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Infancy
+:Infancy rdf:type owl:Class ;
+         rdfs:subClassOf :ChildLifeStages ;
+         rdfs:label "Infancy"@en ;
+         rdfs:seeAlso <https://dbpedia.org/page/Infant> ,
+                      <https://www.wikidata.org/wiki/Q49257364> ;
+         skos:definition "A Child Life Stage that is typically recognized as the age range between 0 and 2."@en ;
+         skos:note "Synonymous with Babies."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Inn
+:Inn rdf:type owl:Class ;
+     rdfs:subClassOf :Accommodations ;
+     rdfs:label "Inn"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#InterestingPeople
+:InterestingPeople rdf:type owl:Class ;
+                   rdfs:subClassOf :People ;
+                   rdfs:label "Interesting People"@en ;
+                   skos:definition "A People subclass that pertains to individuals of interest."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Jacksonville
+:Jacksonville rdf:type owl:Class ;
+              rdfs:subClassOf :NortheastFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Jogging
+:Jogging rdf:type owl:Class ;
+         rdfs:subClassOf :Sports ;
+         rdfs:label "Jogging"@en ;
+         skos:definition "A Sport that involves ambulation at a faster-than-walking pace."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#July4th
+:July4th rdf:type owl:Class ;
+         rdfs:subClassOf :CulturalHolidays ;
+         rdfs:label "July 4th"@en ;
+         owl:sameAs <https://dbpedia.org/page/Independence_Day_(United_States)> ,
+                    <https://www.wikidata.org/wiki/Q86591> ;
+         skos:altLabel "4th of July"@en ,
+                       "Independence Day"@en ;
+         skos:definition "A Cultural Holiday celebrated by Americans to commemorate independence from Great Britain."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#July4thFireworks
+:July4thFireworks rdf:type owl:Class ;
+                  rdfs:subClassOf :July4th ;
+                  rdfs:label "July 4th Fireworks"@en ;
+                  rdfs:seeAlso <https://www.wikidata.org/wiki/Q2699757> ;
+                  skos:definition "A July 4th subclass that pertains to the American custom of launching fireworks on July 4th to celebrate commemorate independence from Great Britain."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#JuniorHigh
+:JuniorHigh rdf:type owl:Class ;
+            rdfs:subClassOf :SchoolsByLifeStage ;
+            rdfs:label "Junior High"@en ;
+            rdfs:seeAlso <https://dbpedia.org/page/Middle_school> ,
+                         <https://www.wikidata.org/wiki/Q149566> ;
+            skos:definition "A Schools By Life Stage subclass that pertains to children aged 12 to 15, or roughly grades 7-9."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#JuniorHighYears
+:JuniorHighYears rdf:type owl:Class ;
+                 rdfs:subClassOf :ChildLifeStages ;
+                 rdfs:label "Junior High Years"@en ;
+                 skos:definition "A Child Life Stage that is typically recognized as the age range between 13 and 15."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kids
+:Kids rdf:type owl:Class ;
+      rdfs:subClassOf :InterestingPeople .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kindergarten
+:Kindergarten rdf:type owl:Class ;
+              rdfs:subClassOf :SchoolsByLifeStage ;
+              rdfs:label "Kindergarten"@en ;
+              rdfs:seeAlso <https://dbpedia.org/page/Kindergarten> ,
+                           <https://www.wikidata.org/wiki/Q126807> ;
+              skos:definition "A Schools By Life Stage subclass that pertains to children aged 5 to 6."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kissimmee
+:Kissimmee rdf:type owl:Class ;
+           rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kitchen
+:Kitchen rdf:type owl:Class ;
+         rdfs:subClassOf :Home ;
+         rdfs:label "Kitchen"@en ;
+         rdfs:seeAlso <https://dbpedia.org/page/Kitchen> ,
+                      <https://www.wikidata.org/wiki/Q43164> ;
+         skos:definition "A Home subclass that pertains to the interior locale used to prepare food."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kwanzaa
+:Kwanzaa rdf:type owl:Class ;
+         rdfs:subClassOf :CulturalHolidays ;
+         rdfs:label "Kwanzaa"@en ;
+         owl:sameAs <https://dbpedia.org/page/Kwanzaa> ,
+                    <https://www.wikidata.org/wiki/Q746851> ;
+         skos:definition "A Cultural Holiday celebrated by black Americans."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#LaborDay
+:LaborDay rdf:type owl:Class ;
+          rdfs:subClassOf :CulturalHolidays ;
+          rdfs:label "Labor Day"@en ;
+          owl:sameAs <https://dbpedia.org/page/Labor_Day> ,
+                     <https://www.wikidata.org/wiki/Q848352> ;
+          skos:altLabel "Labor Day Weekend"@en ;
+          skos:definition "A Cultural Holiday celebrated on the first Monday of September to honor the American labor movement."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Lakeland
+:Lakeland rdf:type owl:Class ;
+          rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Libraries
+:Libraries rdf:type owl:Class ;
+           rdfs:subClassOf :Locations ;
+           rdfs:label "Libraries"@en ;
+           skos:definition "A Location that is established to house and loan books."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#LiveMusic
+:LiveMusic rdf:type owl:Class ;
+           rdfs:subClassOf :Events ;
+           rdfs:label "Live Music"@en ;
+           skos:definition "An Events subclass that pertains to scenarios where music is played live, typically by a musician or a band."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Locations
+:Locations rdf:type owl:Class ;
+           rdfs:subClassOf :ThingsToDo ;
+           rdfs:label "Locations"@en ;
+           skos:definition "A Things To Do subclass that pertains to particular locations of interest to individuals and groups."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Lunch
+:Lunch rdf:type owl:Class ;
+       rdfs:subClassOf :DiningCourse ;
+       rdfs:label "Lunch"@en ;
+       skos:definition "A Dining Course that occurs in the afternoon or early evening."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MLKDay
+:MLKDay rdf:type owl:Class ;
+        rdfs:subClassOf :CulturalHolidays ;
+        rdfs:label "MLK Day"@en ;
+        owl:sameAs <https://dbpedia.org/page/Martin_Luther_King_Jr._Day> ,
+                   <https://www.wikidata.org/wiki/Q81644424> ;
+        skos:altLabel "Martin Luther King Day"@en ;
+        skos:definition "A Cultural Holiday that is designated for the birthday of Martin Luther King Jr., observed on the third Monday of January."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Marathon
+:Marathon rdf:type owl:Class ;
+          rdfs:subClassOf :Running ;
+          rdfs:label "Marathon"@en ;
+          skos:definition "A Running subclass that pertains to a long-distance running competition over 42.195 kilometers."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MardiGras
+:MardiGras rdf:type owl:Class ;
+           rdfs:subClassOf :CulturalHolidays ;
+           rdfs:label "Mardi Gras"@en ;
+           owl:sameAs <https://dbpedia.org/page/Mardi_Gras> ,
+                      <https://www.wikidata.org/wiki/Q35105> ;
+           skos:definition "A Cultural Holiday that celebrates the season before Lent; from French, Mardi Gras means \"Fat Tuesday\", as partakers consume fatty foods to prepare for the fasting of Lent."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Marriage
+:Marriage rdf:type owl:Class ;
+          rdfs:subClassOf :Relationships ;
+          rdfs:label "Marriage"@en ;
+          owl:sameAs <https://dbpedia.org/page/Marriage> ,
+                     <https://www.wikidata.org/wiki/Q8445> ;
+          skos:definition "A Relationships subclass that pertains to marriage or post-marriage topics."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MarriedCouples
+:MarriedCouples rdf:type owl:Class ;
+                rdfs:subClassOf :Couples .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MedicalDoctor
+:MedicalDoctor rdf:type owl:Class ;
+               rdfs:subClassOf :Doctor ;
+               rdfs:label "Medical Doctor"@en ;
+               rdfs:seeAlso <https://www.wikidata.org/wiki/Q39631> ;
+               skos:definition "A Doctor that is licensed in medicine."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Melbourne
+:Melbourne rdf:type owl:Class ;
+           rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MemorialDay
+:MemorialDay rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHolidays ;
+             rdfs:label "Memorial Day"@en ;
+             owl:sameAs <https://dbpedia.org/page/Memorial_Day> ,
+                        <https://www.wikidata.org/wiki/Q371781> ;
+             skos:definition "A Cultural Holiday that is observed on the last Monday of May to commemorate U.S. military personnel who have died in service of their country."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MentalHealth
+:MentalHealth rdf:type owl:Class ;
+              rdfs:subClassOf :Health .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Miami
+:Miami rdf:type owl:Class ;
+       rdfs:subClassOf :SoutheastFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MiddleSchool
+:MiddleSchool rdf:type owl:Class ;
+              rdfs:subClassOf :SchoolsByLifeStage ;
+              rdfs:label "Middle School"@en ;
+              rdfs:seeAlso <https://dbpedia.org/page/Middle_school> ,
+                           <https://www.wikidata.org/wiki/Q149566> ;
+              skos:definition "A Schools By Life Stage subclass that pertains to children aged 11 to 13, or roughly grades 6-8."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MiddleSchoolYears
+:MiddleSchoolYears rdf:type owl:Class ;
+                   rdfs:subClassOf :ChildLifeStages ;
+                   rdfs:label "Middle School Years"@en ;
+                   rdfs:seeAlso <https://www.wikidata.org/wiki/Q116789753> ;
+                   skos:definition "A Child Life Stage that is typically recognized as the age range between 9 and 12."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Moms
+:Moms rdf:type owl:Class ;
+      rdfs:subClassOf :InterestingPeople .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MothersDay
+:MothersDay rdf:type owl:Class ;
+            rdfs:subClassOf :CulturalHolidays ;
+            rdfs:label "Mothers Day"@en ;
+            owl:sameAs <https://dbpedia.org/page/Mother's_Day> ,
+                       <https://www.wikidata.org/wiki/Q6917243> ;
+            skos:definition "A Cultural Holiday celebrating mothers."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Motorsports
+:Motorsports rdf:type owl:Class ;
+             rdfs:subClassOf :Sports ;
+             rdfs:label "Motorsports"@en ;
+             skos:definition "Any Sport that involves motorized vehicles, typically in a timed or racing fashion."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Museums
+:Museums rdf:type owl:Class ;
+         rdfs:subClassOf :Attractions ;
+         rdfs:label "Museums"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Naples
+:Naples rdf:type owl:Class ;
+        rdfs:subClassOf :SouthwestFlorida ;
+        rdfs:label "Naples"@en ;
+        owl:sameAs "https://dbpedia.org/page/Naples,_Florida"@en ,
+                   "https://www.wikidata.org/wiki/Q257830"@en ;
+        skos:definition "The named city of Naples within the Southwest Florida region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NationalPark
+:NationalPark rdf:type owl:Class ;
+              rdfs:subClassOf :Parks ;
+              rdfs:label "National Park" .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NaturalSpring
+:NaturalSpring rdf:type owl:Class ;
+               rdfs:subClassOf :Parks ;
+               rdfs:label "Natural Spring"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Neighborhoods
+:Neighborhoods rdf:type owl:Class ;
+               rdfs:subClassOf :Locations ;
+               rdfs:label "Neighborhoods"@en ;
+               skos:definition "A Location in which houses are built."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NewSmyrnaBeach
+:NewSmyrnaBeach rdf:type owl:Class ;
+                rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NewYears
+:NewYears rdf:type owl:Class ;
+          rdfs:subClassOf :CulturalHolidays ;
+          rdfs:label "New Year's"@en ;
+          rdfs:seeAlso <https://dbpedia.org/page/New_Year> ,
+                       <https://www.wikidata.org/wiki/Q196627> ;
+          skos:definition "A Cultural Holiday that celebrates the progression of a year into the one following on the 1st of January."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NewYearsEve
+:NewYearsEve rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHolidays ;
+             rdfs:label "New Year's Eve"@en ;
+             rdfs:seeAlso <https://www.wikidata.org/wiki/Q11269> ;
+             owl:sameAs <https://dbpedia.org/page/New_Year's_Eve> ;
+             skos:definition "A Cultural Holiday that is celebrated on the last day of the year, December 31st."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NewYearsEveFireworks
+:NewYearsEveFireworks rdf:type owl:Class ;
+                      rdfs:subClassOf :NewYearsEve ;
+                      rdfs:label "New Years Eve Fireworks"@en ;
+                      rdfs:seeAlso <https://www.wikidata.org/wiki/Q2699757> ;
+                      skos:definition "A New Years Eve subclass that pertains to the cultural tradition of deploying fireworks as the year passes into the next at the stroke of midnight."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#News
+:News rdf:type owl:Class .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Nightlife
+:Nightlife rdf:type owl:Class ;
+           rdfs:subClassOf :Events ;
+           rdfs:label "Nightlife"@en ;
+           skos:definition "An Events subclass that pertains to interesting activities or locations enjoyed in the evening and at night."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NortheastFlorida
+:NortheastFlorida rdf:type owl:Class ;
+                  rdfs:subClassOf :Florida ;
+                  rdfs:label "Northeast Florida"@en ;
+                  rdfs:seeAlso <https://www.wikidata.org/wiki/Q387785> ;
+                  skos:altLabel "First Coast"@en ;
+                  skos:definition "A Florida area that pertains to the northeast, coastal part of Florida."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Nutrition
+:Nutrition rdf:type owl:Class ;
+           rdfs:subClassOf :Health ;
+           rdfs:label "Nutrition"@en ;
+           rdfs:seeAlso <https://dbpedia.org/page/Nutrition> ,
+                        <https://www.wikidata.org/wiki/Q66615814> ;
+           skos:definition "A Health subclass that pertains to diet."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Ocala
+:Ocala rdf:type owl:Class ;
+       rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Occupations
+:Occupations rdf:type owl:Class ;
+             rdfs:subClassOf :InterestingPeople .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Oktoberfest
+:Oktoberfest rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHolidays ;
+             rdfs:label "Oktoberfest"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Orlando
+:Orlando rdf:type owl:Class ;
+         rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#OurFavoriteThings
+:OurFavoriteThings rdf:type owl:Class ;
+                   rdfs:subClassOf :SpecialContent ;
+                   rdfs:label "Our Favorite Things"@en ;
+                   skos:definition "A Special Content subclass that pertains to things favorited by content creators."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Outdoor
+:Outdoor rdf:type owl:Class ;
+         rdfs:subClassOf :Scene ;
+         rdfs:label "Outdoor"@en ;
+         skos:definition "A Scene that is placed outside of a constructed building, i.e., in a natural setting."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PalmBeach
+:PalmBeach rdf:type owl:Class ;
+           rdfs:subClassOf :SoutheastFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PanamaCity
+:PanamaCity rdf:type owl:Class ;
+            rdfs:subClassOf :FloridaPanhandle .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Parade
+:Parade rdf:type owl:Class ;
+        rdfs:subClassOf :Events ;
+        rdfs:label "Parade"@en ;
+        skos:definition "An Events subclass that pertains to a celebratory progression typically performed in a public thoroughfare."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Parenting
+:Parenting rdf:type owl:Class ;
+           rdfs:subClassOf :Family ;
+           rdfs:label "Parenting"@en ;
+           owl:sameAs <https://dbpedia.org/page/Parenting> ,
+                      <https://www.wikidata.org/wiki/Q1217379> ;
+           skos:definition "A Family subclass that pertains to raising children."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Parks
+:Parks rdf:type owl:Class ;
+       rdfs:subClassOf :Attractions ;
+       rdfs:label "Parks"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Pensacola
+:Pensacola rdf:type owl:Class ;
+           rdfs:subClassOf :FloridaPanhandle .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#People
+:People rdf:type owl:Class ;
+        rdfs:label "People"@en ;
+        rdfs:seeAlso <https://dbpedia.org/page/People> ,
+                     <https://www.wikidata.org/wiki/Q2472587> ;
+        skos:definition "A top-level class that pertains to humans."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Pets
+:Pets rdf:type owl:Class ;
+      rdfs:subClassOf :Animals .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PettingZoo
+:PettingZoo rdf:type owl:Class ;
+            rdfs:subClassOf :Zoos ;
+            rdfs:label "Petting Zoo"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PlantBased
+:PlantBased rdf:type owl:Class ;
+            rdfs:subClassOf :Cuisine ;
+            rdfs:label "Plant-Based"@en ;
+            skos:definition "A Cuisine subclass that pertains to establishments serving primarily plant-based foods."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Playgrounds
+:Playgrounds rdf:type owl:Class ;
+             rdfs:subClassOf :Locations ;
+             rdfs:label "Playgrounds"@en ;
+             skos:definition "A Location that encompasses recreational equipment and is intended to be used by children to play."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PopularPosts
+:PopularPosts rdf:type owl:Class ;
+              rdfs:subClassOf :SpecialContent ;
+              rdfs:label "Popular Posts"@en ;
+              skos:definition "A Special Content subclass that pertains to posts interacted with a significant number of times by content consumers."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PrePregnancy
+:PrePregnancy rdf:type owl:Class ;
+              rdfs:subClassOf :ChildLifeStages ;
+              rdfs:label "Pre Pregnancy"@en ;
+              skos:definition "A Child Life Stage that pertains to the anticipation of pregnancy."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Pregnancy
+:Pregnancy rdf:type owl:Class ;
+           rdfs:subClassOf :ChildLifeStages ;
+           rdfs:label "Pregnancy"@en ;
+           owl:sameAs <https://dbpedia.org/page/Pregnancy> ,
+                      <https://www.wikidata.org/wiki/Q11995> ;
+           skos:definition "A Child Life Stage that pertains to the period of conception through child delivery."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Preschool
+:Preschool rdf:type owl:Class ;
+           rdfs:subClassOf :SchoolsByLifeStage ;
+           rdfs:label "Preschool"@en ;
+           rdfs:seeAlso <https://dbpedia.org/page/Preschool> ,
+                        <https://www.wikidata.org/wiki/Q1076052> ;
+           skos:definition "A Schools By Life Stage subclass that pertains to children aged 2 to 5."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PresidentsDay
+:PresidentsDay rdf:type owl:Class ;
+               rdfs:subClassOf :CulturalHolidays ;
+               rdfs:label "Presidents Day"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PrivateSchools
+:PrivateSchools rdf:type owl:Class ;
+                rdfs:subClassOf :SchoolsByGovernance ;
+                rdfs:label "Private Schools"@en ;
+                owl:sameAs <https://dbpedia.org/page/Independent_school> ,
+                           <https://www.wikidata.org/wiki/Q423208> ;
+                skos:definition "A Schools By Governance subclass that pertains to schools funded privately with tuition."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Prom
+:Prom rdf:type owl:Class ;
+      rdfs:subClassOf :Education ;
+      rdfs:label "Prom"@en ;
+      owl:sameAs <https://dbpedia.org/page/Prom> ,
+                 <https://www.wikidata.org/wiki/Q1150737> ;
+      skos:definition "An Education subclass that pertains to the middle-youth or teenage year celebration where individuals are inclined to ask one another to attend a ceremony, where dancing and music are typical."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PublicSchools
+:PublicSchools rdf:type owl:Class ;
+               rdfs:subClassOf :SchoolsByGovernance ;
+               rdfs:label "Public Schools"@en ;
+               owl:sameAs <https://dbpedia.org/page/State_school> ,
+                          <https://www.wikidata.org/wiki/Q1080794> ;
+               skos:definition "A Schools By Governance subclass that pertains to schools funded publicly, adhering to regulations prescribed by a higher governing body, e.g., a state."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Pubs
+:Pubs rdf:type owl:Class ;
+      rdfs:subClassOf :Bars ;
+      rdfs:label "Pubs"@en ;
+      skos:definition "A Bars subclass that pertains to establishments serving alcoholic beverages, but with an emphasis on food, community and comfort, typically mirroring \"old-world\" values."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PumpkinPatch
+:PumpkinPatch rdf:type owl:Class ;
+              rdfs:subClassOf :FallFestivals ;
+              rdfs:label "Pumpkin Patch"@en ;
+              skos:definition "A Fall Festival that pertains to the growing and arrangement of pumpkins for the enjoyment of attendees."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Recipes
+:Recipes rdf:type owl:Class ;
+         rdfs:subClassOf :Kitchen .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Region
+:Region rdf:type owl:Class ;
+        rdfs:label "Region"@en ;
+        rdfs:seeAlso <https://dbpedia.org/page/Region> ,
+                     <https://www.wikidata.org/wiki/Q82794> ;
+        skos:definition "A top-level class that pertains to geographic areas."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Relationships
+:Relationships rdf:type owl:Class ;
+               rdfs:subClassOf :Family ;
+               rdfs:label "Relationships"@en ;
+               rdfs:seeAlso <https://dbpedia.org/page/Interpersonal_relationship> ,
+                            <https://dbpedia.org/page/Romance_(love)> ,
+                            <https://www.wikidata.org/wiki/Q1189047> ,
+                            <https://www.wikidata.org/wiki/Q223642> ;
+               skos:definition "A Family subclass that pertains to romantic relationships."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ReligiousHolidays
+:ReligiousHolidays rdf:type owl:Class ;
+                   rdfs:subClassOf :Holidays ;
+                   rdfs:label "Religious Holidays"@en ;
+                   skos:definition "A Holidays subclass that pertains to holidays religious in nature."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ReligiousSchools
+:ReligiousSchools rdf:type owl:Class ;
+                  rdfs:subClassOf :PrivateSchools ;
+                  rdfs:label "Religious Schools"@en ;
+                  owl:sameAs <https://dbpedia.org/page/Religious_school> ,
+                             <https://www.wikidata.org/wiki/Q1971849> ;
+                  skos:definition "A Private Schools subclass that pertains to schools with a religious focus."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Restaurants
+:Restaurants rdf:type owl:Class ;
+             rdfs:subClassOf :Dining ;
+             rdfs:label "Restaurants"@en ;
+             skos:definition "A Dining subclass that pertains to establishments oriented to serving food and drinks to customers."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#RoadTrip
+:RoadTrip rdf:type owl:Class ;
+          rdfs:subClassOf :Travel ;
+          rdfs:label "Road Trip"@en ;
+          skos:definition "A Travel subclass that pertains to the act of driving, typically with others, enjoying the trip itself, and not necessarily the destination."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Running
+:Running rdf:type owl:Class ;
+         rdfs:subClassOf :Sports ;
+         rdfs:label "Running"@en ;
+         skos:definition "A Sport that involves ambulation at a rapid pace, typically for exercise, to reach some destination, with a timer or in a race."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Sanford
+:Sanford rdf:type owl:Class ;
+         rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SantaClaus
+:SantaClaus rdf:type owl:Class ;
+            rdfs:subClassOf :Christmas .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Sarasota
+:Sarasota rdf:type owl:Class ;
+          rdfs:subClassOf :SouthwestFlorida ;
+          rdfs:label "Sarasota"@en ;
+          owl:sameAs "https://dbpedia.org/page/Sarasota,_Florida"@en ,
+                     "https://www.wikidata.org/wiki/Q491540"@en ;
+          skos:definition "The named city of Sarasota within the Southwest Florida region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Scene
+:Scene rdf:type owl:Class ;
+       rdfs:subClassOf :ThingsToDo ;
+       rdfs:label "Scene"@en ;
+       skos:definition "A Things To Do subclass that pertains to the locale of some activity, e.g., Indoor or Outdoor."@en ;
+       skos:note "Subject to change."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Schools
+:Schools rdf:type owl:Class ;
+         rdfs:subClassOf :Education ;
+         rdfs:label "Schools"@en ;
+         owl:sameAs <https://dbpedia.org/page/School> ,
+                    <https://www.wikidata.org/wiki/Q3914> ;
+         skos:definition "A Education subclass that pertains to educational facilities."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SchoolsByGovernance
+:SchoolsByGovernance rdf:type owl:Class ;
+                     rdfs:subClassOf :Schools ;
+                     rdfs:label "Schools by Governance"@en ;
+                     skos:definition "Any School that is grouped by its governance type."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SchoolsByLifeStage
+:SchoolsByLifeStage rdf:type owl:Class ;
+                    rdfs:subClassOf :Schools ;
+                    rdfs:label "Schools by Life Stage"@en ;
+                    skos:definition "Any School that is grouped by the life stage of its attending students."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Seasons
+:Seasons rdf:type owl:Class ;
+         rdfs:subClassOf :ThingsToDo ;
+         rdfs:label "Seasons"@en ;
+         skos:definition "A Things To Do subclass that pertains to the canonical yearly seasons."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Shopping
+:Shopping rdf:type owl:Class ;
+          rdfs:subClassOf :ThingsToDo ;
+          rdfs:label "Shopping"@en ;
+          skos:definition "A Things To Do subclass that pertains to spending money to acquire new items."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Singles
+:Singles rdf:type owl:Class ;
+         rdfs:subClassOf :Audience .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SoutheastFlorida
+:SoutheastFlorida rdf:type owl:Class ;
+                  rdfs:subClassOf :Florida ;
+                  rdfs:label "Southeast Florida"@en ;
+                  skos:definition "A Florida area that pertains to the southeast, coastal part of Florida."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SouthwestFlorida
+:SouthwestFlorida rdf:type owl:Class ;
+                  rdfs:subClassOf :Florida ;
+                  rdfs:label "Southwest Florida"@en ;
+                  rdfs:seeAlso <https://www.wikidata.org/wiki/Q2902384> ;
+                  skos:definition "A Florida area that pertains to the southwest area of Florida."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SpaceCoast
+:SpaceCoast rdf:type owl:Class ;
+            rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Speakeasy
+:Speakeasy rdf:type owl:Class ;
+           rdfs:subClassOf :Bars ;
+           rdfs:label "Speakeasy"@en ;
+           skos:definition "A Bars subclass that pertains to the old-fashioned, Prohibition era style of establishment serving alcoholic beverages."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SpecialContent
+:SpecialContent rdf:type owl:Class ;
+                rdfs:label "Special Content"@en ;
+                skos:definition "A top-level class that pertains to unique or otherwise reserved content."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SpecialOccasions
+:SpecialOccasions rdf:type owl:Class ;
+                  rdfs:subClassOf :Events ;
+                  rdfs:label "Special Occasions"@en ;
+                  skos:definition "An Events Subclass that pertains to unique or otherwise novel occasions."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Sports
+:Sports rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        rdfs:label "Sports"@en ;
+        skos:definition "A Things To Do subclass that pertains to physical activities performed in a competitive or otherwise improvement-oriented manner."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Spring
+:Spring rdf:type owl:Class ;
+        rdfs:subClassOf :Seasons ;
+        rdfs:label "Spring"@en ;
+        skos:definition "A Season that follows Winter and precedes Summer."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SpringBreak
+:SpringBreak rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHolidays ;
+             rdfs:label "Spring Break"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#StAugustine
+:StAugustine rdf:type owl:Class ;
+             rdfs:subClassOf :NortheastFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#StPatricksDay
+:StPatricksDay rdf:type owl:Class ;
+               rdfs:subClassOf :CulturalHolidays ;
+               rdfs:label "St Patricks Day"@en ;
+               skos:altLabel "St. Pats"@en ,
+                             "St. Patty's"@en ,
+                             "St. Patty's Day"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#StPetersburg
+:StPetersburg rdf:type owl:Class ;
+              rdfs:subClassOf :TampaBay ;
+              rdfs:label "St. Petersburg"@en ;
+              owl:sameAs "https://dbpedia.org/page/St._Petersburg,_Florida"@en ,
+                         "https://www.wikidata.org/wiki/Q49236"@en ;
+              skos:altLabel "St. Pete"@en ;
+              skos:definition "The named city of St. Petersburg within the Tampa Bay region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#StatePark
+:StatePark rdf:type owl:Class ;
+           rdfs:subClassOf :Parks ;
+           rdfs:label "State Park"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Steakhouse
+:Steakhouse rdf:type owl:Class ;
+            rdfs:subClassOf :Cuisine ;
+            rdfs:label "Steakhouse"@en ;
+            skos:definition "A Cuisine subclass that pertains to establishments serving primarily steaks."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Summer
+:Summer rdf:type owl:Class ;
+        rdfs:subClassOf :Seasons ;
+        rdfs:label "Summer"@en ;
+        skos:definition "A Season that follows Spring and precedes Fall."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SummerCamp
+:SummerCamp rdf:type owl:Class ;
+            rdfs:subClassOf :Camps ;
+            rdfs:label "Summer Camp"@en ;
+            skos:definition "A Camp that is typically established in a summer period, typically intended for parents to leave their children at."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Sushi
+:Sushi rdf:type owl:Class ;
+       rdfs:subClassOf :Cuisine ;
+       rdfs:label "Sushi"@en ;
+       skos:definition "A Cuisine subclass that pertains to establishments serving primarily the Japanese dish of sushi."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Swimming
+:Swimming rdf:type owl:Class ;
+          rdfs:subClassOf :Sports ;
+          rdfs:label "Swimming"@en ;
+          skos:definition "A Sport that involves movement through water."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Tallahassee
+:Tallahassee rdf:type owl:Class ;
+             rdfs:subClassOf :FloridaPanhandle .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Tampa
+:Tampa rdf:type owl:Class ;
+       rdfs:subClassOf :TampaBay ;
+       rdfs:label "Tampa"@en ;
+       owl:sameAs "https://dbpedia.org/page/Tampa,_Florida"@en ,
+                  "https://www.wikidata.org/wiki/Q49255"@en ;
+       skos:definition "The named city of Tampa within the Tampa Bay region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#TampaBay
+:TampaBay rdf:type owl:Class ;
+          rdfs:subClassOf :Florida ;
+          rdfs:label "Tampa Bay"@en ;
+          rdfs:seeAlso <https://dbpedia.org/page/Tampa_Bay> ;
+          skos:definition "A Florida area that pertains to the popular Tampa Bay part of Florida."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Teacher
+:Teacher rdf:type owl:Class ;
+         rdfs:subClassOf :Occupations .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#TeamSports
+:TeamSports rdf:type owl:Class ;
+            rdfs:subClassOf :Sports ;
+            rdfs:label "Team Sports"@en ;
+            skos:definition "A Sport that involves several people on identifiable teams."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#TeenageYears
+:TeenageYears rdf:type owl:Class ;
+              rdfs:subClassOf :ChildLifeStages ;
+              rdfs:label "Teenage Years"@en ;
+              rdfs:seeAlso <https://dbpedia.org/page/Adolescence> ,
+                           <https://www.wikidata.org/wiki/Q1492760> ,
+                           "A Child Life Stage that is typically recognized as the age range between (roughly) 10 and the early 20s."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Thanksgiving
+:Thanksgiving rdf:type owl:Class ;
+              rdfs:subClassOf :CulturalHolidays ;
+              rdfs:label "Thanksgiving"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ThemePark
+:ThemePark rdf:type owl:Class ;
+           rdfs:subClassOf :Parks ;
+           rdfs:label "Theme Park"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ThingsToDo
+:ThingsToDo rdf:type owl:Class ;
+            rdfs:label "Things To Do"@en ;
+            skos:altLabel "Do"@en ,
+                          "Recreation"@en ,
+                          "To Do"@en ;
+            skos:definition "A top-level class that pertains to activities of interest."@en ;
+            skos:note "Philosophically, everything is a \"thing to do\", if broken into its constituent pieces. For the purpose of the use case of this taxonomy, let a \"thing to do\" be roughly synonymous with a \"recreational act\" that does not typically occur in the home."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Throwback
+:Throwback rdf:type owl:Class ;
+           rdfs:subClassOf :SpecialContent ;
+           rdfs:label "Throwback"@en ;
+           skos:definition "A Special Content subclass that pertains to the remembrance of particular periods in time."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ToddlerYears
+:ToddlerYears rdf:type owl:Class ;
+              rdfs:subClassOf :ChildLifeStages ;
+              rdfs:label "Toddler Years"@en ;
+              rdfs:seeAlso <https://dbpedia.org/page/Toddler> ,
+                           <https://www.wikidata.org/wiki/Q1340307> ;
+              skos:definition "A Child Life Stage that is typically recognized as the age range between 3 and 4."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Trails
+:Trails rdf:type owl:Class ;
+        rdfs:subClassOf :Locations ;
+        rdfs:label "Trails"@en ;
+        skos:definition "A Location that encompasses a marked path, typically through a natural area, intended to be used recreationally by individuals engaging in hiking."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Travel
+:Travel rdf:type owl:Class ;
+        rdfs:subClassOf :ThingsToDo ;
+        rdfs:label "Travel"@en ;
+        skos:definition "A Things To Do subclass that pertains to particular activities taking individuals away from their home and/or local area."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#TrickOrTreating
+:TrickOrTreating rdf:type owl:Class ;
+                 rdfs:subClassOf :Halloween ;
+                 rdfs:label "Trick-or-Treating"@en ;
+                 owl:sameAs <https://dbpedia.org/page/Trick-or-treating> ,
+                            <https://www.wikidata.org/wiki/Q47195> ;
+                 skos:definition "A Halloween subclass that pertains to the traditional Halloween activity for children to dress up and collect candy from the doors of others."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#UPickFarm
+:UPickFarm rdf:type owl:Class ;
+           rdfs:subClassOf :Farms ;
+           rdfs:label "U-Pick Farm"@en ;
+           skos:definition "A Farm that allows attendees to pick their own crops for purchase."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#US_State
+:US_State rdf:type owl:Class ;
+          rdfs:subClassOf :Region .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#ValentinesDay
+:ValentinesDay rdf:type owl:Class ;
+               rdfs:subClassOf :CulturalHolidays ;
+               rdfs:label "Valentines Day"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#VeteransDay
+:VeteransDay rdf:type owl:Class ;
+             rdfs:subClassOf :CulturalHolidays ;
+             rdfs:label "Veterans Day"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Volunteer
+:Volunteer rdf:type owl:Class ;
+           rdfs:subClassOf :ThingsToDo ;
+           rdfs:label "Volunteer"@en ;
+           skos:definition "A Things To Do subclass that pertains to voluntary activities performed without compensation."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WaterPark
+:WaterPark rdf:type owl:Class ;
+           rdfs:subClassOf :Parks ;
+           rdfs:label "Water Park"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Wedding
+:Wedding rdf:type owl:Class ;
+         rdfs:subClassOf :Events ;
+         rdfs:label "Wedding"@en ;
+         skos:definition "An Event that pertains to the marriage of two individuals."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WeekendGetaway
+:WeekendGetaway rdf:type owl:Class ;
+                rdfs:subClassOf :Getaways ;
+                rdfs:label "Weekend Getaway"@en ;
+                skos:definition "A Getaways subclass that pertains to locations travelled to in relatively short manner for no more than two or so days, typically fitting within the timeframe of a weekend."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Westchase
+:Westchase rdf:type owl:Class ;
+           rdfs:subClassOf :TampaBay ;
+           rdfs:label "Westchase"@en ;
+           owl:sameAs "https://dbpedia.org/page/Westchase,_Florida"@en ,
+                      "https://www.wikidata.org/wiki/Q2464007"@en ;
+           skos:definition "The named census-designated place of Westchase within the Tampa Bay region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Wildlife
+:Wildlife rdf:type owl:Class ;
+          rdfs:subClassOf :Animals .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:subClassOf :Drinks ;
+      rdfs:label "Wine"@en ;
+      skos:definition "A Drinks subclass that pertains to alcoholic beverages typically crafted from grapes."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Winter
+:Winter rdf:type owl:Class ;
+        rdfs:subClassOf :Seasons ;
+        rdfs:label "Winter"@en ;
+        skos:definition "A Season that follows Fall and precedes Spring."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WinterGarden
+:WinterGarden rdf:type owl:Class ;
+              rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WinterPark
+:WinterPark rdf:type owl:Class ;
+            rdfs:subClassOf :CentralFlorida .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Work
+:Work rdf:type owl:Class .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WorldChocolateDay
+:WorldChocolateDay rdf:type owl:Class ;
+                   rdfs:subClassOf :CulturalHolidays ;
+                   rdfs:label "World Chocolate Day"@en ;
+                   rdfs:seeAlso <https://www.wikidata.org/wiki/Q20714529> ;
+                   owl:sameAs <https://www.wikidata.org/wiki/Q4127399> ;
+                   skos:altLabel "Chocolate Day"@en ,
+                                 "International Chocolate Day"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Writer
+:Writer rdf:type owl:Class ;
+        rdfs:subClassOf :Occupations .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#YborCity
+:YborCity rdf:type owl:Class ;
+          rdfs:subClassOf :TampaBay ;
+          rdfs:label "Ybor City"@en ;
+          owl:sameAs "https://dbpedia.org/page/Ybor_City"@en ,
+                     "https://www.wikidata.org/wiki/Q3572050"@en ;
+          skos:definition "The named neighborhood of Ybor City within the Tampa Bay region."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#YoungAdulthood
+:YoungAdulthood rdf:type owl:Class ;
+                rdfs:subClassOf :ChildLifeStages ;
+                rdfs:label "Young Adulthood"@en ;
+                rdfs:seeAlso <https://dbpedia.org/page/Young_adult> ,
+                             <https://www.wikidata.org/wiki/Q124411815> ,
+                             <https://www.wikidata.org/wiki/Q17156455> ;
+                skos:altLabel "Highschool Years and Beyond"@en ;
+                skos:definition "A Child Life Stage that is typically recognized as the age range between 18 and 21."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Zoos
+:Zoos rdf:type owl:Class ;
+      rdfs:subClassOf :Attractions ;
+      rdfs:label "Zoos"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#5k
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha#5k> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :Running ;
+                                                           rdfs:label "5k"@en ;
+                                                           skos:definition "A Running subclass that pertains to a long-distance running competition over five kilometers."@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha/HomeImprovement
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/HomeImprovement> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf :Home .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha/YouthSports
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/YouthSports> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf :Education ;
+                                                                    rdfs:label "Youth Sports"@en ;
+                                                                    rdfs:seeAlso <https://dbpedia.org/page/Youth_sports> ,
+                                                                                 <https://www.wikidata.org/wiki/Q599867> ;
+                                                                    skos:definition "An Education subclass that pertains to sports played by youths typically in a tangentially or directly educational setting, e.g., with a school team."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://dbpedia.org/page/Author
+<https://dbpedia.org/page/Author> rdf:type owl:NamedIndividual ;
+                                  owl:sameAs :Author .
+
+
+###  https://dbpedia.org/page/Bachelor
+<https://dbpedia.org/page/Bachelor> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs :Bachelors .
+
+
+###  https://dbpedia.org/page/Bachelorette
+<https://dbpedia.org/page/Bachelorette> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs :Bachelorette .
+
+
+###  https://dbpedia.org/page/COVID-19
+<https://dbpedia.org/page/COVID-19> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs :COVID-19 .
+
+
+###  https://dbpedia.org/page/Cat
+<https://dbpedia.org/page/Cat> rdf:type owl:NamedIndividual ;
+                               owl:sameAs :Cats .
+
+
+###  https://dbpedia.org/page/Child
+<https://dbpedia.org/page/Child> rdf:type owl:NamedIndividual ;
+                                 owl:sameAs :Kids .
+
+
+###  https://dbpedia.org/page/Dog
+<https://dbpedia.org/page/Dog> rdf:type owl:NamedIndividual ;
+                               owl:sameAs :Dogs .
+
+
+###  https://dbpedia.org/page/Exercise
+<https://dbpedia.org/page/Exercise> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs :Exercise .
+
+
+###  https://dbpedia.org/page/Fashion
+<https://dbpedia.org/page/Fashion> rdf:type owl:NamedIndividual ;
+                                   owl:sameAs :Fashion .
+
+
+###  https://dbpedia.org/page/Father
+<https://dbpedia.org/page/Father> rdf:type owl:NamedIndividual ;
+                                  owl:sameAs :Dads .
+
+
+###  https://dbpedia.org/page/Florida
+<https://dbpedia.org/page/Florida> rdf:type owl:NamedIndividual ;
+                                   owl:sameAs :Florida .
+
+
+###  https://dbpedia.org/page/Florida_Keys
+<https://dbpedia.org/page/Florida_Keys> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs :FloridaKeys .
+
+
+###  https://dbpedia.org/page/Florida_Panhandle
+<https://dbpedia.org/page/Florida_Panhandle> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :FloridaPanhandle .
+
+
+###  https://dbpedia.org/page/Gardening
+<https://dbpedia.org/page/Gardening> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs :Gardening .
+
+
+###  https://dbpedia.org/page/Gym
+<https://dbpedia.org/page/Gym> rdf:type owl:NamedIndividual ;
+                               owl:sameAs :Gyms .
+
+
+###  https://dbpedia.org/page/Mental_health
+<https://dbpedia.org/page/Mental_health> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :MentalHealth .
+
+
+###  https://dbpedia.org/page/Miami
+<https://dbpedia.org/page/Miami> rdf:type owl:NamedIndividual ;
+                                 owl:sameAs :Miami .
+
+
+###  https://dbpedia.org/page/Mother
+<https://dbpedia.org/page/Mother> rdf:type owl:NamedIndividual ;
+                                  owl:sameAs :Moms .
+
+
+###  https://dbpedia.org/page/News
+<https://dbpedia.org/page/News> rdf:type owl:NamedIndividual ;
+                                owl:sameAs :News .
+
+
+###  https://dbpedia.org/page/Pet
+<https://dbpedia.org/page/Pet> rdf:type owl:NamedIndividual ;
+                               owl:sameAs :Pets .
+
+
+###  https://dbpedia.org/page/Recipe
+<https://dbpedia.org/page/Recipe> rdf:type owl:NamedIndividual ;
+                                  owl:sameAs :Recipes .
+
+
+###  https://dbpedia.org/page/Single_person
+<https://dbpedia.org/page/Single_person> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :Singles .
+
+
+###  https://dbpedia.org/page/Space_Coast
+<https://dbpedia.org/page/Space_Coast> rdf:type owl:NamedIndividual ;
+                                       owl:sameAs :SpaceCoast .
+
+
+###  https://dbpedia.org/page/Teacher
+<https://dbpedia.org/page/Teacher> rdf:type owl:NamedIndividual ;
+                                   owl:sameAs :Teacher .
+
+
+###  https://dbpedia.org/page/U.S._state
+<https://dbpedia.org/page/U.S._state> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs :US_State .
+
+
+###  https://dbpedia.org/page/Wildlife
+<https://dbpedia.org/page/Wildlife> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs :Wildlife .
+
+
+###  https://dbpedia.org/page/Writer
+<https://dbpedia.org/page/Writer> rdf:type owl:NamedIndividual ;
+                                  owl:sameAs :Writer .
+
+
+###  https://dbpedia.org/page/Cape_Canaveral,_Florida
+<https://dbpedia.org/page/Cape_Canaveral,_Florida> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs :CapeCanaveral .
+
+
+###  https://dbpedia.org/page/Clermont,_Florida
+<https://dbpedia.org/page/Clermont,_Florida> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :Clermont .
+
+
+###  https://dbpedia.org/page/Daytona_Beach,_Florida
+<https://dbpedia.org/page/Daytona_Beach,_Florida> rdf:type owl:NamedIndividual ;
+                                                  owl:sameAs :DaytonaBeach .
+
+
+###  https://dbpedia.org/page/Deltona,_Florida
+<https://dbpedia.org/page/Deltona,_Florida> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :Deltona .
+
+
+###  https://dbpedia.org/page/Doctor_(title)
+<https://dbpedia.org/page/Doctor_(title)> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :Doctor .
+
+
+###  https://dbpedia.org/page/Fernandina_Beach,_Florida
+<https://dbpedia.org/page/Fernandina_Beach,_Florida> rdf:type owl:NamedIndividual ;
+                                                     owl:sameAs :FernandinaBeach .
+
+
+###  https://dbpedia.org/page/Fort_Lauderdale,_Florida
+<https://dbpedia.org/page/Fort_Lauderdale,_Florida> rdf:type owl:NamedIndividual ;
+                                                    owl:sameAs :FortLauderdale .
+
+
+###  https://dbpedia.org/page/Jacksonville,_Florida
+<https://dbpedia.org/page/Jacksonville,_Florida> rdf:type owl:NamedIndividual ;
+                                                 owl:sameAs :Jacksonville .
+
+
+###  https://dbpedia.org/page/Kissimmee,_Florida
+<https://dbpedia.org/page/Kissimmee,_Florida> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :Kissimmee .
+
+
+###  https://dbpedia.org/page/Lakeland,_Florida
+<https://dbpedia.org/page/Lakeland,_Florida> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :Lakeland .
+
+
+###  https://dbpedia.org/page/Melbourne,_Florida
+<https://dbpedia.org/page/Melbourne,_Florida> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :Melbourne .
+
+
+###  https://dbpedia.org/page/New_Smyrna_Beach,_Florida
+<https://dbpedia.org/page/New_Smyrna_Beach,_Florida> rdf:type owl:NamedIndividual ;
+                                                     owl:sameAs :NewSmyrnaBeach .
+
+
+###  https://dbpedia.org/page/Ocala,_Florida
+<https://dbpedia.org/page/Ocala,_Florida> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :Ocala .
+
+
+###  https://dbpedia.org/page/Orlando,_Florida
+<https://dbpedia.org/page/Orlando,_Florida> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :Orlando .
+
+
+###  https://dbpedia.org/page/Palm_Beach,_Florida
+<https://dbpedia.org/page/Palm_Beach,_Florida> rdf:type owl:NamedIndividual ;
+                                               owl:sameAs :PalmBeach .
+
+
+###  https://dbpedia.org/page/Panama_City,_Florida
+<https://dbpedia.org/page/Panama_City,_Florida> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :PanamaCity .
+
+
+###  https://dbpedia.org/page/Pensacola,_Florida
+<https://dbpedia.org/page/Pensacola,_Florida> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :Pensacola .
+
+
+###  https://dbpedia.org/page/Sanford,_Florida
+<https://dbpedia.org/page/Sanford,_Florida> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :Sanford .
+
+
+###  https://dbpedia.org/page/St._Augustine,_Florida
+<https://dbpedia.org/page/St._Augustine,_Florida> rdf:type owl:NamedIndividual ;
+                                                  owl:sameAs :StAugustine .
+
+
+###  https://dbpedia.org/page/Tallahassee,_Florida
+<https://dbpedia.org/page/Tallahassee,_Florida> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :Tallahassee .
+
+
+###  https://dbpedia.org/page/Winter_Garden,_Florida
+<https://dbpedia.org/page/Winter_Garden,_Florida> rdf:type owl:NamedIndividual ;
+                                                  owl:sameAs :WinterGarden .
+
+
+###  https://dbpedia.org/page/Winter_Park,_Florida
+<https://dbpedia.org/page/Winter_Park,_Florida> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :WinterPark .
+
+
+###  https://dbpedia.org/page/Work_(human_activity)
+<https://dbpedia.org/page/Work_(human_activity)> rdf:type owl:NamedIndividual ;
+                                                 owl:sameAs :Work .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Author
+:Author rdf:type owl:NamedIndividual ;
+        owl:sameAs <https://www.wikidata.org/wiki/Q482980> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Bachelorette
+:Bachelorette rdf:type owl:NamedIndividual ;
+              owl:sameAs <https://www.wikidata.org/wiki/Q4838841> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Bachelors
+:Bachelors rdf:type owl:NamedIndividual ;
+           owl:sameAs <https://www.wikidata.org/wiki/Q516445> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#COVID-19
+:COVID-19 rdf:type owl:NamedIndividual .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#CapeCanaveral
+:CapeCanaveral rdf:type owl:NamedIndividual ;
+               owl:sameAs <https://www.wikidata.org/wiki/Q193401> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Cats
+:Cats rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q146> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Clermont
+:Clermont rdf:type owl:NamedIndividual ;
+          owl:sameAs <https://www.wikidata.org/wiki/Q531446> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Couples
+:Couples rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q219160> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dads
+:Dads rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q7565> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#DaytonaBeach
+:DaytonaBeach rdf:type owl:NamedIndividual ;
+              owl:sameAs <https://www.wikidata.org/wiki/Q490595> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Decorating
+:Decorating rdf:type owl:NamedIndividual ;
+            owl:sameAs <https://www.wikidata.org/wiki/Q91791919> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Deltona
+:Deltona rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q1898798> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Doctor
+:Doctor rdf:type owl:NamedIndividual ;
+        owl:sameAs <https://www.wikidata.org/wiki/Q4618975> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Dogs
+:Dogs rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q144> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Exercise
+:Exercise rdf:type owl:NamedIndividual ;
+          owl:sameAs <https://www.wikidata.org/wiki/Q219067> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Fashion
+:Fashion rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q12684> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FernandinaBeach
+:FernandinaBeach rdf:type owl:NamedIndividual ;
+                 owl:sameAs <https://www.wikidata.org/wiki/Q1975746> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Florida
+:Florida rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q812> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FloridaKeys
+:FloridaKeys rdf:type owl:NamedIndividual ;
+             owl:sameAs <https://www.wikidata.org/wiki/Q537749> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FloridaPanhandle
+:FloridaPanhandle rdf:type owl:NamedIndividual ;
+                  owl:sameAs <https://www.wikidata.org/wiki/Q1430068> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#FortLauderdale
+:FortLauderdale rdf:type owl:NamedIndividual ;
+                owl:sameAs <https://www.wikidata.org/wiki/Q165972> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Friends
+:Friends rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q17297777> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Gardening
+:Gardening rdf:type owl:NamedIndividual ;
+           owl:sameAs <https://www.wikidata.org/wiki/Q124946> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Gyms
+:Gyms rdf:type owl:NamedIndividual .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Jacksonville
+:Jacksonville rdf:type owl:NamedIndividual ;
+              owl:sameAs <https://www.wikidata.org/wiki/Q16568> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#JohnByrne
+:JohnByrne rdf:type owl:NamedIndividual ;
+           rdfs:label "John Byrne"@en ;
+           foaf:name "John Byrne"@en .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kids
+:Kids rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q7569> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Kissimmee
+:Kissimmee rdf:type owl:NamedIndividual ;
+           owl:sameAs <https://www.wikidata.org/wiki/Q583894> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Lakeland
+:Lakeland rdf:type owl:NamedIndividual ;
+          owl:sameAs <https://www.wikidata.org/wiki/Q639452> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MarriedCouples
+:MarriedCouples rdf:type owl:NamedIndividual ;
+                owl:sameAs <https://www.wikidata.org/wiki/Q3046146> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Melbourne
+:Melbourne rdf:type owl:NamedIndividual ;
+           owl:sameAs <https://www.wikidata.org/wiki/Q949779> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#MentalHealth
+:MentalHealth rdf:type owl:NamedIndividual ;
+              owl:sameAs <https://www.wikidata.org/wiki/Q317309> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Miami
+:Miami rdf:type owl:NamedIndividual ;
+       owl:sameAs <https://www.wikidata.org/wiki/Q8652> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Moms
+:Moms rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q7560> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#NewSmyrnaBeach
+:NewSmyrnaBeach rdf:type owl:NamedIndividual ;
+                owl:sameAs <https://www.wikidata.org/wiki/Q375375> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#News
+:News rdf:type owl:NamedIndividual .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Ocala
+:Ocala rdf:type owl:NamedIndividual ;
+       owl:sameAs <https://www.wikidata.org/wiki/Q918195> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Occupations
+:Occupations rdf:type owl:NamedIndividual ;
+             owl:sameAs <https://www.wikidata.org/wiki/Q12737077> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Orlando
+:Orlando rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q49233> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PalmBeach
+:PalmBeach rdf:type owl:NamedIndividual ;
+           owl:sameAs <https://www.wikidata.org/wiki/Q695411> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#PanamaCity
+:PanamaCity rdf:type owl:NamedIndividual ;
+            owl:sameAs <https://www.wikidata.org/wiki/Q852591> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Pensacola
+:Pensacola rdf:type owl:NamedIndividual ;
+           owl:sameAs <https://www.wikidata.org/wiki/Q486306> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Pets
+:Pets rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q39201> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Recipes
+:Recipes rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q219239> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Sanford
+:Sanford rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q786770> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Singles
+:Singles rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q908826> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#SpaceCoast
+:SpaceCoast rdf:type owl:NamedIndividual ;
+            owl:sameAs <https://www.wikidata.org/wiki/Q2920489> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#StAugustine
+:StAugustine rdf:type owl:NamedIndividual ;
+             owl:sameAs <https://www.wikidata.org/wiki/Q487988> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Tallahassee
+:Tallahassee rdf:type owl:NamedIndividual ;
+             owl:sameAs <https://www.wikidata.org/wiki/Q37043> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Teacher
+:Teacher rdf:type owl:NamedIndividual ;
+         owl:sameAs <https://www.wikidata.org/wiki/Q37226> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#TylerProcko
+:TylerProcko rdf:type owl:NamedIndividual ;
+             rdfs:label "Tyler Procko"@en ;
+             foaf:mbox "tyler@semanticscience.us"@en ;
+             foaf:name "Tyler Procko"@en ;
+             foaf:page <https://www.semanticscience.us> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#US_State
+:US_State rdf:type owl:NamedIndividual ;
+          owl:sameAs <https://www.wikidata.org/wiki/Q35657> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Wildlife
+:Wildlife rdf:type owl:NamedIndividual ;
+          owl:sameAs <https://www.wikidata.org/wiki/Q241741> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WinterGarden
+:WinterGarden rdf:type owl:NamedIndividual ;
+              owl:sameAs <https://www.wikidata.org/wiki/Q2152414> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#WinterPark
+:WinterPark rdf:type owl:NamedIndividual ;
+            owl:sameAs <https://www.wikidata.org/wiki/Q986641> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Work
+:Work rdf:type owl:NamedIndividual ;
+      owl:sameAs <https://www.wikidata.org/wiki/Q192581> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha#Writer
+:Writer rdf:type owl:NamedIndividual ;
+        owl:sameAs <https://www.wikidata.org/wiki/Q37226> .
+
+
+###  https://hooray.media/ontology/wpo/version/0.3.0-alpha/HomeImprovement
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/HomeImprovement> rdf:type owl:NamedIndividual ;
+                                                                        owl:sameAs <https://www.wikidata.org/wiki/Q2789106> .
+
+
+###  https://www.wikidata.org/wiki/Q124946
+<https://www.wikidata.org/wiki/Q124946> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q12684
+<https://www.wikidata.org/wiki/Q12684> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q12737077
+<https://www.wikidata.org/wiki/Q12737077> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q1430068
+<https://www.wikidata.org/wiki/Q1430068> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q144
+<https://www.wikidata.org/wiki/Q144> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q146
+<https://www.wikidata.org/wiki/Q146> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q16568
+<https://www.wikidata.org/wiki/Q16568> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q165972
+<https://www.wikidata.org/wiki/Q165972> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q17297777
+<https://www.wikidata.org/wiki/Q17297777> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q1898798
+<https://www.wikidata.org/wiki/Q1898798> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q192581
+<https://www.wikidata.org/wiki/Q192581> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q193401
+<https://www.wikidata.org/wiki/Q193401> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q1975746
+<https://www.wikidata.org/wiki/Q1975746> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q2152414
+<https://www.wikidata.org/wiki/Q2152414> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q219067
+<https://www.wikidata.org/wiki/Q219067> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q219160
+<https://www.wikidata.org/wiki/Q219160> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q219239
+<https://www.wikidata.org/wiki/Q219239> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q241741
+<https://www.wikidata.org/wiki/Q241741> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q2789106
+<https://www.wikidata.org/wiki/Q2789106> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q2920489
+<https://www.wikidata.org/wiki/Q2920489> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q3046146
+<https://www.wikidata.org/wiki/Q3046146> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q317309
+<https://www.wikidata.org/wiki/Q317309> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q35657
+<https://www.wikidata.org/wiki/Q35657> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q37043
+<https://www.wikidata.org/wiki/Q37043> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q37226
+<https://www.wikidata.org/wiki/Q37226> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q375375
+<https://www.wikidata.org/wiki/Q375375> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q39201
+<https://www.wikidata.org/wiki/Q39201> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q4618975
+<https://www.wikidata.org/wiki/Q4618975> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q482980
+<https://www.wikidata.org/wiki/Q482980> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q4838841
+<https://www.wikidata.org/wiki/Q4838841> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q486306
+<https://www.wikidata.org/wiki/Q486306> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q487988
+<https://www.wikidata.org/wiki/Q487988> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q490595
+<https://www.wikidata.org/wiki/Q490595> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q49233
+<https://www.wikidata.org/wiki/Q49233> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q516445
+<https://www.wikidata.org/wiki/Q516445> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q531446
+<https://www.wikidata.org/wiki/Q531446> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q537749
+<https://www.wikidata.org/wiki/Q537749> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q583894
+<https://www.wikidata.org/wiki/Q583894> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q639452
+<https://www.wikidata.org/wiki/Q639452> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q695411
+<https://www.wikidata.org/wiki/Q695411> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q7560
+<https://www.wikidata.org/wiki/Q7560> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q7565
+<https://www.wikidata.org/wiki/Q7565> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q7569
+<https://www.wikidata.org/wiki/Q7569> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q786770
+<https://www.wikidata.org/wiki/Q786770> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q812
+<https://www.wikidata.org/wiki/Q812> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q852591
+<https://www.wikidata.org/wiki/Q852591> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q8652
+<https://www.wikidata.org/wiki/Q8652> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q908826
+<https://www.wikidata.org/wiki/Q908826> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q91791919
+<https://www.wikidata.org/wiki/Q91791919> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q918195
+<https://www.wikidata.org/wiki/Q918195> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q949779
+<https://www.wikidata.org/wiki/Q949779> rdf:type owl:NamedIndividual .
+
+
+###  https://www.wikidata.org/wiki/Q986641
+<https://www.wikidata.org/wiki/Q986641> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Author rdfs:label "Author"@en ;
+        skos:definition "An Occupation that pertains to those who author artifacts for publication."@en .
+
+
+:Bachelorette rdfs:label "Bachelorette"@en ;
+              skos:definition "A Single person who is a female."@en .
+
+
+:Bachelors rdfs:label "Bachelors"@en ;
+           skos:definition "A Single person who is a male."@en .
+
+
+:COVID-19 rdfs:seeAlso <https://www.wikidata.org/wiki/Q84263196> ;
+          rdfs:label "COVID-19"@en ;
+          skos:definition "A News subclass that pertains to the COVID-19 pandemic."@en .
+
+
+:CapeCanaveral skos:definition "The named city of Cape Canaveral within the Space Coast region."@en ;
+               rdfs:label "Cape Canaveral"@en .
+
+
+:Cats skos:definition "A Pet that has the species name Felis catus."@en .
+
+
+:Clermont skos:definition "The named city of Clermont within the Central Florida region."@en ;
+          rdfs:label "Clermont"@en .
+
+
+:Couples rdfs:seeAlso <https://dbpedia.org/page/Intimate_relationship> ;
+         rdfs:label "Couples"@en ;
+         skos:definition "An Audience subclass that pertains to individuals in romantic relationships."@en .
+
+
+:Dads skos:definition "A Interesting People subclass that pertains to fathers."@en ;
+      rdfs:label "Dads"@en .
+
+
+:DaytonaBeach skos:definition "The named city of Daytona Beach within the Central Florida region."@en ;
+              rdfs:label "Daytona Beach"@en .
+
+
+:Decorating rdfs:label "Decorating"@en ;
+            rdfs:seeAlso <https://dbpedia.org/page/Christmas_decoration> ;
+            skos:definition "A Home subclass that pertains to the apperance of a home."@en ;
+            rdfs:seeAlso <https://dbpedia.org/page/Interior_design> .
+
+
+:Deltona skos:definition "The named city of Deltona within the Central Florida region."@en ;
+         rdfs:label "Deltona"@en .
+
+
+:Doctor rdfs:label "Doctor"@en ;
+        skos:definition "An Occupation that pertains to accredited doctors in some field."@en .
+
+
+:Dogs skos:definition "A Pet that has the species name Canis lupus familiaris."@en .
+
+
+:Exercise rdfs:label "Exercise"@en ;
+          skos:definition "A Fitness subclass that pertains to physical exercise activities intended to enhance physical wellness."@en .
+
+
+:Fashion rdfs:label "Fashion"@en ;
+         skos:definition "A Home subclass that pertains to personal appearance through artifacts, such as clothing."@en .
+
+
+:FernandinaBeach skos:definition "The named city of Fernandina Beach within the Northeast Florida region."@en ;
+                 rdfs:label "Fernandina Beach"@en ;
+                 skos:note "Tyler lived here!"@en .
+
+
+:Florida skos:definition "The American state of Florida."@en ;
+         rdfs:label "Florida"@en .
+
+
+:FloridaKeys skos:definition "A Florida area that pertains to the chain of islands south of Florida's primary landmass."@en ;
+             rdfs:label "Florida Keys"@en .
+
+
+:FloridaPanhandle rdfs:label "Florida Panhandle"@en ;
+                  skos:definition "A Florida area that pertains to the northwest part of Florida."@en .
+
+
+:FortLauderdale skos:definition "The named city of Fort Lauderdale within the Southeast Florida region."@en ;
+                rdfs:label "Fort Lauderdale"@en .
+
+
+:Friends skos:definition "An Audience subclass that pertains to close acquaintances."@en ;
+         rdfs:label "Friends"@en ;
+         rdfs:seeAlso <https://dbpedia.org/page/Friendship> .
+
+
+:Gardening skos:definition "A Home subclass that pertains to the maintenance of gardens."@en ;
+           rdfs:label "Gardening"@en .
+
+
+:Gyms rdfs:seeAlso <https://www.wikidata.org/wiki/Q1065656> ,
+                   <https://www.wikidata.org/wiki/Q14092> ;
+      rdfs:label "Gyms"@en ;
+      skos:definition "A Fitness subclass that pertains to locations used to perform physical activities."@en .
+
+
+:Jacksonville rdfs:label "Jacksonville"@en ;
+              skos:definition "The named city of Jacksonville within the Northeast Florida region."@en .
+
+
+:Kids skos:definition "A Interesting People subclass that pertains to children."@en ;
+      rdfs:label "Kids"@en .
+
+
+:Kissimmee rdfs:label "Kissimmee"@en ;
+           skos:definition "The named city of Kissimmee within the Central Florida region."@en .
+
+
+:Lakeland skos:definition "The named city of Lakeland within the Central Florida region."@en ;
+          rdfs:label "Lakeland"@en .
+
+
+:MarriedCouples skos:definition "A Couple that has been married previously."@en ;
+                rdfs:label "Married Couples"@en ;
+                rdfs:seeAlso <https://dbpedia.org/page/Monogamy> .
+
+
+:Melbourne skos:definition "The named city of Melbourne within the Central Florida region."@en ;
+           rdfs:label "Melbourne"@en .
+
+
+:MentalHealth skos:definition "A Health subclass that pertains to mental wellbeing."@en ;
+              rdfs:label "Mental Health"@en .
+
+
+:Miami skos:definition "The named city of Miami within the Southeast Florida region."@en ;
+       rdfs:label "Miami"@en .
+
+
+:Moms rdfs:label "Moms"@en ;
+      skos:definition "A Interesting People subclass that pertains to mothers."@en .
+
+
+:NewSmyrnaBeach skos:definition "The named city of New Smyrna Beach within the Central Florida region."@en ;
+                rdfs:label "New Smyrna Beach"@en .
+
+
+:News rdfs:seeAlso <https://www.wikidata.org/wiki/Q38926> ;
+      rdfs:label "News"@en ;
+      skos:definition "A top-level class that pertains to notable events."@en ;
+      rdfs:seeAlso <https://www.wikidata.org/wiki/Q1193236> .
+
+
+:Ocala rdfs:label "Ocala"@en ;
+       skos:definition "The named city of Ocala within the Central Florida region."@en .
+
+
+:Occupations skos:definition "A Interesting People subclass that groups persons by occupation or role."@en ;
+             rdfs:seeAlso <https://dbpedia.org/page/Work_(human_activity)> ;
+             rdfs:label "Occupations"@en .
+
+
+:Orlando skos:definition "The named city of Orlando within the Central Florida region."@en ;
+         rdfs:label "Orlando"@en .
+
+
+:PalmBeach skos:definition "The named city of Palm Beach within the Southeast Florida region."@en ;
+           rdfs:label "Palm Beach"@en .
+
+
+:PanamaCity rdfs:label "Panama City"@en ;
+            skos:definition "The named city of Panama City within the Florida Panhandle region."@en .
+
+
+:Pensacola rdfs:label "Pensacola"@en ;
+           skos:definition "The named city of Pensacola within the Florida Panhandle region."@en .
+
+
+:Pets skos:definition "An Animal that is domesticated and kept for the purpose of companionship."@en ;
+      rdfs:label "Pets"@en .
+
+
+:Recipes rdfs:label "Recipes"@en ;
+         skos:definition "A Kitchen subclass that pertains to cooking recipes."@en .
+
+
+:Sanford rdfs:label "Sanford"@en ;
+         skos:definition "The named city of Sanford within the Central Florida region."@en .
+
+
+:Singles skos:definition "An Audience subclass that pertains to persons not in romantic relationships."@en ;
+         rdfs:label "Singles"@en .
+
+
+:SpaceCoast skos:definition "The named region of the Space Coast within the Central Florida region."@en ;
+            rdfs:label "Space Coast"@en .
+
+
+:StAugustine skos:definition "The named city of St. Augustine within the Northeast Florida region."@en ;
+             rdfs:label "St. Augustine"@en .
+
+
+:Tallahassee rdfs:label "Tallahassee"@en ;
+             skos:definition "The named city of Tallahassee within the Florida Panhandle region."@en .
+
+
+:Teacher rdfs:label "Teacher"@en ;
+         skos:definition "An Occupation that pertains to educational professionals."@en .
+
+
+:US_State skos:definition "A Region subclass that is an identifiable, named, bordered region within the United States of America."@en ;
+          rdfs:label "U.S. State"@en .
+
+
+:Wildlife rdfs:label "Wildlife"@en ;
+          skos:definition "Any Animal that is not domesticated."@en .
+
+
+:WinterGarden rdfs:label "Winter Garden"@en ;
+              skos:definition "The named city of Winter Garden within the Central Florida region."@en .
+
+
+:WinterPark rdfs:label "Winter Park"@en ;
+            skos:definition "The named city of Winter Park within the Central Florida region."@en .
+
+
+:Work skos:definition "A top-level class that pertains to employment, service, jobs, careers, etc."@en ;
+      rdfs:label "Work"@en .
+
+
+:Writer skos:definition "A Occupation that pertains to those who write content."@en ;
+        rdfs:label "Writer"@en .
+
+
+<https://hooray.media/ontology/wpo/version/0.3.0-alpha/HomeImprovement> skos:definition "A Home subclass that pertains to the renovation or improvement of homes."@en ;
+                                                                        rdfs:label "Home Improvement"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
