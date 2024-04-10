@@ -56,4 +56,5 @@ Visualizations are then made with [jsoncrack.com](jsoncrack.com).
 
 # Credit
 * John Byrne of Hooray Media for project inception
+* Dani Meyering for feedback
 * Tyler Procko, ontologist
