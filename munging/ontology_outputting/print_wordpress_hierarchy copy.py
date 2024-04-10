@@ -46,7 +46,7 @@ def print_class_hierarchy(turtle_file_path):
         build_hierarchy(g, top_class)
 
 scriptDir = os.path.dirname(os.path.abspath(__file__))
-inputFile = os.path.join(scriptDir, 'wpo_v0.2.2-alpha.ttl')
+inputFile = os.path.join(scriptDir, 'wpo_v0.3.0-alpha.ttl')
 #outputFile = os.path.join(scriptDir, 'all_labels.txt')       
 
 print_class_hierarchy(inputFile)

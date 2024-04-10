@@ -2,16 +2,17 @@ from rdflib import Graph, Namespace, RDF, RDFS, SKOS, OWL, URIRef
 import os
 
 def build_hierarchy(graph, class_uri, file, level=0, hierarchy=None):
+    skos = Namespace("http://www.w3.org/2004/02/skos/core#")
     """
     Recursive function to build class hierarchy from an RDF graph and write it to a file.
     """
     if hierarchy is None:
         hierarchy = []  # Initialize a new list if none is provided
-        file.write(graph.value(class_uri, RDFS.label) +'\n')
+        file.write(graph.value(class_uri, skos.prefLabel) +'\n')
     
     # Your existing code to build the hierarchy
-    label = graph.value(class_uri, RDFS.label) or class_uri.split('#')[-1]
-    hierarchy.append((label, level))
+    prefLabel = graph.value(class_uri, skos.prefLabel) or class_uri.split('#')[-1]
+    hierarchy.append((prefLabel, level))
     
     # Find subclasses of the current class
     subclasses = graph.subjects(predicate=RDFS.subClassOf, object=class_uri)
@@ -35,17 +36,17 @@ def print_class_hierarchy(turtle_file_path, output_file_path):
     # Open the output file in write mode
     with open(output_file_path, 'w') as file:
         top_level_class_iris = {
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Animals"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Audience"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Family"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Health"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Home"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#News"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#People"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Region"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#SpecialContent"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#ThingsToDo"),
-        URIRef("https://hooray.media/ontology/wpo/version/0.3.0-alpha#Work")
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Animals"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Audience"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Family"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Health"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Home"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#News"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#People"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Region"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#SpecialContent"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#ThingsToDo"),
+        URIRef("https://hooray.media/ontology/wpo/version/0.2.0-alpha#Work")
         # Add more IRIs as needed
         }
         top_level_classes = set(top_level_class_iris)
@@ -55,7 +56,7 @@ def print_class_hierarchy(turtle_file_path, output_file_path):
             build_hierarchy(g, top_class, file)
 
 scriptDir = os.path.dirname(os.path.abspath(__file__))
-inputFile = os.path.join(scriptDir, 'wpo_v0.3.0-alpha.ttl')
-outputFile = os.path.join(scriptDir, 'class_hierarchy.txt')       
+inputFile = os.path.join(scriptDir, 'wpo_v0.2.2-alpha.ttl')
+outputFile = os.path.join(scriptDir, 'class_hierarchy_022.txt')       
 
 print_class_hierarchy(inputFile, outputFile)
