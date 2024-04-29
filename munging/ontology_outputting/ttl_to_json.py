@@ -8,8 +8,8 @@ scriptDir = os.path.dirname(os.path.abspath(__file__))
 #########################################################################
 #########################CHANGE ME AS NEEDED#############################
 #########################################################################
-ttl_file_path = os.path.join(scriptDir, 'wpo_v0.4.1-alpha.ttl')
-output_file_path = os.path.join(scriptDir, 'wpo_v0.4.1-alpha.json')
+ttl_file_path = os.path.join(scriptDir, 'wpo_v0.5.0-alpha.ttl')
+output_file_path = os.path.join(scriptDir, 'wpo_v0.5.0-alpha.json')
 #########################################################################
 
 def convert_ttl_to_json_hierarchy(ttl_file_path, output_file_path):

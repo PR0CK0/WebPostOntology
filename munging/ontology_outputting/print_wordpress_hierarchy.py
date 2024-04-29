@@ -6,7 +6,7 @@ scriptDir = os.path.dirname(os.path.abspath(__file__))
 #########################################################################
 #########################CHANGE ME AS NEEDED#############################
 #########################################################################
-input_file = os.path.join(scriptDir, 'wpo_v0.4.0-alpha.ttl')
+input_file = os.path.join(scriptDir, 'wpo_v0.5.0-alpha.ttl')
 output_file = os.path.join(scriptDir, 'class_hierarchy.txt')       
 #########################################################################
 
