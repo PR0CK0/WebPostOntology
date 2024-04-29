@@ -1,12 +1,16 @@
 # For converting RDF/RDFS/OWL taxonomies into JSON for nice visualization in jsoncrack
 
-import json
+import json, os
 from rdflib import Graph, RDFS
-import os
 
 scriptDir = os.path.dirname(os.path.abspath(__file__))
-ttl_file_path = os.path.join(scriptDir, 'wpo_v0.3.0-alpha.ttl')
-output_file_path = os.path.join(scriptDir, 'wpo_v0.3.0-alpha.json')
+
+#########################################################################
+#########################CHANGE ME AS NEEDED#############################
+#########################################################################
+ttl_file_path = os.path.join(scriptDir, 'wpo_v0.4.1-alpha.ttl')
+output_file_path = os.path.join(scriptDir, 'wpo_v0.4.1-alpha.json')
+#########################################################################
 
 def convert_ttl_to_json_hierarchy(ttl_file_path, output_file_path):
     g = Graph()
@@ -45,7 +49,6 @@ def convert_ttl_to_json_hierarchy(ttl_file_path, output_file_path):
     # Building the hierarchy for each root class
     hierarchy = {root_class: build_hierarchy(root_class, results_list) for root_class in root_classes}
 
-    # Write the hierarchy to the output file in JSON format
     with open(output_file_path, 'w') as outfile:
         json.dump(hierarchy, outfile, indent=4)
 

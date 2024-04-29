@@ -1,0 +1,470 @@
+{
+    "Animals": {
+        "Wildlife": {
+            "AquaticWildlife": {
+                "Alligators": {},
+                "Dolphins": {},
+                "Manatees": {},
+                "Sharks": {},
+                "AquaticBirds": {
+                    "Ducks": {},
+                    "Flamingos": {},
+                    "Geese": {},
+                    "Swans": {}
+                }
+            }
+        },
+        "Pets": {
+            "Cats": {},
+            "Dogs": {}
+        }
+    },
+    "People": {
+        "InterestingPeople": {
+            "Dads": {},
+            "Doctor": {},
+            "Kids": {},
+            "Moms": {},
+            "Occupations": {
+                "ConstructionProfessional": {
+                    "Contractor": {}
+                },
+                "LegalProfessional": {
+                    "Lawyer": {}
+                },
+                "EducationProfessional": {
+                    "Professor": {},
+                    "Teacher": {}
+                },
+                "TechnologyProfessional": {
+                    "Engineer": {},
+                    "SoftwareDeveloper": {}
+                },
+                "CommunicationProfessional": {
+                    "Author": {},
+                    "Journalist": {},
+                    "Writer": {}
+                },
+                "HealthcareProfessional": {
+                    "Dentist": {},
+                    "MedicalDoctor": {},
+                    "Nurse": {},
+                    "Psychiatrist": {},
+                    "Counselor": {
+                        "LicensedMentalHealthCounselor": {}
+                    }
+                }
+            }
+        }
+    },
+    "Health": {
+        "MentalHealth": {},
+        "Nutrition": {},
+        "Fitness": {
+            "Gyms": {},
+            "Exercise": {
+                "ExerciseClasses": {},
+                "Yoga": {}
+            }
+        }
+    },
+    "Family": {
+        "Birthday": {},
+        "Wedding": {},
+        "Parenting": {
+            "Babysitting": {},
+            "Daycare": {},
+            "ChildLifeStages": {
+                "ElementaryYears": {},
+                "HighSchoolYears": {},
+                "Infancy": {},
+                "JuniorHighYears": {},
+                "MiddleSchoolYears": {},
+                "PrePregnancy": {},
+                "Pregnancy": {},
+                "TeenageYears": {},
+                "ToddlerYears": {},
+                "YoungAdulthood": {}
+            }
+        },
+        "Relationships": {
+            "Dating": {},
+            "Engagement": {},
+            "Marriage": {}
+        },
+        "Education": {
+            "BackToSchool": {},
+            "Prom": {},
+            "SpringBreak": {},
+            "WinterBreak": {},
+            "YouthSports": {},
+            "Schools": {
+                "SchoolsByGovernance": {
+                    "HomeSchool": {},
+                    "PrivateSchools": {
+                        "ReligiousSchools": {}
+                    },
+                    "PublicSchools": {
+                        "CharterSchools": {}
+                    }
+                },
+                "SchoolsByLifeStage": {
+                    "CollegePrep": {},
+                    "ElementarySchool": {},
+                    "HighSchool": {},
+                    "JuniorHigh": {},
+                    "Kindergarten": {},
+                    "MiddleSchool": {},
+                    "Preschool": {}
+                }
+            }
+        }
+    },
+    "Audience": {
+        "Friends": {},
+        "Couples": {
+            "MarriedCouples": {}
+        },
+        "Singles": {
+            "Bachelorette": {},
+            "Bachelors": {}
+        }
+    },
+    "Home": {
+        "Beauty": {},
+        "Crafts": {},
+        "Decorating": {},
+        "Fashion": {},
+        "Gardening": {},
+        "HomeImprovement": {},
+        "Kitchen": {
+            "Recipes": {}
+        }
+    },
+    "SpecialContent": {
+        "AskTheDoc": {},
+        "CheapAndFree": {},
+        "Featured": {},
+        "KidFriendly": {},
+        "OurFavoriteThings": {},
+        "PopularPosts": {},
+        "Throwback": {}
+    },
+    "Region": {
+        "US_State": {
+            "Florida": {
+                "FloridaKeys": {},
+                "NortheastFlorida": {
+                    "Jacksonville": {},
+                    "StAugustine": {}
+                },
+                "FloridaPanhandle": {
+                    "PanamaCity": {},
+                    "Pensacola": {},
+                    "Tallahassee": {}
+                },
+                "SoutheastFlorida": {
+                    "FortLauderdale": {},
+                    "Miami": {},
+                    "PalmBeach": {}
+                },
+                "SouthwestFlorida": {
+                    "AnnaMariaIsland": {},
+                    "FortMyers": {},
+                    "Naples": {},
+                    "Sarasota": {}
+                },
+                "TampaBay": {
+                    "Clearwater": {},
+                    "StPetersburg": {},
+                    "Tampa": {},
+                    "Westchase": {},
+                    "YborCity": {}
+                },
+                "CentralFlorida": {
+                    "Clermont": {},
+                    "CocoaBeach": {},
+                    "DaytonaBeach": {},
+                    "DeLand": {},
+                    "Deltona": {},
+                    "Kissimmee": {},
+                    "Lakeland": {},
+                    "Melbourne": {},
+                    "NewSmyrnaBeach": {},
+                    "Ocala": {},
+                    "Orlando": {},
+                    "Sanford": {},
+                    "WinterGarden": {},
+                    "WinterPark": {},
+                    "SpaceCoast": {
+                        "CapeCanaveral": {}
+                    }
+                }
+            }
+        }
+    },
+    "ThingsToDo": {
+        "Books": {},
+        "Dancing": {},
+        "Games": {},
+        "Movies": {},
+        "Science": {},
+        "Technology": {},
+        "Volunteer": {},
+        "Holidays": {
+            "HolidayMonths": {
+                "AsianPacificHeritageMonth": {},
+                "BlackHistoryMonth": {},
+                "HispanicHeritageMonth": {},
+                "Ramadan": {},
+                "WomensHistoryMonth": {}
+            },
+            "ReligiousHolidays": {
+                "Diwali": {},
+                "Eid_al-Fitr": {},
+                "Hanukkah": {},
+                "Holi": {},
+                "Passover": {},
+                "RoshHashanah": {},
+                "YomKippur": {},
+                "Easter": {
+                    "EasterBrunch": {},
+                    "EasterBunny": {},
+                    "EasterEggHunting": {}
+                },
+                "Christmas": {
+                    "ChristmasDinner": {},
+                    "ChristmasEve": {},
+                    "ChristmasLights": {},
+                    "ChristmasTree": {},
+                    "SantaClaus": {}
+                }
+            },
+            "CulturalHolidays": {
+                "CincoDeMayo": {},
+                "FathersDay": {},
+                "Juneteenth": {},
+                "Kwanzaa": {},
+                "LaborDay": {},
+                "MLKDay": {},
+                "MardiGras": {},
+                "MemorialDay": {},
+                "NewYears": {},
+                "Oktoberfest": {},
+                "PresidentsDay": {},
+                "SpringBreak": {},
+                "StPatricksDay": {},
+                "ValentinesDay": {},
+                "VeteransDay": {},
+                "WorldChocolateDay": {},
+                "July4th": {
+                    "July4thFireworks": {}
+                },
+                "MothersDay": {
+                    "MothersDayBrunch": {}
+                },
+                "NewYearsEve": {
+                    "NewYearsEveFireworks": {}
+                },
+                "Thanksgiving": {
+                    "ThanksgivingDinner": {}
+                },
+                "Halloween": {
+                    "HauntedHouse": {},
+                    "TrickOrTreating": {}
+                }
+            }
+        },
+        "Scene": {
+            "Indoor": {},
+            "Outdoor": {},
+            "Waterfront": {}
+        },
+        "Seasons": {
+            "Spring": {},
+            "Summer": {},
+            "Winter": {},
+            "Fall": {
+                "FallFestivals": {
+                    "PumpkinPatch": {}
+                }
+            }
+        },
+        "Shopping": {
+            "BlackFriday": {},
+            "CyberMonday": {},
+            "Deals": {},
+            "TaxHolidays": {}
+        },
+        "Travel": {
+            "Cruise": {},
+            "DayTrip": {},
+            "RoadTrip": {},
+            "Camping": {
+                "Glamping": {}
+            },
+            "Getaways": {
+                "GirlsWeekend": {},
+                "WeekendGetaway": {}
+            }
+        },
+        "RecreationalClasses": {
+            "ArtClasses": {},
+            "CocktailClasses": {},
+            "CookingClasses": {},
+            "DanceClasses": {},
+            "PhotographyClasses": {},
+            "PotteryClasses": {}
+        },
+        "Dining": {
+            "Breweries": {},
+            "Distilleries": {},
+            "FoodCourts": {},
+            "FoodTrucks": {},
+            "Restaurants": {},
+            "Bars": {
+                "HappyHour": {},
+                "Pubs": {},
+                "Speakeasy": {},
+                "WineBars": {}
+            },
+            "Drinks": {
+                "Cocktails": {},
+                "Coffee": {},
+                "Liquor": {},
+                "Wine": {},
+                "Beer": {
+                    "CraftBeer": {}
+                }
+            },
+            "DiningCourse": {
+                "Appetizers": {},
+                "Breakfast": {},
+                "Brunch": {},
+                "Desserts": {},
+                "Dinner": {},
+                "LateNightMeal": {},
+                "Lunch": {}
+            },
+            "Cuisine": {
+                "Barbecue": {},
+                "Chinese": {},
+                "French": {},
+                "Indian": {},
+                "Mexican": {},
+                "PlantBased": {},
+                "Seafood": {},
+                "Steakhouse": {},
+                "Thai": {},
+                "Japanese": {
+                    "Sushi": {}
+                },
+                "Mediterranean": {
+                    "Greek": {},
+                    "Spanish": {},
+                    "Italian": {
+                        "Pizza": {}
+                    }
+                }
+            }
+        },
+        "Sports": {
+            "Biking": {},
+            "Golf": {},
+            "Hiking": {},
+            "Jogging": {},
+            "Motorsports": {},
+            "Pickleball": {},
+            "Tennis": {},
+            "Swimming": {
+                "SwimTeam": {}
+            },
+            "Running": {
+                "5k": {},
+                "Marathon": {}
+            },
+            "TeamSports": {
+                "Baseball": {},
+                "Basketball": {},
+                "Football": {},
+                "Hockey": {},
+                "Soccer": {},
+                "Softball": {}
+            }
+        },
+        "Events": {
+            "CarShows": {},
+            "Contests": {},
+            "DateNight": {},
+            "FamilyFun": {},
+            "GirlsNightOut": {},
+            "Nightlife": {},
+            "Parade": {},
+            "SpecialOccasions": {},
+            "Staycation": {},
+            "Festivals": {
+                "MusicFestivals": {}
+            },
+            "LiveMusic": {
+                "Concerts": {}
+            }
+        },
+        "Locations": {
+            "Ballroom": {},
+            "BirthdayPartyVenue": {},
+            "Churches": {},
+            "ComedyClub": {},
+            "DanceStudio": {},
+            "FarmersMarket": {},
+            "FleaMarket": {},
+            "Libraries": {},
+            "Neighborhoods": {},
+            "Playgrounds": {},
+            "Trails": {},
+            "Farms": {
+                "UPickFarm": {}
+            },
+            "Accommodations": {
+                "Hotel": {},
+                "Inn": {},
+                "Resort": {},
+                "VacationHomes": {}
+            },
+            "Camps": {
+                "SpringBreakCamp": {},
+                "SummerCamp": {},
+                "ThanksgivingCamp": {},
+                "WinterBreakCamp": {}
+            },
+            "Attractions": {
+                "Aquariums": {},
+                "Aviary": {},
+                "Beaches": {},
+                "Garden": {},
+                "MovieTheater": {},
+                "Zoos": {
+                    "PettingZoo": {}
+                },
+                "Museums": {
+                    "ArtMuseum": {},
+                    "ChildrensMuseum": {},
+                    "HistoryMuseum": {}
+                },
+                "Parks": {
+                    "NationalPark": {},
+                    "NaturalSpring": {},
+                    "StatePark": {},
+                    "ThemePark": {},
+                    "WaterPark": {}
+                }
+            }
+        }
+    },
+    "News": {
+        "COVID-19": {},
+        "Culture": {},
+        "Economy": {},
+        "International": {},
+        "Politics": {}
+    }
+}

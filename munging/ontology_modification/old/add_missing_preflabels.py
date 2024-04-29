@@ -31,13 +31,10 @@ def addSkosPrefLabel(graph):
 
     return graph
 
-# Reading the Turtle file
 graph = Graph()
 graph.parse("v1.ttl", format="turtle")
 
-# Adding skos:prefLabel to classes
 graph = addSkosPrefLabel(graph)
 
-# Serializing the graph to Turtle format and saving it
 with open("v1_modified.ttl", "w") as file:
     file.write(graph.serialize(format="turtle"))

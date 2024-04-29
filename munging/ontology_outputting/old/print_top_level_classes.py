@@ -1,10 +1,6 @@
 from rdflib import Graph, RDF, RDFS, OWL
 
 def print_top_level_classes(turtle_file_path):
-    """
-    Prints all top-level classes in a Turtle file.
-    Top-level classes are those that are not subclasses of any other classes.
-    """
     # Initialize the RDF graph
     g = Graph()
     

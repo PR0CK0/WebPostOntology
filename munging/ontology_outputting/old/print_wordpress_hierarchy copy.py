@@ -2,9 +2,6 @@ from rdflib import Graph, Namespace, RDF, RDFS, SKOS, OWL
 import os
 
 def build_hierarchy(graph, class_uri, level=0, hierarchy=[]):    
-    """
-    Recursive function to build and print class hierarchy from an RDF graph, using skos:prefLabel.
-    """
     # Define the SKOS namespace
     skos = Namespace("http://www.w3.org/2004/02/skos/core#")
     
@@ -24,9 +21,6 @@ def build_hierarchy(graph, class_uri, level=0, hierarchy=[]):
         print(" / ".join([h[0] for h in hierarchy]))
 
 def print_class_hierarchy(turtle_file_path):
-    """
-    Parses a Turtle file and prints the class hierarchy, utilizing skos:prefLabel for class names.
-    """
     g = Graph()
     g.parse(turtle_file_path, format="turtle")
     

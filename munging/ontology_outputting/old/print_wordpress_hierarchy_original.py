@@ -10,7 +10,6 @@ def build_hierarchy(graph, class_uri, file, level=0, hierarchy=None):
         hierarchy = []  # Initialize a new list if none is provided
         file.write(graph.value(class_uri, skos.prefLabel) +'\n')
     
-    # Your existing code to build the hierarchy
     prefLabel = graph.value(class_uri, skos.prefLabel) or class_uri.split('#')[-1]
     hierarchy.append((prefLabel, level))
     

@@ -6,7 +6,6 @@ def parseTurtleFile(filePath):
   g = rdflib.Graph()
   g.parse(filePath, format="turtle")
 
-  # Query for classes, their superclasses, and the label of the superclass
   qres = g.query(
     """
     SELECT ?class ?superclass ?label
@@ -17,7 +16,6 @@ def parseTurtleFile(filePath):
     """
   )
 
-  # Iterate over the results and append definitions
   for row in qres:
     classUri, superclassUri, label = row
     if label:
@@ -28,5 +26,5 @@ def parseTurtleFile(filePath):
   # Output the modified graph
   g.serialize(destination=filePath, format="turtle")
 
-# Replace 'your_file.ttl' with the path to your Turtle file
+### Change as needed
 parseTurtleFile('munging/wpo_v0.2.0-alpha.ttl')

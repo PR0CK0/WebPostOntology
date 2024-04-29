@@ -1,14 +1,15 @@
+# For converting all owl:sameAs and rdfs:seeAlso statements because Protege and PyLode, respectively, give issues
+# Somewhat one-off
+
 from rdflib import Graph, Namespace, URIRef
 import os
 
-# Define namespaces
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
 OWL = Namespace("http://www.w3.org/2002/07/owl#")
 
 def convert_predicates(input_ttl, output_ttl):
     g = Graph()
-    # Load the Turtle file
     g.parse(input_ttl, format="turtle")
 
     # Replacement mappings
@@ -27,11 +28,9 @@ def convert_predicates(input_ttl, output_ttl):
             # Add the new triple with the new predicate
             g.add((s, new_predicate, o))
 
-    # Save the modified graph to a new Turtle file
     g.serialize(destination=output_ttl, format="turtle")
     print(f"Conversion complete. Output saved to {output_ttl}")
 
-# Input and output file paths
 scriptDir = os.path.dirname(os.path.abspath(__file__))
 input_file = os.path.join(scriptDir, '_DO_NOT_MODIFY.ttl')
 output_file = os.path.join(scriptDir, 'please_work.ttl')
