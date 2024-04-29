@@ -22,7 +22,7 @@
                                      dct:format "text/turtle"@en ;
                                      dct:language "en-US"@en ;
                                      dct:modified "2024-04-29"@en ;
-                                     dct:source <https://github.com/PR0CK0/WebPostOntology> ;
+                                     dct:source <https://raw.githubusercontent.com/PR0CK0/WebPostOntology/main/ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.ttl> ;
                                      dct:title "Web Post Ontology"@en ;
                                      owl:priorVersion "0.4.1-alpha"@en ;
                                      owl:versionInfo "0.5.0-alpha"@en ;
