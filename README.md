@@ -1,23 +1,37 @@
 
 # Web Post Ontology (WPO)
-GitHub repository for the Web Post Ontology of Hooray Media. Contains a taxonomy of conceptual/topical "categories" for the purpose of organizing web posts centering on parenting and dating lifestyle content.
+GitHub repository for the Web Post Ontology of Hooray Media. Contains a hierarchy of conceptual/topical "categories" for the purpose of organizing web posts centering on parenting and dating lifestyle content.
 
-This is a provisional (and necessarily philosophically "loose") representation of general topics/categories used to organize website content for posts pertaining to parenting and dating lifestyle. Inasmuch as the things represented here are not precisely tangible, the taxonomy is intentionally "fiat" (see Barry Smith's BFO). Therefore, the author maintains the stance that (1) the end-user view of the webpages themselves and (2) the ease of use of the website for content writers in categorizing new content are more important than the philosophical rigor of the taxonomy.
+These category terms are intended to provide a re-usable, concrete basis for Hooray content authors to more reliably categorize their posts.
 
-Moreover, where the semantics of "subClassOf" mean inheritance and specialization, within this taxonomy, the definition of "subClassOf" is loosened. For example, while "Fall Festival" is not, semantically, a subclass of "Fall", it is nonetheless placed under "Fall". This is because the purpose of the taxonomy is to help content writers organize website posts, and such a prescription is intuitive to laymen.
+# Table of Contents
+- [Web Post Ontology (WPO)](#web-post-ontology-wpo)
+- [Table of Contents](#table-of-contents)
+- [Current Version](#current-version)
+- [Repository Structure](#repository-structure)
+- [General Information](#general-information)
+  - [Philosophical Considerations](#philosophical-considerations)
+  - [Reserved Terms](#reserved-terms)
+- [Using the Category Hierarchy](#using-the-category-hierarchy)
+  - [GPT Categorizer](#gpt-categorizer)
+- [Version Updates](#version-updates)
+    - [Protégé Work](#protégé-work)
+    - [isDefinedBy Update](#isdefinedby-update)
+    - [jsoncrack Visualization](#jsoncrack-visualization)
+    - [PyLODE HTML rendering](#pylode-html-rendering)
+    - [Textual hierarchy rendering](#textual-hierarchy-rendering)
+- [Credit](#credit)
 
-The BFO principle of naming things singularly (non-plurally) is violated here. This is because, for web content categorization, it is common practice for post categories to be plural. E.g., "Holidays" is more appropriately displayed on a web page than "Holiday". This is not true for every term, however, e.g., as "Family" is more appropriate than "Families". In short: the decision between singular and plural terms is subjectively based on the applicability to web content writers and readers.
 
-Some of the other BFO-esque principles are violated here: single inheritance, Aristotelian definitions and the use of roles.
-
-## Current Version
-v0.5.0-alpha
+# Current Version
+**v0.5.0-alpha** - April 30th, 2024
 * [TTL version](ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.ttl)
 * [HTML version](ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.html)
 * [Image version](ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.png)
 * [Text version](ontology/v0.5.0-alpha/class_hierarchy.txt)
 
 # Repository Structure
+* [classifier](classifier/) contains content for the GPT post categorizer
 * [munging](munging/) contains Python scripts for various tasks; mostly ignorable
 * [ontology](ontology/) contains folders for each released version of the WPO; each folder contains, at minimum
   * ```changes.md``` contains a listing of everything modified from the last version
@@ -40,6 +54,51 @@ Below are some general things to consider about the WPO:
 * Class definitions are an amalgamation of Wikidata and DBPedia, in addition to the "lifestyle content focused" knowledge particular to the task at hand
   * Class definitions are of the general form "A superclass that xyz", where superclass is the immediate parent class, and xyz contains the specific information about the class in question
     * Superclasses are not stated for the top-level classes
+
+## Philosophical Considerations
+This is a provisional (and necessarily philosophically "loose") representation of general topics/categories used to organize website content for posts pertaining to parenting and dating lifestyle. Inasmuch as the things represented here are not precisely tangible, the taxonomy is intentionally "fiat" (see Barry Smith's BFO). Therefore, the author maintains the stance that (1) the end-user view of the webpages themselves and (2) the ease of use of the website for content writers in categorizing new content are more important than the philosophical rigor of the taxonomy.
+
+Moreover, where the semantics of "subClassOf" mean inheritance and specialization, within this taxonomy, the definition of "subClassOf" is loosened. For example, while "Fall Festival" is not, semantically, a subclass of "Fall", it is nonetheless placed under "Fall". This is because the purpose of the taxonomy is to help content writers organize website posts, and such a prescription is intuitive to laymen.
+
+The BFO principle of naming things singularly (non-plurally) is violated here. This is because, for web content categorization, it is common practice for post categories to be plural. E.g., "Holidays" is more appropriately displayed on a web page than "Holiday". This is not true for every term, however, e.g., as "Family" is more appropriate than "Families". In short: the decision between singular and plural terms is subjectively based on the applicability to web content writers and readers.
+
+Some of the other BFO-esque principles are violated here: single inheritance, Aristotelian definitions and the use of roles.
+
+## Reserved Terms
+Some terms are in the hierarchy simply for organizational purposes and should not be used by Hooray authors.
+
+* U.S. State
+  * Use the U.S. state, like Florida, or a city under it
+* Occupations and the “xyz Professional” terms, like Healthcare Professional
+  * Use a lower term of an actual occupation, like Nurse
+* Schools by Governance, Schools by Life Stage
+  * Use a lower term, like Home School or Charter School
+* Child Life Stages
+  * Use a lower term, like Elementary Years
+* Aquatic Wildlife and Aquatic Birds
+  * Use a lower term for a real animal, like Dolphin or Duck
+  
+Below are some debatable reserved terms (use with discretion):
+
+* Recreational Classes
+* Team Sports
+* Cultural Holidays, Holiday Months and Religious Holidays
+  * Keeping because I can see the SEO use of these terms
+  
+# Using the Category Hierarchy
+The category hierarchy must be understood if it is to be used well. It can be browsed and played around with in several forms:
+* [HTML version](ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.html)
+* [Image version](ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.png)
+* [Text version](ontology/v0.5.0-alpha/class_hierarchy.txt)
+
+There are some general rules to follow when categorizing:
+1. Ideally, select one (1) region category term, like Orlando
+2. Select no more than five (5) categories in total
+3. Select the most specific terms possible, while considering SEO
+4. Do not hesitate to use terms from more than one top-level term; e.g., a post about Zoos can use the Animals and Things To Do trees
+
+## GPT Categorizer
+To keep categorization as normalized as possible, a custom GPT is available that recommends 5 categories to authors, when they paste the text content of their post. The custom GPT can be accessed [here](https://chat.openai.com/g/g-JAXADHu7r-hooray-post-categorizer).
 
 # Version Updates
 All updates to the taxonomy are performed in Protégé. The general process after updating (anything, including term ordering, term names/annotations, addition/deletion of terms, etc.) is:
@@ -68,8 +127,6 @@ The ```rdfs:isDefinedBy``` statement is used so that if, by some chance, someone
 2. Put your new ontology file in the same folder with it
 3. Change the input_file and output_file variables
 4. Run and use your new ontology file as needed
-
-isDefinedBy_Adder.py
 
 ### jsoncrack Visualization
 Visualizations are then made with [jsoncrack.com](jsoncrack.com).

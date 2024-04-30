@@ -21,7 +21,7 @@
                                      dct:creator :TylerProcko ;
                                      dct:format "text/turtle"@en ;
                                      dct:language "en-US"@en ;
-                                     dct:modified "2024-04-29"@en ;
+                                     dct:modified "2024-04-30"@en ;
                                      dct:provenance <https://github.com/PR0CK0/WebPostOntology> ;
                                      dct:source <https://raw.githubusercontent.com/PR0CK0/WebPostOntology/main/ontology/v0.5.0-alpha/wpo_v0.5.0-alpha.ttl> ;
                                      dct:title "Web Post Ontology"@en ;
@@ -189,7 +189,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                          wkd:Q3303681 ;
               rdfs:isDefinedBy : ;
               rdfs:label "Aquatic Birds"@en ;
-              skos:definition "An Aquatic Wildlife subclass that pertains to birds living primarily on or around water, with particular adaptations such as webbed feet."@en .
+              skos:definition "An Aquatic Wildlife subclass that pertains to birds living primarily on or around water, with particular adaptations such as webbed feet."@en ;
+              skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#AquaticWildlife
@@ -199,7 +200,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                  rdfs:label "Aquatic Wildlife"@en ;
                  skos:definition "A Wildlife subclass that pertains to wild animals primarily inhabiting bodies of water."@en ;
                  skos:example dbp:Marine_life ,
-                              wkd:Q1230015 .
+                              wkd:Q1230015 ;
+                 skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#ArtClasses
@@ -570,7 +572,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                  rdfs:isDefinedBy : ;
                  rdfs:label "Child Life Stages"@en ;
                  skos:definition "A Parenting subclass that pertains to the canonical life stages of childhood development."@en ;
-                 skos:example wkd:Q48834911 .
+                 skos:example wkd:Q48834911 ;
+                 skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#ChildrensMuseum
@@ -743,7 +746,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                            rdfs:subClassOf :Occupations ;
                            rdfs:isDefinedBy : ;
                            rdfs:label "Communication Professional"@en ;
-                           skos:definition "An Occupation that pertains to individuals engaged in works of information collection, organization, synthesis and dissemination."@en .
+                           skos:definition "An Occupation that pertains to individuals engaged in works of information collection, organization, synthesis and dissemination."@en ;
+                           skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#Concerts
@@ -761,7 +765,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                           rdfs:subClassOf :Occupations ;
                           rdfs:isDefinedBy : ;
                           rdfs:label "Construction Professional"@en ;
-                          skos:definition "An Occupation that pertains to individuals engaged in physical construction, e.g., of buildings and their components."@en .
+                          skos:definition "An Occupation that pertains to individuals engaged in physical construction, e.g., of buildings and their components."@en ;
+                          skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#Contests
@@ -1183,7 +1188,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                        rdfs:subClassOf :Occupations ;
                        rdfs:isDefinedBy : ;
                        rdfs:label "Education Professional"@en ;
-                       skos:definition "An Occupation that pertains to individuals engaged in educating others, e.g., as kindergarten teachers instruct children in various subjects."@en .
+                       skos:definition "An Occupation that pertains to individuals engaged in educating others, e.g., as kindergarten teachers instruct children in various subjects."@en ;
+                       skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#Eid_al-Fitr
@@ -1648,7 +1654,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                         dct:source dbp:Health_professional ;
                         rdfs:isDefinedBy : ;
                         rdfs:label "Healthcare Professional"@en ;
-                        skos:definition "An Occupation that pertains to individuals engaged in helping others maintain their health."@en .
+                        skos:definition "An Occupation that pertains to individuals engaged in helping others maintain their health."@en ;
+                        skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#HighSchool
@@ -2028,7 +2035,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                    rdfs:subClassOf :Occupations ;
                    rdfs:isDefinedBy : ;
                    rdfs:label "Legal Professional"@en ;
-                   skos:definition "An Occupation that pertains to individuals engaged in work centering around interpretation and application of laws."@en .
+                   skos:definition "An Occupation that pertains to individuals engaged in work centering around interpretation and application of laws."@en ;
+                   skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#Libraries
@@ -2459,7 +2467,8 @@ foaf:page rdf:type owl:AnnotationProperty .
              rdfs:isDefinedBy : ;
              rdfs:label "Occupations"@en ;
              skos:definition "An Interesting People subclass that groups persons by occupation or role."@en ;
-             skos:example <https://dbpedia.org/page/Work_(human_activity)> .
+             skos:example <https://dbpedia.org/page/Work_(human_activity)> ;
+             skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#Oktoberfest
@@ -2950,7 +2959,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                      rdfs:subClassOf :Schools ;
                      rdfs:isDefinedBy : ;
                      rdfs:label "Schools by Governance"@en ;
-                     skos:definition "Any School that is grouped by its governance type."@en .
+                     skos:definition "Any School that is grouped by its governance type."@en ;
+                     skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#SchoolsByLifeStage
@@ -2958,7 +2968,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                     rdfs:subClassOf :Schools ;
                     rdfs:isDefinedBy : ;
                     rdfs:label "Schools by Life Stage"@en ;
-                    skos:definition "Any School that is grouped by the life stage of its attending students."@en .
+                    skos:definition "Any School that is grouped by the life stage of its attending students."@en ;
+                    skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#Science
@@ -3348,7 +3359,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                         rdfs:subClassOf :Occupations ;
                         rdfs:isDefinedBy : ;
                         rdfs:label "Technology Professional"@en ;
-                        skos:definition "An Occupation that pertains to individuals engaged in the application of technological tools and techniques."@en .
+                        skos:definition "An Occupation that pertains to individuals engaged in the application of technological tools and techniques."@en ;
+                        skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#TeenageYears
@@ -3496,7 +3508,8 @@ foaf:page rdf:type owl:AnnotationProperty .
                      wkd:Q35657 ;
           rdfs:isDefinedBy : ;
           rdfs:label "U.S. State"@en ;
-          skos:definition "A Region subclass that is an identifiable, named, bordered region within the United States of America."@en .
+          skos:definition "A Region subclass that is an identifiable, named, bordered region within the United States of America."@en ;
+          skos:note "Reserved"@en .
 
 
 ###  https://hooray.media/ontology/wpo#VacationHomes

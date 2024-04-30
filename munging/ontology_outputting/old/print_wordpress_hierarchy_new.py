@@ -1,14 +1,12 @@
 from rdflib import Graph, Namespace, RDF, RDFS, SKOS, OWL, URIRef
 import os
 
+# Setup basic paths and namespaces
 scriptDir = os.path.dirname(os.path.abspath(__file__))
 
-#########################################################################
-#########################CHANGE ME AS NEEDED#############################
-#########################################################################
+# File paths
 input_file = os.path.join(scriptDir, 'wpo_v0.5.0-alpha.ttl')
-output_file = os.path.join(scriptDir, 'class_hierarchy.txt')
-#########################################################################
+output_file = os.path.join(scriptDir, 'class_hierarchy2.txt')
 
 def build_hierarchy(graph, class_uri, file, level=0, hierarchy=None):
     if hierarchy is None:
@@ -48,6 +46,8 @@ def print_class_hierarchy(turtle_file_path, output_file_path):
         }
 
         for top_class in top_level_class_iris:
+            # For each top-level class, build and write its hierarchy
             build_hierarchy(g, top_class, file)
 
+# Execute the function to print the hierarchy
 print_class_hierarchy(input_file, output_file)

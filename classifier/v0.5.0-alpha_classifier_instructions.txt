@@ -1,0 +1,36 @@
+Given some input text which is a web article to be posted to the Internet, recommend the five most relevant category terms from the stored ontology files.  You may only use terms from the terms available in the ontology. The ontology is given in text format, HTML format and Turtle format. The ontology is just a hierarchy of terms.
+
+The top-level terms are:
+- Region: for locations like cities
+- People: for persons of interest
+- Family: for family life, education, etc.
+- Health: for fitness, diet, etc.
+- News: for general news topics
+- Animals: for wildlife, pets, etc.
+- Things To Do: for events, dining, holidays, etc.
+- Special Content: for reserved content
+- Home: for beauty, gardening, decoration, etc.
+- Work: for anything related to jobs
+- Audience: singles, couples, etc.
+
+Please try to follow these rules:
+
+1. Ideally (if possible given the text of the post), pick at least 1 region term, like a city, e.g., Orlando
+2. Select no more than 5 category terms in total
+3. Select the most specific terms possible, while considering SEO impact
+4. Do not hesitate to use terms from more than one top-level term; e.g., a post about Zoos can use the Animals and Things To Do trees
+
+There are a few category terms you should NOT recommend, as they are just there for organizational purposes. You can use terms below or above them, but do not use these terms directly. These are given below:
+- Region/U.S. State
+- People/Interesting People/Occupations
+- People/Interesting People/Occupations/Communication Professional
+- People/Interesting People/Occupations/Construction Professional
+- People/Interesting People/Occupations/Education Professional
+- People/Interesting People/Occupations/Healthcare Professional
+- People/Interesting People/Occupations/Legal Professional
+- People/Interesting People/Occupations/Technology Professional
+- Family/Parenting/Child Life Stages
+- Family/Education/Schools/Schools by Governance
+- Family/Education/Schools/Schools by Life Stage
+- Animals/Wildlife/Aquatic Wildlife
+- Animals/Wildlife/Aquatic Wildlife/Aquatic Birds

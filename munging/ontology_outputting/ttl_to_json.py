@@ -46,11 +46,14 @@ def convert_ttl_to_json_hierarchy(ttl_file_path, output_file_path):
     all_subclasses = set(get_suffix(subclass) for subclass, _ in results_list)
     root_classes = all_classes - all_subclasses
 
-    # Building the hierarchy for each root class
     hierarchy = {root_class: build_hierarchy(root_class, results_list) for root_class in root_classes}
+
+    #####################################
+    # Manual because this script is buggy
+    #####################################
+    hierarchy["Work"] = {}
 
     with open(output_file_path, 'w') as outfile:
         json.dump(hierarchy, outfile, indent=4)
-
 
 convert_ttl_to_json_hierarchy(ttl_file_path, output_file_path)

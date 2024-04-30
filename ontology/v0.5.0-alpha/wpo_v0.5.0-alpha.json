@@ -1,92 +1,48 @@
 {
-    "Region": {
-        "US_State": {
-            "Florida": {
-                "CentralFlorida": {
-                    "Clermont": {},
-                    "CocoaBeach": {},
-                    "DaytonaBeach": {},
-                    "DeLand": {},
-                    "Deltona": {},
-                    "Kissimmee": {},
-                    "Lakeland": {},
-                    "Melbourne": {},
-                    "NewSmyrnaBeach": {},
-                    "Ocala": {},
-                    "Orlando": {},
-                    "Sanford": {},
-                    "SpaceCoast": {
-                        "CapeCanaveral": {}
-                    },
-                    "WinterGarden": {},
-                    "WinterPark": {}
-                },
-                "FloridaKeys": {},
-                "FloridaPanhandle": {
-                    "PanamaCity": {},
-                    "Pensacola": {},
-                    "Tallahassee": {}
-                },
-                "NortheastFlorida": {
-                    "Jacksonville": {},
-                    "StAugustine": {}
-                },
-                "SoutheastFlorida": {
-                    "FortLauderdale": {},
-                    "Miami": {},
-                    "PalmBeach": {}
-                },
-                "SouthwestFlorida": {
-                    "AnnaMariaIsland": {},
-                    "FortMyers": {},
-                    "Naples": {},
-                    "Sarasota": {}
-                },
-                "TampaBay": {
-                    "Clearwater": {},
-                    "StPetersburg": {},
-                    "Tampa": {},
-                    "Westchase": {},
-                    "YborCity": {}
-                }
-            }
-        }
+    "Health": {
+        "Fitness": {
+            "Exercise": {
+                "ExerciseClasses": {},
+                "Yoga": {}
+            },
+            "Gyms": {}
+        },
+        "MentalHealth": {},
+        "Nutrition": {}
     },
-    "People": {
-        "InterestingPeople": {
-            "Dads": {},
-            "Doctor": {},
-            "Kids": {},
-            "Moms": {},
-            "Occupations": {
-                "CommunicationProfessional": {
-                    "Author": {},
-                    "Journalist": {},
-                    "Writer": {}
+    "News": {
+        "COVID-19": {},
+        "Culture": {},
+        "Economy": {},
+        "International": {},
+        "Politics": {}
+    },
+    "SpecialContent": {
+        "AskTheDoc": {},
+        "CheapAndFree": {},
+        "Featured": {},
+        "KidFriendly": {},
+        "OurFavoriteThings": {},
+        "PopularPosts": {},
+        "Throwback": {}
+    },
+    "Animals": {
+        "Pets": {
+            "Cats": {},
+            "Dogs": {}
+        },
+        "Wildlife": {
+            "AquaticWildlife": {
+                "Alligators": {},
+                "AquaticBirds": {
+                    "Ducks": {},
+                    "Flamingos": {},
+                    "Geese": {},
+                    "Swans": {}
                 },
-                "ConstructionProfessional": {
-                    "Contractor": {}
-                },
-                "EducationProfessional": {
-                    "Professor": {},
-                    "Teacher": {}
-                },
-                "HealthcareProfessional": {
-                    "Counselor": {
-                        "LicensedMentalHealthCounselor": {}
-                    },
-                    "Dentist": {},
-                    "MedicalDoctor": {},
-                    "Nurse": {},
-                    "Psychiatrist": {}
-                },
-                "LegalProfessional": {
-                    "Lawyer": {}
-                },
-                "TechnologyProfessional": {
-                    "Engineer": {},
-                    "SoftwareDeveloper": {}
-                }
+                "Dolphins": {},
+                "Manatees": {},
+                "Sharks": {}
             }
         }
     },
@@ -142,42 +98,15 @@
         },
         "Wedding": {}
     },
-    "Health": {
-        "Fitness": {
-            "Exercise": {
-                "ExerciseClasses": {},
-                "Yoga": {}
-            },
-            "Gyms": {}
-        },
-        "MentalHealth": {},
-        "Nutrition": {}
-    },
-    "News": {
-        "COVID-19": {},
-        "Culture": {},
-        "Economy": {},
-        "International": {},
-        "Politics": {}
-    },
-    "Animals": {
-        "Pets": {
-            "Cats": {},
-            "Dogs": {}
-        },
-        "Wildlife": {
-            "AquaticWildlife": {
-                "Alligators": {},
-                "AquaticBirds": {
-                    "Ducks": {},
-                    "Flamingos": {},
-                    "Geese": {},
-                    "Swans": {}
-                },
-                "Dolphins": {},
-                "Manatees": {},
-                "Sharks": {}
-            }
+    "Home": {
+        "Beauty": {},
+        "Crafts": {},
+        "Decorating": {},
+        "Fashion": {},
+        "Gardening": {},
+        "HomeImprovement": {},
+        "Kitchen": {
+            "Recipes": {}
         }
     },
     "ThingsToDo": {
@@ -437,26 +366,6 @@
         },
         "Volunteer": {}
     },
-    "SpecialContent": {
-        "AskTheDoc": {},
-        "CheapAndFree": {},
-        "Featured": {},
-        "KidFriendly": {},
-        "OurFavoriteThings": {},
-        "PopularPosts": {},
-        "Throwback": {}
-    },
-    "Home": {
-        "Beauty": {},
-        "Crafts": {},
-        "Decorating": {},
-        "Fashion": {},
-        "Gardening": {},
-        "HomeImprovement": {},
-        "Kitchen": {
-            "Recipes": {}
-        }
-    },
     "Audience": {
         "Couples": {
             "MarriedCouples": {}
@@ -466,5 +375,97 @@
             "Bachelorette": {},
             "Bachelors": {}
         }
-    }
+    },
+    "Region": {
+        "US_State": {
+            "Florida": {
+                "CentralFlorida": {
+                    "Clermont": {},
+                    "CocoaBeach": {},
+                    "DaytonaBeach": {},
+                    "DeLand": {},
+                    "Deltona": {},
+                    "Kissimmee": {},
+                    "Lakeland": {},
+                    "Melbourne": {},
+                    "NewSmyrnaBeach": {},
+                    "Ocala": {},
+                    "Orlando": {},
+                    "Sanford": {},
+                    "SpaceCoast": {
+                        "CapeCanaveral": {}
+                    },
+                    "WinterGarden": {},
+                    "WinterPark": {}
+                },
+                "FloridaKeys": {},
+                "FloridaPanhandle": {
+                    "PanamaCity": {},
+                    "Pensacola": {},
+                    "Tallahassee": {}
+                },
+                "NortheastFlorida": {
+                    "Jacksonville": {},
+                    "StAugustine": {}
+                },
+                "SoutheastFlorida": {
+                    "FortLauderdale": {},
+                    "Miami": {},
+                    "PalmBeach": {}
+                },
+                "SouthwestFlorida": {
+                    "AnnaMariaIsland": {},
+                    "FortMyers": {},
+                    "Naples": {},
+                    "Sarasota": {}
+                },
+                "TampaBay": {
+                    "Clearwater": {},
+                    "StPetersburg": {},
+                    "Tampa": {},
+                    "Westchase": {},
+                    "YborCity": {}
+                }
+            }
+        }
+    },
+    "People": {
+        "InterestingPeople": {
+            "Dads": {},
+            "Doctor": {},
+            "Kids": {},
+            "Moms": {},
+            "Occupations": {
+                "CommunicationProfessional": {
+                    "Author": {},
+                    "Journalist": {},
+                    "Writer": {}
+                },
+                "ConstructionProfessional": {
+                    "Contractor": {}
+                },
+                "EducationProfessional": {
+                    "Professor": {},
+                    "Teacher": {}
+                },
+                "HealthcareProfessional": {
+                    "Counselor": {
+                        "LicensedMentalHealthCounselor": {}
+                    },
+                    "Dentist": {},
+                    "MedicalDoctor": {},
+                    "Nurse": {},
+                    "Psychiatrist": {}
+                },
+                "LegalProfessional": {
+                    "Lawyer": {}
+                },
+                "TechnologyProfessional": {
+                    "Engineer": {},
+                    "SoftwareDeveloper": {}
+                }
+            }
+        }
+    },
+    "Work": {}
 }
